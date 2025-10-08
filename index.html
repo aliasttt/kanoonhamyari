@@ -31,6 +31,169 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Navigation Menu Fix -->
+    <style>
+        #navigation {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            white-space: nowrap !important;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            justify-content: center !important;
+        }
+        
+        #navigation li {
+            flex-shrink: 0 !important;
+            white-space: nowrap !important;
+            margin: 0 8px !important;
+            display: inline-block !important;
+        }
+        
+        #navigation li a {
+            padding: 6px 10px !important;
+            font-size: 13px !important;
+            white-space: nowrap !important;
+            display: block !important;
+            text-decoration: none !important;
+            color: #ff0000 !important;
+            font-weight: 500 !important;
+            transition: all 0.3s ease !important;
+            border-radius: 4px !important;
+        }
+        
+        #navigation li a:hover {
+            color: #ffffff !important;
+            background-color: #ff0000 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+        }
+        
+        .main-menu {
+            overflow: hidden !important;
+        }
+        
+        .main-menu nav {
+            width: 100% !important;
+        }
+        
+        /* Hide horizontal scrollbar completely */
+        #navigation::-webkit-scrollbar {
+            display: none !important;
+        }
+        
+        #navigation {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+        
+        @media (min-width: 992px) and (max-width: 1200px) {
+            #navigation li a {
+                padding: 6px 8px !important;
+                font-size: 13px !important;
+                color: #ff0000 !important;
+            }
+            
+            #navigation li a:hover {
+                color: #ffffff !important;
+                background-color: #ff0000 !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+            }
+            
+            #navigation li {
+                margin: 0 4px !important;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            #navigation li a {
+                padding: 8px 12px !important;
+                font-size: 14px !important;
+                color: #ff0000 !important;
+            }
+            
+            #navigation li a:hover {
+                color: #ffffff !important;
+                background-color: #ff0000 !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+            }
+            
+            #navigation li {
+                margin: 0 8px !important;
+            }
+        }
+        
+        /* Language Dropdown Styles */
+        .language_dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .language_dropdown_btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .language_dropdown_btn:hover {
+            background: #e55a2b;
+        }
+        
+        .language_dropdown_btn i {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .language_dropdown_btn.active i {
+            transform: rotate(180deg);
+        }
+        
+        .language_dropdown_content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 5px;
+            top: 100%;
+            right: 0;
+            margin-top: 5px;
+        }
+        
+        .language_dropdown_content.show {
+            display: block;
+        }
+        
+        .language-option {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .language-option:hover {
+            background-color: #f1f1f1;
+            color: #ff6b35;
+        }
+        
+        .language-option.active {
+            background-color: #ff6b35;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -71,10 +234,16 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="language_switcher" style="margin-bottom: 10px;">
-                                    <button class="language-switcher" data-lang="fa" style="background: #ff6b35; color: white; border: none; padding: 5px 10px; margin: 2px; border-radius: 3px; cursor: pointer;">فا</button>
-                                    <button class="language-switcher" data-lang="en" style="background: #ff6b35; color: white; border: none; padding: 5px 10px; margin: 2px; border-radius: 3px; cursor: pointer;">EN</button>
-                                    <button class="language-switcher" data-lang="tr" style="background: #ff6b35; color: white; border: none; padding: 5px 10px; margin: 2px; border-radius: 3px; cursor: pointer;">TR</button>
+                                <div class="language_dropdown">
+                                    <button class="language_dropdown_btn" id="languageBtn">
+                                        <span id="currentLang">فا</span>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </button>
+                                    <div class="language_dropdown_content" id="languageDropdown">
+                                        <a href="#" class="language-option" data-lang="fa">فارسی</a>
+                                        <a href="#" class="language-option" data-lang="en">English</a>
+                                        <a href="#" class="language-option" data-lang="tr">Türkçe</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -421,16 +590,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-4">
-                                <div class="col-12 text-center">
-                                    <div class="website_credit">
-                                        <p data-translate="websiteBy">طراحی و توسعه وبسایت توسط</p>
-                                        <a href="https://angraweb.com/" target="_blank" class="angraweb_link">
-                                            <span>AngraWeb.com</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -472,6 +631,62 @@
 
     <script src="js/main.js"></script>
     <script src="js/languages.js"></script>
+    
+    <!-- Language Dropdown JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageBtn = document.getElementById('languageBtn');
+            const languageDropdown = document.getElementById('languageDropdown');
+            const currentLang = document.getElementById('currentLang');
+            const languageOptions = document.querySelectorAll('.language-option');
+            
+            // Toggle dropdown on click
+            languageBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('show');
+                languageBtn.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                    languageDropdown.classList.remove('show');
+                    languageBtn.classList.remove('active');
+                }
+            });
+            
+            // Handle language selection
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    const selectedText = this.textContent;
+                    
+                    // Update current language display
+                    currentLang.textContent = selectedLang === 'fa' ? 'فا' : selectedLang.toUpperCase();
+                    
+                    // Update active state
+                    languageOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Close dropdown
+                    languageDropdown.classList.remove('show');
+                    languageBtn.classList.remove('active');
+                    
+                    // Trigger language change (if you have language switching functionality)
+                    if (typeof switchLanguage === 'function') {
+                        switchLanguage(selectedLang);
+                    }
+                });
+            });
+            
+            // Set initial active language
+            const activeOption = document.querySelector('.language-option[data-lang="fa"]');
+            if (activeOption) {
+                activeOption.classList.add('active');
+            }
+        });
+    </script>
 
     <!-- WhatsApp Fixed Button -->
     <div class="whatsapp-fixed">
