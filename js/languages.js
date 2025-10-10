@@ -42,6 +42,51 @@ const languages = {
         slide3Subtitle: "سرویس‌های یکپارچه",
         slide3Description: "از تور و املاک تا تبلیغات و خدمات حقوقی در کنار شما هستیم",
         
+        // Advertising Page
+        advertisingHero: "تبلیغات خلاقانه و مؤثر",
+        advertisingHeroSub: "با ما برند خود را به اوج برسانید",
+        ourAdvertising: "خدمات تبلیغاتی ما",
+        advertisingSubtitle: "بهترین راه‌حل‌های تبلیغاتی با قیمت‌های مناسب",
+        digital: "دیجیتال",
+        print: "چاپی",
+        tv: "تلویزیونی",
+        social: "شبکه‌های اجتماعی",
+        radio: "رادیویی",
+        outdoor: "محیطی",
+        category: "دسته‌بندی",
+        views: "بازدید",
+        clients: "مشتری",
+        rating: "امتیاز",
+        prints: "چاپ",
+        quality: "کیفیت",
+        delivery: "تحویل",
+        channels: "شبکه",
+        duration: "مدت",
+        production: "تولید",
+        platforms: "پلتفرم",
+        engagement: "تعامل",
+        analytics: "تحلیل",
+        stations: "ایستگاه",
+        schedule: "زمان‌بندی",
+        locations: "موقعیت",
+        visibility: "قابلیت دید",
+        learnMore: "اطلاعات بیشتر",
+        loadMore: "مشاهده خدمات بیشتر",
+        
+        // Advertising Service Titles
+        advertising1Title: "تبلیغات دیجیتال",
+        advertising1Desc: "تبلیغات آنلاین و دیجیتال با استفاده از آخرین تکنولوژی‌ها",
+        advertising2Title: "تبلیغات چاپی",
+        advertising2Desc: "طراحی و چاپ انواع تبلیغات چاپی با کیفیت بالا",
+        advertising3Title: "تبلیغات تلویزیونی",
+        advertising3Desc: "تولید و پخش تبلیغات تلویزیونی حرفه‌ای",
+        advertising4Title: "تبلیغات شبکه‌های اجتماعی",
+        advertising4Desc: "تبلیغات مؤثر در شبکه‌های اجتماعی و پلتفرم‌های آنلاین",
+        advertising5Title: "تبلیغات رادیویی",
+        advertising5Desc: "تولید و پخش تبلیغات رادیویی با کیفیت صوتی بالا",
+        advertising6Title: "تبلیغات محیطی",
+        advertising6Desc: "تبلیغات بیلبورد، بنر و تابلوهای محیطی در نقاط پرترافیک",
+        
         // Events Page
         eventsHero: "رویدادهای به‌یادماندنی",
         eventsHeroSub: "با ما در بهترین رویدادهای شهر شرکت کنید",
@@ -224,6 +269,51 @@ const languages = {
         slide3Subtitle: "Integrated Services",
         slide3Description: "From tours and real estate to advertising and legal services, we are with you",
         
+        // Advertising Page
+        advertisingHero: "Creative and Effective Advertising",
+        advertisingHeroSub: "Take your brand to the top with us",
+        ourAdvertising: "Our Advertising Services",
+        advertisingSubtitle: "The best advertising solutions at reasonable prices",
+        digital: "Digital",
+        print: "Print",
+        tv: "Television",
+        social: "Social Media",
+        radio: "Radio",
+        outdoor: "Outdoor",
+        category: "Category",
+        views: "Views",
+        clients: "Clients",
+        rating: "Rating",
+        prints: "Prints",
+        quality: "Quality",
+        delivery: "Delivery",
+        channels: "Channels",
+        duration: "Duration",
+        production: "Production",
+        platforms: "Platforms",
+        engagement: "Engagement",
+        analytics: "Analytics",
+        stations: "Stations",
+        schedule: "Schedule",
+        locations: "Locations",
+        visibility: "Visibility",
+        learnMore: "Learn More",
+        loadMore: "View More Services",
+        
+        // Advertising Service Titles
+        advertising1Title: "Digital Advertising",
+        advertising1Desc: "Online and digital advertising using the latest technologies",
+        advertising2Title: "Print Advertising",
+        advertising2Desc: "Design and printing of various print advertisements with high quality",
+        advertising3Title: "Television Advertising",
+        advertising3Desc: "Professional television advertising production and broadcasting",
+        advertising4Title: "Social Media Advertising",
+        advertising4Desc: "Effective advertising on social networks and online platforms",
+        advertising5Title: "Radio Advertising",
+        advertising5Desc: "Radio advertising production and broadcasting with high audio quality",
+        advertising6Title: "Outdoor Advertising",
+        advertising6Desc: "Billboard, banner and outdoor advertising in high-traffic areas",
+        
         // Events Page
         eventsHero: "Unforgettable Events",
         eventsHeroSub: "Join the best events in the city with us",
@@ -405,6 +495,51 @@ const languages = {
         slide3Title: "Yeni Deneyim",
         slide3Subtitle: "Entegre Hizmetler",
         slide3Description: "Turlar ve emlaktan reklam ve hukuki hizmetlere kadar yanınızdayız",
+        
+        // Advertising Page
+        advertisingHero: "Yaratıcı ve Etkili Reklamcılık",
+        advertisingHeroSub: "Bizimle markanızı zirveye taşıyın",
+        ourAdvertising: "Reklamcılık Hizmetlerimiz",
+        advertisingSubtitle: "En iyi reklamcılık çözümleri uygun fiyatlarla",
+        digital: "Dijital",
+        print: "Baskı",
+        tv: "Televizyon",
+        social: "Sosyal Medya",
+        radio: "Radyo",
+        outdoor: "Açık Hava",
+        category: "Kategori",
+        views: "Görüntüleme",
+        clients: "Müşteri",
+        rating: "Değerlendirme",
+        prints: "Baskı",
+        quality: "Kalite",
+        delivery: "Teslimat",
+        channels: "Kanal",
+        duration: "Süre",
+        production: "Üretim",
+        platforms: "Platform",
+        engagement: "Etkileşim",
+        analytics: "Analiz",
+        stations: "İstasyon",
+        schedule: "Program",
+        locations: "Konum",
+        visibility: "Görünürlük",
+        learnMore: "Daha Fazla Bilgi",
+        loadMore: "Daha Fazla Hizmet Görüntüle",
+        
+        // Advertising Service Titles
+        advertising1Title: "Dijital Reklamcılık",
+        advertising1Desc: "En son teknolojileri kullanarak online ve dijital reklamcılık",
+        advertising2Title: "Baskı Reklamcılığı",
+        advertising2Desc: "Yüksek kaliteli çeşitli baskı reklamlarının tasarımı ve baskısı",
+        advertising3Title: "Televizyon Reklamcılığı",
+        advertising3Desc: "Profesyonel televizyon reklamcılığı üretimi ve yayını",
+        advertising4Title: "Sosyal Medya Reklamcılığı",
+        advertising4Desc: "Sosyal ağlarda ve online platformlarda etkili reklamcılık",
+        advertising5Title: "Radyo Reklamcılığı",
+        advertising5Desc: "Yüksek ses kalitesi ile radyo reklamcılığı üretimi ve yayını",
+        advertising6Title: "Açık Hava Reklamcılığı",
+        advertising6Desc: "Yüksek trafikli alanlarda billboard, banner ve açık hava reklamcılığı",
         
         // Events Page
         eventsHero: "Unutulmaz Etkinlikler",
@@ -639,6 +774,51 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="phone"]').forEach(el => el.textContent = langData.phone);
     document.querySelectorAll('[data-translate="emailLabel"]').forEach(el => el.textContent = langData.emailLabel);
     document.querySelectorAll('[data-translate="email"]').forEach(el => el.textContent = langData.email);
+    
+    // Update advertising section
+    document.querySelectorAll('[data-translate="advertisingHero"]').forEach(el => el.textContent = langData.advertisingHero);
+    document.querySelectorAll('[data-translate="advertisingHeroSub"]').forEach(el => el.textContent = langData.advertisingHeroSub);
+    document.querySelectorAll('[data-translate="ourAdvertising"]').forEach(el => el.textContent = langData.ourAdvertising);
+    document.querySelectorAll('[data-translate="advertisingSubtitle"]').forEach(el => el.textContent = langData.advertisingSubtitle);
+    document.querySelectorAll('[data-translate="digital"]').forEach(el => el.textContent = langData.digital);
+    document.querySelectorAll('[data-translate="print"]').forEach(el => el.textContent = langData.print);
+    document.querySelectorAll('[data-translate="tv"]').forEach(el => el.textContent = langData.tv);
+    document.querySelectorAll('[data-translate="social"]').forEach(el => el.textContent = langData.social);
+    document.querySelectorAll('[data-translate="radio"]').forEach(el => el.textContent = langData.radio);
+    document.querySelectorAll('[data-translate="outdoor"]').forEach(el => el.textContent = langData.outdoor);
+    document.querySelectorAll('[data-translate="category"]').forEach(el => el.textContent = langData.category);
+    document.querySelectorAll('[data-translate="views"]').forEach(el => el.textContent = langData.views);
+    document.querySelectorAll('[data-translate="clients"]').forEach(el => el.textContent = langData.clients);
+    document.querySelectorAll('[data-translate="rating"]').forEach(el => el.textContent = langData.rating);
+    document.querySelectorAll('[data-translate="prints"]').forEach(el => el.textContent = langData.prints);
+    document.querySelectorAll('[data-translate="quality"]').forEach(el => el.textContent = langData.quality);
+    document.querySelectorAll('[data-translate="delivery"]').forEach(el => el.textContent = langData.delivery);
+    document.querySelectorAll('[data-translate="channels"]').forEach(el => el.textContent = langData.channels);
+    document.querySelectorAll('[data-translate="duration"]').forEach(el => el.textContent = langData.duration);
+    document.querySelectorAll('[data-translate="production"]').forEach(el => el.textContent = langData.production);
+    document.querySelectorAll('[data-translate="platforms"]').forEach(el => el.textContent = langData.platforms);
+    document.querySelectorAll('[data-translate="engagement"]').forEach(el => el.textContent = langData.engagement);
+    document.querySelectorAll('[data-translate="analytics"]').forEach(el => el.textContent = langData.analytics);
+    document.querySelectorAll('[data-translate="stations"]').forEach(el => el.textContent = langData.stations);
+    document.querySelectorAll('[data-translate="schedule"]').forEach(el => el.textContent = langData.schedule);
+    document.querySelectorAll('[data-translate="locations"]').forEach(el => el.textContent = langData.locations);
+    document.querySelectorAll('[data-translate="visibility"]').forEach(el => el.textContent = langData.visibility);
+    document.querySelectorAll('[data-translate="learnMore"]').forEach(el => el.textContent = langData.learnMore);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update advertising service titles and descriptions
+    document.querySelectorAll('[data-translate="advertising1Title"]').forEach(el => el.textContent = langData.advertising1Title);
+    document.querySelectorAll('[data-translate="advertising1Desc"]').forEach(el => el.textContent = langData.advertising1Desc);
+    document.querySelectorAll('[data-translate="advertising2Title"]').forEach(el => el.textContent = langData.advertising2Title);
+    document.querySelectorAll('[data-translate="advertising2Desc"]').forEach(el => el.textContent = langData.advertising2Desc);
+    document.querySelectorAll('[data-translate="advertising3Title"]').forEach(el => el.textContent = langData.advertising3Title);
+    document.querySelectorAll('[data-translate="advertising3Desc"]').forEach(el => el.textContent = langData.advertising3Desc);
+    document.querySelectorAll('[data-translate="advertising4Title"]').forEach(el => el.textContent = langData.advertising4Title);
+    document.querySelectorAll('[data-translate="advertising4Desc"]').forEach(el => el.textContent = langData.advertising4Desc);
+    document.querySelectorAll('[data-translate="advertising5Title"]').forEach(el => el.textContent = langData.advertising5Title);
+    document.querySelectorAll('[data-translate="advertising5Desc"]').forEach(el => el.textContent = langData.advertising5Desc);
+    document.querySelectorAll('[data-translate="advertising6Title"]').forEach(el => el.textContent = langData.advertising6Title);
+    document.querySelectorAll('[data-translate="advertising6Desc"]').forEach(el => el.textContent = langData.advertising6Desc);
     
     // Update events section
     document.querySelectorAll('[data-translate="eventsHero"]').forEach(el => el.textContent = langData.eventsHero);
