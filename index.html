@@ -374,48 +374,93 @@
             background: linear-gradient(90deg, #ff6b35, #ff9f43);
         }
 
-        /* Services with images */
-        .single_service {
+        /* Large Services with alternating layout */
+        .service_item {
             background: #141414;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.08);
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
         }
-        .single_service .service_image {
-            width: 100%;
-            height: 160px;
+        .service_item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        .service_item .service_row {
+            display: flex;
+            align-items: center;
+            min-height: 300px;
+        }
+        .service_item .service_content {
+            flex: 1;
+            padding: 40px;
+            direction: rtl;
+        }
+        .service_item .service_image {
+            flex: 1;
+            height: 300px;
             overflow: hidden;
         }
-        .single_service .service_image img {
+        .service_item .service_image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            transform: scale(1.02);
             transition: transform .6s ease;
         }
-        .single_service:hover .service_image img {
-            transform: scale(1.06);
+        .service_item:hover .service_image img {
+            transform: scale(1.05);
         }
-        .single_service .service_content {
-            padding: 18px 18px 22px;
+        .service_item .service_content h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #fff;
+            font-weight: 700;
         }
-        .single_service .service_content h4 {
-            margin-bottom: 8px;
+        .service_item .service_content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 24px;
         }
-        .single_service .service_link {
-            margin-top: 10px;
+        .service_item .service_link {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 12px 24px;
             border-radius: 8px;
             background: transparent;
             color: #ff6b35;
-            border: 1px solid #ff6b35;
-            transition: all .25s ease;
+            border: 2px solid #ff6b35;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all .3s ease;
         }
-        .single_service .service_link:hover {
+        .service_item .service_link:hover {
             background: #ff6b35;
             color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        /* Alternating layout */
+        .service_item:nth-child(even) .service_row {
+            flex-direction: row-reverse;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .service_item .service_row {
+                flex-direction: column !important;
+            }
+            .service_item .service_image {
+                height: 200px;
+            }
+            .service_item .service_content {
+                padding: 24px;
+            }
+            .service_item .service_content h3 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -516,97 +561,6 @@
     </div>
     <!-- slider_area_end -->
 
-    <!-- services_area_start  -->
-    <div class="services_area black_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourServices">خدمات ما</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div class="service_image">
-                                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop" alt="events">
-                                </div>
-                                <div class="service_content">
-                                    <h4 data-translate="events">رویدادها</h4>
-                                    <p>برگزاری حرفه‌ای انواع رویدادهای سازمانی، همایش‌ها و دورهمی‌ها با تیم اجرایی مجرب.</p>
-                                    <a href="events.html" class="service_link">ادامه مطلب</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div class="service_image">
-                                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="tours">
-                                </div>
-                                <div class="service_content">
-                                    <h4 data-translate="tours">تورها</h4>
-                                    <p>تورهای داخلی و خارجی، طبیعت‌گردی و ماجراجویی با بهترین لیدرها و برنامه‌ریزی.</p>
-                                    <a href="tours.html" class="service_link">ادامه مطلب</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                <div class="service_image">
-                                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="real-estate">
-                                </div>
-                                <div class="service_content">
-                                    <h4 data-translate="realEstate">املاک</h4>
-                                    <p>مشاوره تخصصی خرید، فروش و اجاره ملک با پایگاه داده به‌روز و دقیق.</p>
-                                    <a href="real-estate.html" class="service_link">ادامه مطلب</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                                <div class="service_image">
-                                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="advertising">
-                                </div>
-                                <div class="service_content">
-                                    <h4 data-translate="advertising">تبلیغات</h4>
-                                    <p>کمپین‌های خلاقانه بازاریابی دیجیتال و آفلاین برای رشد برند شما.</p>
-                                    <a href="advertising.html" class="service_link">ادامه مطلب</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
-                                <div class="service_image">
-                                    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="education">
-                                </div>
-                                <div class="service_content">
-                                    <h4 data-translate="education">تحصیلی</h4>
-                                    <p>پذیرش دانشگاهی، اپلای، راهنمایی انتخاب رشته و مشاوره آموزشی تخصصی.</p>
-                                    <a href="education.html" class="service_link">ادامه مطلب</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-                                <div class="service_image">
-                                    <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1200&auto=format&fit=crop" alt="legal">
-                                </div>
-                                <div class="service_content">
-                                    <h4 data-translate="legal">امور حقوقی</h4>
-                                    <p>مشاوره حقوقی، قراردادها و پیگیری پرونده‌ها توسط تیم حقوقی مجرب.</p>
-                                    <a href="legal.html" class="service_link">ادامه مطلب</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- services_area_end  -->
 
     <!-- about_area_start  -->
     <div class="about_area black_bg">
@@ -711,6 +665,107 @@
             </div>
         </div>
     </div>
+
+    <!-- services_area_start  -->
+    <div class="services_area black_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title mb-80">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourServices">خدمات ما</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <!-- Events Service -->
+                    <div class="service_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="service_row">
+                            <div class="service_content">
+                                <h3 data-translate="events">رویدادها</h3>
+                                <p>برگزاری حرفه‌ای انواع رویدادهای سازمانی، همایش‌ها و دورهمی‌ها با تیم اجرایی مجرب. ما با سال‌ها تجربه در زمینه برگزاری رویدادهای بزرگ و کوچک، از کنفرانس‌های علمی تا جشن‌های شرکتی، تمامی جزئیات را با دقت برنامه‌ریزی می‌کنیم. تیم ما شامل طراحان، مجریان و هماهنگ‌کنندگان حرفه‌ای است که تضمین می‌کنند رویداد شما به بهترین شکل ممکن برگزار شود.</p>
+                                <a href="events.html" class="service_link">ادامه مطلب</a>
+                            </div>
+                            <div class="service_image">
+                                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop" alt="events">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tours Service -->
+                    <div class="service_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="service_row">
+                            <div class="service_content">
+                                <h3 data-translate="tours">تورها</h3>
+                                <p>تورهای داخلی و خارجی، طبیعت‌گردی و ماجراجویی با بهترین لیدرها و برنامه‌ریزی. ما تورهای متنوعی از سفرهای داخلی تا تورهای خارجی ارائه می‌دهیم. از کوهنوردی و طبیعت‌گردی تا سفرهای فرهنگی و تاریخی، تمامی تورهای ما با بهترین راهنمایان محلی و برنامه‌ریزی دقیق برگزار می‌شود. امنیت و رفاه مسافران اولویت اصلی ماست.</p>
+                                <a href="tours.html" class="service_link">ادامه مطلب</a>
+                            </div>
+                            <div class="service_image">
+                                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="tours">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Real Estate Service -->
+                    <div class="service_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="service_row">
+                            <div class="service_content">
+                                <h3 data-translate="realEstate">املاک</h3>
+                                <p>مشاوره تخصصی خرید، فروش و اجاره ملک با پایگاه داده به‌روز و دقیق. تیم متخصص ما در زمینه املاک، با سال‌ها تجربه و دانش عمیق از بازار مسکن، بهترین مشاوره را در اختیار شما قرار می‌دهد. از ارزیابی ملک تا مذاکره و عقد قرارداد، تمامی مراحل را با دقت و تخصص انجام می‌دهیم. پایگاه داده ما شامل تمامی املاک موجود در شهر است.</p>
+                                <a href="real-estate.html" class="service_link">ادامه مطلب</a>
+                            </div>
+                            <div class="service_image">
+                                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="real-estate">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advertising Service -->
+                    <div class="service_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <div class="service_row">
+                            <div class="service_content">
+                                <h3 data-translate="advertising">تبلیغات</h3>
+                                <p>کمپین‌های خلاقانه بازاریابی دیجیتال و آفلاین برای رشد برند شما. تیم خلاق ما با ایده‌های نوآورانه و استراتژی‌های اثربخش، برند شما را به اوج می‌رساند. از طراحی گرافیک تا مدیریت شبکه‌های اجتماعی، از تبلیغات آنلاین تا کمپین‌های خیابانی، تمامی خدمات بازاریابی را تحت یک سقف ارائه می‌دهیم. هدف ما افزایش فروش و شناخت برند شماست.</p>
+                                <a href="advertising.html" class="service_link">ادامه مطلب</a>
+                            </div>
+                            <div class="service_image">
+                                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="advertising">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Service -->
+                    <div class="service_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                        <div class="service_row">
+                            <div class="service_content">
+                                <h3 data-translate="education">تحصیلی</h3>
+                                <p>پذیرش دانشگاهی، اپلای، راهنمایی انتخاب رشته و مشاوره آموزشی تخصصی. ما با تیم مشاوران تحصیلی مجرب، راهنمای شما در مسیر تحصیلی هستیم. از انتخاب رشته مناسب تا اپلای برای دانشگاه‌های خارجی، از آماده‌سازی مدارک تا مصاحبه، تمامی مراحل را با دقت و تخصص انجام می‌دهیم. هدف ما موفقیت تحصیلی و شغلی شماست.</p>
+                                <a href="education.html" class="service_link">ادامه مطلب</a>
+                            </div>
+                            <div class="service_image">
+                                <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="education">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legal Service -->
+                    <div class="service_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                        <div class="service_row">
+                            <div class="service_content">
+                                <h3 data-translate="legal">امور حقوقی</h3>
+                                <p>مشاوره حقوقی، قراردادها و پیگیری پرونده‌ها توسط تیم حقوقی مجرب. وکلای متخصص ما با سال‌ها تجربه در زمینه‌های مختلف حقوقی، بهترین مشاوره و خدمات حقوقی را ارائه می‌دهند. از مشاوره حقوقی تا تنظیم قرارداد و پیگیری پرونده‌های قضایی، تمامی خدمات حقوقی را با تخصص و دقت انجام می‌دهیم. هدف ما حفظ حقوق و منافع شماست.</p>
+                                <a href="legal.html" class="service_link">ادامه مطلب</a>
+                            </div>
+                            <div class="service_image">
+                                <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1200&auto=format&fit=crop" alt="legal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services_area_end  -->
 
     <!-- contact_area_start  -->
     <div class="contact_area black_bg">
