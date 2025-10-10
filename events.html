@@ -28,6 +28,487 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Modern Events Page Styles -->
+    <style>
+        /* Modern Events Page Styles */
+        .events_hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .events_hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2000&auto=format&fit=crop') center/cover;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        
+        .hero_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+        }
+        
+        .hero_content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero_title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .hero_subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 300;
+        }
+        
+        .hero_search {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .search_box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .search_input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 18px 25px;
+            color: white;
+            font-size: 18px;
+            outline: none;
+            font-weight: 500;
+        }
+        
+        .search_input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .search_btn {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .search_btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+        }
+        
+        /* Events Section */
+        .events_section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            position: relative;
+        }
+        
+        .events_section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=2000&auto=format&fit=crop') center/cover;
+            opacity: 0.05;
+            z-index: 1;
+        }
+        
+        .events_section > .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section_subtitle {
+            color: #888;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+        
+        /* Events Grid */
+        .events_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        /* Event Cards */
+        .event_card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .event_card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 107, 53, 0.4);
+        }
+        
+        .event_image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .event_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .event_card:hover .event_image img {
+            transform: scale(1.1);
+        }
+        
+        .event_badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .event_badge.conference {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .event_badge.festival {
+            background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+            color: white;
+            box-shadow: 0 5px 20px rgba(156, 39, 176, 0.4);
+        }
+        
+        .event_badge.workshop {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            box-shadow: 0 5px 20px rgba(33, 150, 243, 0.4);
+        }
+        
+        .event_badge.exhibition {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        .event_badge.seminar {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 152, 0, 0.4);
+        }
+        
+        .event_badge.party {
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.4);
+        }
+        
+        .event_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .event_card:hover .event_overlay {
+            opacity: 1;
+        }
+        
+        .overlay_actions {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .action_btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 18px;
+        }
+        
+        .action_btn:hover {
+            background: #ff6b35;
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .event_content {
+            padding: 30px;
+        }
+        
+        .event_header {
+            margin-bottom: 20px;
+        }
+        
+        .event_title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .event_location {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .event_location i {
+            margin-left: 8px;
+            color: #ff6b35;
+            font-size: 16px;
+        }
+        
+        .event_description {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        
+        .event_features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .feature_item {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .feature_item i {
+            margin-left: 8px;
+            color: #ff6b35;
+            width: 18px;
+            font-size: 16px;
+        }
+        
+        .event_footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .event_price {
+            flex: 1;
+        }
+        
+        .price_amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ff6b35;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+        }
+        
+        .event_btn {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .event_btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .load_more_btn {
+            background: transparent;
+            color: #ff6b35;
+            border: 3px solid #ff6b35;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .load_more_btn:hover {
+            background: #ff6b35;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.4);
+            text-decoration: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .event_card:hover {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .events_grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                gap: 35px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero_title {
+                font-size: 3rem;
+            }
+            
+            .hero_subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .events_grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .event_card {
+                margin: 0 15px;
+            }
+            
+            .event_footer {
+                flex-direction: column;
+                gap: 20px;
+                align-items: stretch;
+            }
+            
+            .event_btn {
+                text-align: center;
+                padding: 18px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero_title {
+                font-size: 2.5rem;
+            }
+            
+            .search_box {
+                flex-direction: column;
+                border-radius: 20px;
+            }
+            
+            .search_btn {
+                border-radius: 20px;
+                margin-top: 15px;
+            }
+        }
+    </style>
+    
     <!-- Dark Theme Navigation Menu with FOUC Prevention -->
     <style>
         /* Prevent FOUC - Hide content until styles are loaded */
@@ -536,84 +1017,325 @@
     </header>
     <!-- header-end -->
 
-    <!-- page_title_start -->
-    <div class="page_title_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page_title text-center">
-                        <h1 data-translate="events">رویدادها</h1>
-                        <p data-translate="eventsSubtitle">برگزاری انواع رویدادها، پارتی و دورهمی</p>
+
+    <!-- events_area_start -->
+    <div class="events_area black_bg">
+        <div class="container-fluid px-0">
+            <!-- Hero Section -->
+            <div class="events_hero">
+                <div class="hero_overlay"></div>
+                <div class="hero_content">
+                    <h1 class="hero_title" data-translate="eventsHero">رویدادهای به‌یادماندنی</h1>
+                    <p class="hero_subtitle" data-translate="eventsHeroSub">با ما در بهترین رویدادهای شهر شرکت کنید</p>
+                    <div class="hero_search">
+                        <div class="search_box">
+                            <input type="text" placeholder="جستجو در رویدادها..." class="search_input">
+                            <button class="search_btn"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- page_title_end -->
 
-    <!-- events_area_start -->
-    <div class="events_area black_bg">
+            <!-- Events Grid -->
+            <div class="events_section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section_title text-center mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourEvents">رویدادهای ما</h3>
+                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourEvents">رویدادهای منتخب</h3>
+                                <p class="section_subtitle" data-translate="eventsSubtitle">بهترین تجربه‌های رویداد با قیمت‌های مناسب</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_event wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    
+                    <!-- Event Cards -->
+                    <div class="events_grid">
+                        <!-- Event 1 -->
+                        <div class="event_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="event_image">
-                            <img src="img/events/1.jpg" alt="رویداد 1">
-                            <div class="event_date">
-                                <span data-translate="date">۱۵ دی</span>
+                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop" alt="کنفرانس فناوری">
+                                <div class="event_badge conference">
+                                    <span data-translate="conference">کنفرانس</span>
+                                </div>
+                                <div class="event_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
                             </div>
                         </div>
                         <div class="event_content">
-                            <h4 data-translate="event1Title">جشن تولد شرکتی</h4>
-                            <p data-translate="event1Desc">برگزاری جشن تولد برای کارمندان شرکت با برنامه‌های تفریحی و سرگرمی</p>
-                            <div class="event_meta">
-                                <span><i class="fa fa-calendar"></i> <span data-translate="date">۱۵ دی ۱۴۰۳</span></span>
-                                <span><i class="fa fa-map-marker"></i> <span data-translate="location">تهران</span></span>
+                                <div class="event_header">
+                                    <h4 class="event_title" data-translate="event1Title">کنفرانس فناوری</h4>
+                                    <div class="event_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">سالن همایش</span>
+                            </div>
+                        </div>
+                                <p class="event_description" data-translate="event1Desc">کنفرانس ۱ روزه فناوری با حضور متخصصان و سخنرانان برجسته</p>
+                                <div class="event_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="date">۱۵ خرداد</span>
+                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="time">۱۸:۰۰</span>
+                </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="capacity">۲۰۰ نفر</span>
+                                    </div>
+                                </div>
+                                <div class="event_footer">
+                                    <div class="event_price">
+                                        <span class="price_amount" data-translate="price">۱۵۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="event_btn" data-translate="bookTicket">خرید بلیت</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 2 -->
+                        <div class="event_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="event_image">
+                                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1000&auto=format&fit=crop" alt="فستیوال موسیقی">
+                                <div class="event_badge festival">
+                                    <span data-translate="festival">فستیوال</span>
+                                </div>
+                                <div class="event_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="event_content">
+                                <div class="event_header">
+                                    <h4 class="event_title" data-translate="event2Title">فستیوال موسیقی</h4>
+                                    <div class="event_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">پارک شهر</span>
+                            </div>
+                        </div>
+                                <p class="event_description" data-translate="event2Desc">فستیوال ۲ روزه موسیقی با حضور هنرمندان محلی و بین‌المللی</p>
+                                <div class="event_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="date">۲۰ خرداد</span>
+                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="time">۱۹:۳۰</span>
+                </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="capacity">۵۰۰ نفر</span>
+                                    </div>
+                                </div>
+                                <div class="event_footer">
+                                    <div class="event_price">
+                                        <span class="price_amount" data-translate="price">۸۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="event_btn" data-translate="bookTicket">خرید بلیت</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 3 -->
+                        <div class="event_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="event_image">
+                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000&auto=format&fit=crop" alt="ورکشاپ طراحی">
+                                <div class="event_badge workshop">
+                                    <span data-translate="workshop">ورکشاپ</span>
+                                </div>
+                                <div class="event_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="event_content">
+                                <div class="event_header">
+                                    <h4 class="event_title" data-translate="event3Title">ورکشاپ طراحی</h4>
+                                    <div class="event_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">مرکز آموزش</span>
+                            </div>
+                        </div>
+                                <p class="event_description" data-translate="event3Desc">ورکشاپ ۳ روزه طراحی گرافیک با آموزش عملی و پروژه‌های واقعی</p>
+                                <div class="event_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="date">۲۵ خرداد</span>
+                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="time">۱۰:۰۰</span>
+                </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="capacity">۳۰ نفر</span>
+                                    </div>
+                                </div>
+                                <div class="event_footer">
+                                    <div class="event_price">
+                                        <span class="price_amount" data-translate="price">۳۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="event_btn" data-translate="bookTicket">خرید بلیت</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 4 -->
+                        <div class="event_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                            <div class="event_image">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1000&auto=format&fit=crop" alt="نمایشگاه هنری">
+                                <div class="event_badge exhibition">
+                                    <span data-translate="exhibition">نمایشگاه</span>
+                                </div>
+                                <div class="event_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event_content">
+                                <div class="event_header">
+                                    <h4 class="event_title" data-translate="event4Title">نمایشگاه هنری</h4>
+                                    <div class="event_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">موزه هنر</span>
+                                    </div>
+                                </div>
+                                <p class="event_description" data-translate="event4Desc">نمایشگاه ۱ هفته‌ای هنر معاصر با آثار هنرمندان جوان</p>
+                                <div class="event_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="date">۱ تیر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="time">۱۶:۰۰</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="capacity">۱۰۰ نفر</span>
+                                    </div>
+                                </div>
+                                <div class="event_footer">
+                                    <div class="event_price">
+                                        <span class="price_amount" data-translate="price">۵۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="event_btn" data-translate="bookTicket">خرید بلیت</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 5 -->
+                        <div class="event_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                            <div class="event_image">
+                                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1000&auto=format&fit=crop" alt="سمینار کسب‌وکار">
+                                <div class="event_badge seminar">
+                                    <span data-translate="seminar">سمینار</span>
+                                </div>
+                                <div class="event_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event_content">
+                                <div class="event_header">
+                                    <h4 class="event_title" data-translate="event5Title">سمینار کسب‌وکار</h4>
+                                    <div class="event_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">هتل پارس</span>
+                                    </div>
+                                </div>
+                                <p class="event_description" data-translate="event5Desc">سمینار ۱ روزه کسب‌وکار با حضور کارآفرینان موفق</p>
+                                <div class="event_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="date">۵ تیر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="time">۱۴:۰۰</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="capacity">۱۵۰ نفر</span>
+                                    </div>
+                                </div>
+                                <div class="event_footer">
+                                    <div class="event_price">
+                                        <span class="price_amount" data-translate="price">۲۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="event_btn" data-translate="bookTicket">خرید بلیت</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event 6 -->
+                        <div class="event_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                            <div class="event_image">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop" alt="پارتی شبانه">
+                                <div class="event_badge party">
+                                    <span data-translate="party">پارتی</span>
+                                </div>
+                                <div class="event_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event_content">
+                                <div class="event_header">
+                                    <h4 class="event_title" data-translate="event6Title">پارتی شبانه</h4>
+                                    <div class="event_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">کلوپ شبانه</span>
+                                    </div>
+                                </div>
+                                <p class="event_description" data-translate="event6Desc">پارتی شبانه با موسیقی زنده و فضای شاد</p>
+                                <div class="event_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="date">۱۰ تیر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="time">۲۲:۰۰</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="capacity">۳۰۰ نفر</span>
+                                    </div>
+                                </div>
+                                <div class="event_footer">
+                                    <div class="event_price">
+                                        <span class="price_amount" data-translate="price">۱۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="event_btn" data-translate="bookTicket">خرید بلیت</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_event wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="event_image">
-                            <img src="img/events/2.jpg" alt="رویداد 2">
-                            <div class="event_date">
-                                <span data-translate="date">۲۰ دی</span>
-                            </div>
-                        </div>
-                        <div class="event_content">
-                            <h4 data-translate="event2Title">پارتی شبانه</h4>
-                            <p data-translate="event2Desc">پارتی شبانه با موسیقی زنده و رقص در فضای باز</p>
-                            <div class="event_meta">
-                                <span><i class="fa fa-calendar"></i> <span data-translate="date">۲۰ دی ۱۴۰۳</span></span>
-                                <span><i class="fa fa-map-marker"></i> <span data-translate="location">اصفهان</span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_event wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="event_image">
-                            <img src="img/events/3.jpg" alt="رویداد 3">
-                            <div class="event_date">
-                                <span data-translate="date">۲۵ دی</span>
-                            </div>
-                        </div>
-                        <div class="event_content">
-                            <h4 data-translate="event3Title">دورهمی خانوادگی</h4>
-                            <p data-translate="event3Desc">دورهمی خانوادگی با بازی‌ها و فعالیت‌های گروهی</p>
-                            <div class="event_meta">
-                                <span><i class="fa fa-calendar"></i> <span data-translate="date">۲۵ دی ۱۴۰۳</span></span>
-                                <span><i class="fa fa-map-marker"></i> <span data-translate="location">شیراز</span></span>
-                            </div>
-                        </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-80">
+                        <a href="#" class="load_more_btn" data-translate="loadMore">مشاهده رویدادهای بیشتر</a>
                     </div>
                 </div>
             </div>

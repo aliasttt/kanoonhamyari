@@ -42,6 +42,37 @@ const languages = {
         slide3Subtitle: "سرویس‌های یکپارچه",
         slide3Description: "از تور و املاک تا تبلیغات و خدمات حقوقی در کنار شما هستیم",
         
+        // Events Page
+        eventsHero: "رویدادهای به‌یادماندنی",
+        eventsHeroSub: "با ما در بهترین رویدادهای شهر شرکت کنید",
+        ourEvents: "رویدادهای منتخب",
+        eventsSubtitle: "بهترین تجربه‌های رویداد با قیمت‌های مناسب",
+        conference: "کنفرانس",
+        festival: "فستیوال",
+        workshop: "ورکشاپ",
+        exhibition: "نمایشگاه",
+        seminar: "سمینار",
+        party: "پارتی",
+        date: "تاریخ",
+        time: "زمان",
+        capacity: "ظرفیت",
+        bookTicket: "خرید بلیت",
+        loadMore: "مشاهده رویدادهای بیشتر",
+        
+        // Event Titles
+        event1Title: "کنفرانس فناوری",
+        event1Desc: "کنفرانس ۱ روزه فناوری با حضور متخصصان و سخنرانان برجسته",
+        event2Title: "فستیوال موسیقی",
+        event2Desc: "فستیوال ۲ روزه موسیقی با حضور هنرمندان محلی و بین‌المللی",
+        event3Title: "ورکشاپ طراحی",
+        event3Desc: "ورکشاپ ۳ روزه طراحی گرافیک با آموزش عملی و پروژه‌های واقعی",
+        event4Title: "نمایشگاه هنری",
+        event4Desc: "نمایشگاه ۱ هفته‌ای هنر معاصر با آثار هنرمندان جوان",
+        event5Title: "سمینار کسب‌وکار",
+        event5Desc: "سمینار ۱ روزه کسب‌وکار با حضور کارآفرینان موفق",
+        event6Title: "پارتی شبانه",
+        event6Desc: "پارتی شبانه با موسیقی زنده و فضای شاد",
+        
         // Tours Page
         toursHero: "ماجراجویی‌های به‌یادماندنی",
         toursHeroSub: "با ما به زیباترین نقاط ایران و جهان سفر کنید",
@@ -193,6 +224,37 @@ const languages = {
         slide3Subtitle: "Integrated Services",
         slide3Description: "From tours and real estate to advertising and legal services, we are with you",
         
+        // Events Page
+        eventsHero: "Unforgettable Events",
+        eventsHeroSub: "Join the best events in the city with us",
+        ourEvents: "Featured Events",
+        eventsSubtitle: "The best event experiences at reasonable prices",
+        conference: "Conference",
+        festival: "Festival",
+        workshop: "Workshop",
+        exhibition: "Exhibition",
+        seminar: "Seminar",
+        party: "Party",
+        date: "Date",
+        time: "Time",
+        capacity: "Capacity",
+        bookTicket: "Buy Ticket",
+        loadMore: "View More Events",
+        
+        // Event Titles
+        event1Title: "Technology Conference",
+        event1Desc: "1-day technology conference with experts and prominent speakers",
+        event2Title: "Music Festival",
+        event2Desc: "2-day music festival with local and international artists",
+        event3Title: "Design Workshop",
+        event3Desc: "3-day graphic design workshop with practical training and real projects",
+        event4Title: "Art Exhibition",
+        event4Desc: "1-week contemporary art exhibition with works by young artists",
+        event5Title: "Business Seminar",
+        event5Desc: "1-day business seminar with successful entrepreneurs",
+        event6Title: "Night Party",
+        event6Desc: "Night party with live music and fun atmosphere",
+        
         // Tours Page
         toursHero: "Unforgettable Adventures",
         toursHeroSub: "Travel to the most beautiful places in Iran and the world with us",
@@ -343,6 +405,37 @@ const languages = {
         slide3Title: "Yeni Deneyim",
         slide3Subtitle: "Entegre Hizmetler",
         slide3Description: "Turlar ve emlaktan reklam ve hukuki hizmetlere kadar yanınızdayız",
+        
+        // Events Page
+        eventsHero: "Unutulmaz Etkinlikler",
+        eventsHeroSub: "Bizimle şehrin en iyi etkinliklerine katılın",
+        ourEvents: "Seçkin Etkinlikler",
+        eventsSubtitle: "En iyi etkinlik deneyimleri uygun fiyatlarla",
+        conference: "Konferans",
+        festival: "Festival",
+        workshop: "Atölye",
+        exhibition: "Sergi",
+        seminar: "Seminer",
+        party: "Parti",
+        date: "Tarih",
+        time: "Saat",
+        capacity: "Kapasite",
+        bookTicket: "Bilet Al",
+        loadMore: "Daha Fazla Etkinlik Görüntüle",
+        
+        // Event Titles
+        event1Title: "Teknoloji Konferansı",
+        event1Desc: "Uzmanlar ve önde gelen konuşmacılarla 1 günlük teknoloji konferansı",
+        event2Title: "Müzik Festivali",
+        event2Desc: "Yerel ve uluslararası sanatçılarla 2 günlük müzik festivali",
+        event3Title: "Tasarım Atölyesi",
+        event3Desc: "Pratik eğitim ve gerçek projelerle 3 günlük grafik tasarım atölyesi",
+        event4Title: "Sanat Sergisi",
+        event4Desc: "Genç sanatçıların eserleriyle 1 haftalık çağdaş sanat sergisi",
+        event5Title: "İş Semineri",
+        event5Desc: "Başarılı girişimcilerle 1 günlük iş semineri",
+        event6Title: "Gece Partisi",
+        event6Desc: "Canlı müzik ve eğlenceli atmosferle gece partisi",
         
         // Tours Page
         toursHero: "Unutulmaz Maceralar",
@@ -546,6 +639,37 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="phone"]').forEach(el => el.textContent = langData.phone);
     document.querySelectorAll('[data-translate="emailLabel"]').forEach(el => el.textContent = langData.emailLabel);
     document.querySelectorAll('[data-translate="email"]').forEach(el => el.textContent = langData.email);
+    
+    // Update events section
+    document.querySelectorAll('[data-translate="eventsHero"]').forEach(el => el.textContent = langData.eventsHero);
+    document.querySelectorAll('[data-translate="eventsHeroSub"]').forEach(el => el.textContent = langData.eventsHeroSub);
+    document.querySelectorAll('[data-translate="ourEvents"]').forEach(el => el.textContent = langData.ourEvents);
+    document.querySelectorAll('[data-translate="eventsSubtitle"]').forEach(el => el.textContent = langData.eventsSubtitle);
+    document.querySelectorAll('[data-translate="conference"]').forEach(el => el.textContent = langData.conference);
+    document.querySelectorAll('[data-translate="festival"]').forEach(el => el.textContent = langData.festival);
+    document.querySelectorAll('[data-translate="workshop"]').forEach(el => el.textContent = langData.workshop);
+    document.querySelectorAll('[data-translate="exhibition"]').forEach(el => el.textContent = langData.exhibition);
+    document.querySelectorAll('[data-translate="seminar"]').forEach(el => el.textContent = langData.seminar);
+    document.querySelectorAll('[data-translate="party"]').forEach(el => el.textContent = langData.party);
+    document.querySelectorAll('[data-translate="date"]').forEach(el => el.textContent = langData.date);
+    document.querySelectorAll('[data-translate="time"]').forEach(el => el.textContent = langData.time);
+    document.querySelectorAll('[data-translate="capacity"]').forEach(el => el.textContent = langData.capacity);
+    document.querySelectorAll('[data-translate="bookTicket"]').forEach(el => el.textContent = langData.bookTicket);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update event titles and descriptions
+    document.querySelectorAll('[data-translate="event1Title"]').forEach(el => el.textContent = langData.event1Title);
+    document.querySelectorAll('[data-translate="event1Desc"]').forEach(el => el.textContent = langData.event1Desc);
+    document.querySelectorAll('[data-translate="event2Title"]').forEach(el => el.textContent = langData.event2Title);
+    document.querySelectorAll('[data-translate="event2Desc"]').forEach(el => el.textContent = langData.event2Desc);
+    document.querySelectorAll('[data-translate="event3Title"]').forEach(el => el.textContent = langData.event3Title);
+    document.querySelectorAll('[data-translate="event3Desc"]').forEach(el => el.textContent = langData.event3Desc);
+    document.querySelectorAll('[data-translate="event4Title"]').forEach(el => el.textContent = langData.event4Title);
+    document.querySelectorAll('[data-translate="event4Desc"]').forEach(el => el.textContent = langData.event4Desc);
+    document.querySelectorAll('[data-translate="event5Title"]').forEach(el => el.textContent = langData.event5Title);
+    document.querySelectorAll('[data-translate="event5Desc"]').forEach(el => el.textContent = langData.event5Desc);
+    document.querySelectorAll('[data-translate="event6Title"]').forEach(el => el.textContent = langData.event6Title);
+    document.querySelectorAll('[data-translate="event6Desc"]').forEach(el => el.textContent = langData.event6Desc);
     
     // Update tours section
     document.querySelectorAll('[data-translate="toursHero"]').forEach(el => el.textContent = langData.toursHero);
