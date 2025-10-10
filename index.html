@@ -32,8 +32,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Navigation Menu Fix -->
+    <!-- Dark Theme Navigation Menu -->
     <style>
+        /* Main Navigation Container - Dark Theme */
         #navigation {
             display: flex !important;
             flex-wrap: nowrap !important;
@@ -42,43 +43,72 @@
             margin: 0 !important;
             padding: 0 !important;
             justify-content: center !important;
+            align-items: center !important;
+            gap: 1px !important;
+            background: rgba(0, 0, 0, 0.85) !important;
+            backdrop-filter: blur(20px) !important;
+            border-radius: 15px !important;
+            padding: 6px 8px !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
         }
         
         #navigation li {
             flex-shrink: 0 !important;
             white-space: nowrap !important;
-            margin: 0 8px !important;
+            margin: 0 !important;
             display: inline-block !important;
+            position: relative !important;
         }
         
         #navigation li a {
-            padding: 6px 10px !important;
+            padding: 10px 16px !important;
             font-size: 13px !important;
+            font-weight: 500 !important;
             white-space: nowrap !important;
             display: block !important;
             text-decoration: none !important;
-            color: #ff0000 !important;
-            font-weight: 500 !important;
+            color: #ffffff !important;
             transition: all 0.3s ease !important;
-            border-radius: 4px !important;
+            border-radius: 12px !important;
+            position: relative !important;
+            background: transparent !important;
+            border: 1px solid transparent !important;
         }
         
         #navigation li a:hover {
             color: #ffffff !important;
-            background-color: #ff0000 !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        #navigation li a:active {
+            transform: translateY(0) !important;
+        }
+        
+        /* Active page indicator */
+        #navigation li a.active {
+            background: rgba(255, 255, 255, 0.15) !important;
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
         }
         
         .main-menu {
             overflow: hidden !important;
+            width: 100% !important;
         }
         
         .main-menu nav {
             width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
         }
         
-        /* Hide horizontal scrollbar completely */
+        /* Hide scrollbars completely */
         #navigation::-webkit-scrollbar {
             display: none !important;
         }
@@ -88,42 +118,119 @@
             scrollbar-width: none !important;
         }
         
-        @media (min-width: 992px) and (max-width: 1200px) {
+        /* Responsive Design */
+        @media (max-width: 1400px) {
             #navigation li a {
-                padding: 6px 8px !important;
-                font-size: 13px !important;
-                color: #ff0000 !important;
-            }
-            
-            #navigation li a:hover {
-                color: #ffffff !important;
-                background-color: #ff0000 !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
-            }
-            
-            #navigation li {
-                margin: 0 4px !important;
+                padding: 8px 14px !important;
+                font-size: 12px !important;
             }
         }
         
-        @media (min-width: 1200px) {
-            #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 14px !important;
-                color: #ff0000 !important;
+        @media (max-width: 1200px) {
+            #navigation {
+                padding: 4px 6px !important;
+                border-radius: 12px !important;
             }
             
-            #navigation li a:hover {
-                color: #ffffff !important;
-                background-color: #ff0000 !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+            #navigation li a {
+                padding: 8px 12px !important;
+                font-size: 11px !important;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            #navigation {
+                flex-wrap: nowrap !important;
+                justify-content: flex-start !important;
+                padding: 4px !important;
+                border-radius: 10px !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+            }
+            
+            #navigation li a {
+                padding: 8px 10px !important;
+                font-size: 11px !important;
+                margin: 0 1px !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #navigation {
+                flex-direction: row !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                padding: 3px !important;
             }
             
             #navigation li {
-                margin: 0 8px !important;
+                flex-shrink: 0 !important;
+                margin: 0 !important;
             }
+            
+            #navigation li a {
+                padding: 8px 12px !important;
+                font-size: 11px !important;
+                white-space: nowrap !important;
+            }
+        }
+        
+        /* Smooth animations */
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        #navigation {
+            animation: fadeInUp 0.5s ease-out !important;
+        }
+        
+        /* Subtle glow effect */
+        #navigation:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8) !important;
+        }
+        
+        /* Ensure no horizontal scrollbar */
+        .main-menu nav {
+            overflow: hidden !important;
+        }
+        
+        /* Perfect fit for dark theme */
+        #navigation {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.8)) !important;
+        }
+        
+        /* Typography */
+        html[lang="fa"], body {
+            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        /* Brand tools (Logo + Language) */
+        .brand_tools {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 6px 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+        .brand_tools .logo img {
+            height: 38px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
         }
         
         /* Language Dropdown Styles */
@@ -193,6 +300,123 @@
             background-color: #ff6b35;
             color: white;
         }
+
+        /* Hero Carousel */
+        .hero_wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .hero-carousel .hero_slide {
+            position: relative;
+            height: 70vh;
+            min-height: 420px;
+        }
+        .hero-carousel .hero_slide img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            filter: brightness(0.55);
+        }
+        .hero_overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.6));
+        }
+        .hero-caption {
+            position: absolute;
+            top: 18%;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            padding: 0 16px;
+            opacity: 0;
+            transform: translateY(-24px);
+            transition: all .6s ease;
+            max-width: 960px;
+        }
+        .hero-caption.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-caption span {
+            display: inline-block;
+            font-size: 16px;
+            opacity: .9;
+        }
+        .hero-caption h3 {
+            margin: 10px 0 8px 0;
+            font-size: 44px;
+            line-height: 1.2;
+        }
+        .hero-caption p {
+            font-size: 16px;
+            opacity: .95;
+        }
+        .hero_progress {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background: rgba(255,255,255,.2);
+            z-index: 5;
+        }
+        .hero_progress span {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #ff6b35, #ff9f43);
+        }
+
+        /* Services with images */
+        .single_service {
+            background: #141414;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.06);
+        }
+        .single_service .service_image {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+        }
+        .single_service .service_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1.02);
+            transition: transform .6s ease;
+        }
+        .single_service:hover .service_image img {
+            transform: scale(1.06);
+        }
+        .single_service .service_content {
+            padding: 18px 18px 22px;
+        }
+        .single_service .service_content h4 {
+            margin-bottom: 8px;
+        }
+        .single_service .service_link {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            background: transparent;
+            color: #ff6b35;
+            border: 1px solid #ff6b35;
+            transition: all .25s ease;
+        }
+        .single_service .service_link:hover {
+            background: #ff6b35;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -209,13 +433,26 @@
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-3">
+                                <div class="brand_tools">
                                 <div class="logo">
                                     <a href="index.html">
                                         <img src="img/logo.png" alt="">
                                     </a>
                                 </div>
+                                    <div class="language_dropdown">
+                                        <button class="language_dropdown_btn" id="languageBtn">
+                                            <span id="currentLang">فا</span>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                        <div class="language_dropdown_content" id="languageDropdown">
+                                            <a href="#" class="language-option" data-lang="fa">فارسی</a>
+                                            <a href="#" class="language-option" data-lang="en">English</a>
+                                            <a href="#" class="language-option" data-lang="tr">Türkçe</a>
                             </div>
-                            <div class="col-xl-6 col-lg-6">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9">
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
@@ -226,24 +463,10 @@
                                             <li><a href="advertising.html" data-translate="advertising">تبلیغات</a></li>
                                             <li><a href="education.html" data-translate="education">تحصیلی</a></li>
                                             <li><a href="legal.html" data-translate="legal">امور حقوقی</a></li>
-                                            <li><a href="blog.html" data-translate="blog">وبلاگ</a></li>
                                             <li><a href="about.html" data-translate="about">درباره ما</a></li>
                                             <li><a href="contact.html" data-translate="contact">تماس</a></li>
                                         </ul>
                                     </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="language_dropdown">
-                                    <button class="language_dropdown_btn" id="languageBtn">
-                                        <span id="currentLang">فا</span>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </button>
-                                    <div class="language_dropdown_content" id="languageDropdown">
-                                        <a href="#" class="language-option" data-lang="fa">فارسی</a>
-                                        <a href="#" class="language-option" data-lang="en">English</a>
-                                        <a href="#" class="language-option" data-lang="tr">Türkçe</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -259,23 +482,34 @@
     <!-- header-end -->
 
     <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <div class="shape_1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <img src="img/shape/shape_1.svg" alt="">
+    <div class="slider_area hero_wrapper">
+        <div class="hero_progress"><span id="heroProgress"></span></div>
+        <div class="owl-carousel hero-carousel">
+            <div class="hero_slide">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt="slide-1">
+                <div class="hero_overlay"></div>
+                <div class="hero-caption" id="heroCaption1">
+                    <span data-translate="welcome">خوش آمدید</span>
+                    <h3 data-translate="mainTitle">کانون همیاری</h3>
+                    <p data-translate="subtitle">خدمات جامع برای رویدادها، تورها، املاک و خدمات حقوقی</p>
                             </div>
-                            <div class="shape_2 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
-                                <img src="img/shape/shape_2.svg" alt="">
                             </div>
-                            <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s" data-translate="welcome">خوش آمدید</span>
-                            <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s" data-translate="mainTitle">کانون همیاری</h3>
-                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s" data-translate="subtitle">خدمات جامع برای رویدادها، تورها، املاک و خدمات حقوقی</p>
+            <div class="hero_slide">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="slide-2">
+                <div class="hero_overlay"></div>
+                <div class="hero-caption" id="heroCaption2">
+                    <span>برنامه‌ریزی حرفه‌ای</span>
+                    <h3>رویدادهای به‌یادماندنی</h3>
+                    <p>کنفرانس، فستیوال، دورهمی؛ با تیم ما متفاوت برگزار کنید</p>
                         </div>
                     </div>
+            <div class="hero_slide">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop" alt="slide-3">
+                <div class="hero_overlay"></div>
+                <div class="hero-caption" id="heroCaption3">
+                    <span>تجربه‌ای نو</span>
+                    <h3>سرویس‌های یکپارچه</h3>
+                    <p>از تور و املاک تا تبلیغات و خدمات حقوقی در کنار شما هستیم</p>
                 </div>
             </div>
         </div>
@@ -297,73 +531,73 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div class="service_icon">
-                                    <i class="fa fa-calendar"></i>
+                                <div class="service_image">
+                                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop" alt="events">
                                 </div>
                                 <div class="service_content">
                                     <h4 data-translate="events">رویدادها</h4>
-                                    <p data-translate="eventsDesc">برگزاری انواع رویدادها، پارتی و دورهمی</p>
-                                    <a href="events.html" class="service_link" data-translate="learnMore">بیشتر بدانید</a>
+                                    <p>برگزاری حرفه‌ای انواع رویدادهای سازمانی، همایش‌ها و دورهمی‌ها با تیم اجرایی مجرب.</p>
+                                    <a href="events.html" class="service_link">ادامه مطلب</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div class="service_icon">
-                                    <i class="fa fa-plane"></i>
+                                <div class="service_image">
+                                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="tours">
                                 </div>
                                 <div class="service_content">
                                     <h4 data-translate="tours">تورها</h4>
-                                    <p data-translate="toursDesc">تورهای تفریحی و گردشگری</p>
-                                    <a href="tours.html" class="service_link" data-translate="learnMore">بیشتر بدانید</a>
+                                    <p>تورهای داخلی و خارجی، طبیعت‌گردی و ماجراجویی با بهترین لیدرها و برنامه‌ریزی.</p>
+                                    <a href="tours.html" class="service_link">ادامه مطلب</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                <div class="service_icon">
-                                    <i class="fa fa-home"></i>
+                                <div class="service_image">
+                                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="real-estate">
                                 </div>
                                 <div class="service_content">
                                     <h4 data-translate="realEstate">املاک</h4>
-                                    <p data-translate="realEstateDesc">خرید، فروش و اجاره املاک</p>
-                                    <a href="real-estate.html" class="service_link" data-translate="learnMore">بیشتر بدانید</a>
+                                    <p>مشاوره تخصصی خرید، فروش و اجاره ملک با پایگاه داده به‌روز و دقیق.</p>
+                                    <a href="real-estate.html" class="service_link">ادامه مطلب</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                                <div class="service_icon">
-                                    <i class="fa fa-bullhorn"></i>
+                                <div class="service_image">
+                                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="advertising">
                                 </div>
                                 <div class="service_content">
                                     <h4 data-translate="advertising">تبلیغات</h4>
-                                    <p data-translate="advertisingDesc">خدمات تبلیغاتی و بازاریابی</p>
-                                    <a href="advertising.html" class="service_link" data-translate="learnMore">بیشتر بدانید</a>
+                                    <p>کمپین‌های خلاقانه بازاریابی دیجیتال و آفلاین برای رشد برند شما.</p>
+                                    <a href="advertising.html" class="service_link">ادامه مطلب</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
-                                <div class="service_icon">
-                                    <i class="fa fa-graduation-cap"></i>
+                                <div class="service_image">
+                                    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="education">
                                 </div>
                                 <div class="service_content">
                                     <h4 data-translate="education">تحصیلی</h4>
-                                    <p data-translate="educationDesc">خدمات تحصیلی و آموزشی</p>
-                                    <a href="education.html" class="service_link" data-translate="learnMore">بیشتر بدانید</a>
+                                    <p>پذیرش دانشگاهی، اپلای، راهنمایی انتخاب رشته و مشاوره آموزشی تخصصی.</p>
+                                    <a href="education.html" class="service_link">ادامه مطلب</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single_service wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-                                <div class="service_icon">
-                                    <i class="fa fa-gavel"></i>
+                                <div class="service_image">
+                                    <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1200&auto=format&fit=crop" alt="legal">
                                 </div>
                                 <div class="service_content">
                                     <h4 data-translate="legal">امور حقوقی</h4>
-                                    <p data-translate="legalDesc">خدمات حقوقی و مشاوره</p>
-                                    <a href="legal.html" class="service_link" data-translate="learnMore">بیشتر بدانید</a>
+                                    <p>مشاوره حقوقی، قراردادها و پیگیری پرونده‌ها توسط تیم حقوقی مجرب.</p>
+                                    <a href="legal.html" class="service_link">ادامه مطلب</a>
                                 </div>
                             </div>
                         </div>
@@ -635,6 +869,48 @@
     <!-- Language Dropdown JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Hero carousel init (owl-carousel already included)
+            try {
+                const $hero = $('.hero-carousel');
+                const $progress = document.getElementById('heroProgress');
+                if ($hero.length) {
+                    $hero.on('changed.owl.carousel', function(event){
+                        // animate caption
+                        const current = event.item.index;
+                        const $slide = $(event.target).find('.owl-item').eq(current).find('.hero-caption');
+                        $('.hero-caption').removeClass('show');
+                        setTimeout(()=>{$slide.addClass('show');}, 50);
+                        // reset progress
+                        if ($progress) {
+                            $progress.style.transition = 'none';
+                            $progress.style.width = '0%';
+                            setTimeout(()=>{
+                                $progress.style.transition = 'width 3s linear';
+                                $progress.style.width = '100%';
+                            }, 50);
+                        }
+                    });
+                    $hero.owlCarousel({
+                        items: 1,
+                        loop: true,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: false,
+                        smartSpeed: 650,
+                        rtl: true,
+                        dots: false,
+                        nav: false
+                    });
+                    // initial progress
+                    if ($progress) {
+                        setTimeout(()=>{
+                            $progress.style.transition = 'width 3s linear';
+                            $progress.style.width = '100%';
+                        }, 200);
+                    }
+                }
+            } catch(err) { /* ignore */ }
+
             const languageBtn = document.getElementById('languageBtn');
             const languageDropdown = document.getElementById('languageDropdown');
             const currentLang = document.getElementById('currentLang');

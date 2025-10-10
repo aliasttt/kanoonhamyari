@@ -28,6 +28,169 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Navigation Menu Fix -->
+    <style>
+        #navigation {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            white-space: nowrap !important;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            justify-content: center !important;
+        }
+        
+        #navigation li {
+            flex-shrink: 0 !important;
+            white-space: nowrap !important;
+            margin: 0 8px !important;
+            display: inline-block !important;
+        }
+        
+        #navigation li a {
+            padding: 6px 10px !important;
+            font-size: 13px !important;
+            white-space: nowrap !important;
+            display: block !important;
+            text-decoration: none !important;
+            color: #ff0000 !important;
+            font-weight: 500 !important;
+            transition: all 0.3s ease !important;
+            border-radius: 4px !important;
+        }
+        
+        #navigation li a:hover {
+            color: #ffffff !important;
+            background-color: #ff0000 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+        }
+        
+        .main-menu {
+            overflow: hidden !important;
+        }
+        
+        .main-menu nav {
+            width: 100% !important;
+        }
+        
+        /* Hide horizontal scrollbar completely */
+        #navigation::-webkit-scrollbar {
+            display: none !important;
+        }
+        
+        #navigation {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+        
+        @media (min-width: 992px) and (max-width: 1200px) {
+            #navigation li a {
+                padding: 6px 8px !important;
+                font-size: 13px !important;
+                color: #ff0000 !important;
+            }
+            
+            #navigation li a:hover {
+                color: #ffffff !important;
+                background-color: #ff0000 !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+            }
+            
+            #navigation li {
+                margin: 0 4px !important;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            #navigation li a {
+                padding: 8px 12px !important;
+                font-size: 14px !important;
+                color: #ff0000 !important;
+            }
+            
+            #navigation li a:hover {
+                color: #ffffff !important;
+                background-color: #ff0000 !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+            }
+            
+            #navigation li {
+                margin: 0 8px !important;
+            }
+        }
+        
+        /* Language Dropdown Styles */
+        .language_dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .language_dropdown_btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .language_dropdown_btn:hover {
+            background: #e55a2b;
+        }
+        
+        .language_dropdown_btn i {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .language_dropdown_btn.active i {
+            transform: rotate(180deg);
+        }
+        
+        .language_dropdown_content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 5px;
+            top: 100%;
+            right: 0;
+            margin-top: 5px;
+        }
+        
+        .language_dropdown_content.show {
+            display: block;
+        }
+        
+        .language-option {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .language-option:hover {
+            background-color: #f1f1f1;
+            color: #ff6b35;
+        }
+        
+        .language-option.active {
+            background-color: #ff6b35;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,16 +219,23 @@
                                             <li><a href="advertising.html" data-translate="advertising">تبلیغات</a></li>
                                             <li><a href="education.html" data-translate="education">تحصیلی</a></li>
                                             <li><a href="legal.html" data-translate="legal">امور حقوقی</a></li>
+                                            <li><a href="about.html" data-translate="about">درباره ما</a></li>
                                             <li><a href="contact.html" data-translate="contact">تماس</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="language_switcher" style="margin-bottom: 10px;">
-                                    <button class="language-switcher" data-lang="fa" style="background: #ff6b35; color: white; border: none; padding: 5px 10px; margin: 2px; border-radius: 3px; cursor: pointer;">فا</button>
-                                    <button class="language-switcher" data-lang="en" style="background: #ff6b35; color: white; border: none; padding: 5px 10px; margin: 2px; border-radius: 3px; cursor: pointer;">EN</button>
-                                    <button class="language-switcher" data-lang="tr" style="background: #ff6b35; color: white; border: none; padding: 5px 10px; margin: 2px; border-radius: 3px; cursor: pointer;">TR</button>
+                                <div class="language_dropdown">
+                                    <button class="language_dropdown_btn" id="languageBtn">
+                                        <span id="currentLang">فا</span>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </button>
+                                    <div class="language_dropdown_content" id="languageDropdown">
+                                        <a href="#" class="language-option" data-lang="fa">فارسی</a>
+                                        <a href="#" class="language-option" data-lang="en">English</a>
+                                        <a href="#" class="language-option" data-lang="tr">Türkçe</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -246,7 +416,6 @@
                                         <a href="#" data-translate="termsOfService">شرایط استفاده</a>
                                         <a href="#" data-translate="sitemap">نقشه سایت</a>
                                         <a href="#" data-translate="faq">سوالات متداول</a>
-                                        <a href="#" data-translate="blog">وبلاگ</a>
                                     </div>
                                 </div>
                             </div>
@@ -285,6 +454,62 @@
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
     <script src="js/languages.js"></script>
+    
+    <!-- Language Dropdown JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageBtn = document.getElementById('languageBtn');
+            const languageDropdown = document.getElementById('languageDropdown');
+            const currentLang = document.getElementById('currentLang');
+            const languageOptions = document.querySelectorAll('.language-option');
+            
+            // Toggle dropdown on click
+            languageBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('show');
+                languageBtn.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                    languageDropdown.classList.remove('show');
+                    languageBtn.classList.remove('active');
+                }
+            });
+            
+            // Handle language selection
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    const selectedText = this.textContent;
+                    
+                    // Update current language display
+                    currentLang.textContent = selectedLang === 'fa' ? 'فا' : selectedLang.toUpperCase();
+                    
+                    // Update active state
+                    languageOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Close dropdown
+                    languageDropdown.classList.remove('show');
+                    languageBtn.classList.remove('active');
+                    
+                    // Trigger language change (if you have language switching functionality)
+                    if (typeof switchLanguage === 'function') {
+                        switchLanguage(selectedLang);
+                    }
+                });
+            });
+            
+            // Set initial active language
+            const activeOption = document.querySelector('.language-option[data-lang="fa"]');
+            if (activeOption) {
+                activeOption.classList.add('active');
+            }
+        });
+    </script>
 
     <!-- WhatsApp Fixed Button -->
     <div class="whatsapp-fixed">
@@ -358,3 +583,363 @@
 </body>
 
 </html>
+
+    <!-- footer_start -->
+
+    <footer class="footer">
+
+        <div class="copy-right_text">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-xl-12">
+
+                        <div class="footer_content">
+
+                            <div class="row">
+
+                                <div class="col-lg-4 col-md-6">
+
+                                    <div class="footer_widget">
+
+                                        <h4 data-translate="aboutUs">درباره ما</h4>
+
+                                        <p data-translate="aboutDesc">کانون همیاری ارائه‌دهنده خدمات جامع در زمینه رویدادها، تورها، املاک، تبلیغات، تحصیلی و امور حقوقی</p>
+
+                                        <div class="social_links">
+
+                                            <a href="#" class="social_link"><i class="fa fa-facebook"></i></a>
+
+                                            <a href="#" class="social_link"><i class="fa fa-twitter"></i></a>
+
+                                            <a href="#" class="social_link"><i class="fa fa-instagram"></i></a>
+
+                                            <a href="#" class="social_link"><i class="fa fa-linkedin"></i></a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-6">
+
+                                    <div class="footer_widget">
+
+                                        <h4 data-translate="quickLinks">لینک‌های سریع</h4>
+
+                                        <ul class="footer_links">
+
+                                            <li><a href="index.html" data-translate="home">خانه</a></li>
+
+                                            <li><a href="events.html" data-translate="events">رویدادها</a></li>
+
+                                            <li><a href="tours.html" data-translate="tours">تورها</a></li>
+
+                                            <li><a href="real-estate.html" data-translate="realEstate">املاک</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-2 col-md-6">
+
+                                    <div class="footer_widget">
+
+                                        <h4 data-translate="services">خدمات</h4>
+
+                                        <ul class="footer_links">
+
+                                            <li><a href="advertising.html" data-translate="advertising">تبلیغات</a></li>
+
+                                            <li><a href="education.html" data-translate="education">تحصیلی</a></li>
+
+                                            <li><a href="legal.html" data-translate="legal">امور حقوقی</a></li>
+
+                                            <li><a href="contact.html" data-translate="contact">تماس</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+
+                                    <div class="footer_widget">
+
+                                        <h4 data-translate="contactInfo">اطلاعات تماس</h4>
+
+                                        <div class="contact_info">
+
+                                            <p><i class="fa fa-map-marker"></i> <span data-translate="address">تهران، خیابان ولیعصر، پلاک ۱۲۳</span></p>
+
+                                            <p><i class="fa fa-phone"></i> <span data-translate="phone">+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸</span></p>
+
+                                            <p><i class="fa fa-envelope"></i> <span data-translate="email">info@kanoonhamyari.com</span></p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="footer_bottom">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-6">
+
+                                    <p class="copyright_text" data-translate="copyright">
+
+                                        تمام حقوق محفوظ است © <script>document.write(new Date().getFullYear());</script> کانون همیاری
+
+                                    </p>
+
+                                </div>
+
+                                <div class="col-lg-6">
+
+                                    <div class="footer_bottom_links">
+
+                                        <a href="#" data-translate="privacyPolicy">حریم خصوصی</a>
+
+                                        <a href="#" data-translate="termsOfService">شرایط استفاده</a>
+
+                                        <a href="#" data-translate="sitemap">نقشه سایت</a>
+
+                                        <a href="#" data-translate="faq">سوالات متداول</a>
+
+                                        <a href="#" data-translate="blog">وبلاگ</a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- footer_end -->
+
+
+
+    <!-- JS here -->
+
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script src="js/ajax-form.js"></script>
+
+    <script src="js/waypoints.min.js"></script>
+
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+    <script src="js/scrollIt.js"></script>
+
+    <script src="js/jquery.scrollUp.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/gijgo.min.js"></script>
+
+    <script src="js/nice-select.min.js"></script>
+
+    <script src="js/jquery.slicknav.min.js"></script>
+
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/tilt.jquery.js"></script>
+
+    <script src="js/plugins.js"></script>
+
+    <script src="js/contact.js"></script>
+
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="js/jquery.form.js"></script>
+
+    <script src="js/jquery.validate.min.js"></script>
+
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="js/languages.js"></script>
+
+
+
+    <!-- WhatsApp Fixed Button -->
+
+    <div class="whatsapp-fixed">
+
+        <a href="https://wa.me/9892112345678" target="_blank" class="whatsapp-link">
+
+            <i class="fa fa-whatsapp"></i>
+
+        </a>
+
+    </div>
+
+
+
+    <style>
+
+        .whatsapp-fixed {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            left: 20px;
+
+            z-index: 9999;
+
+        }
+
+        
+
+        .whatsapp-link {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 60px;
+
+            height: 60px;
+
+            background-color: #25D366;
+
+            border-radius: 50%;
+
+            color: white;
+
+            text-decoration: none;
+
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+
+            transition: all 0.3s ease;
+
+            animation: pulse 2s infinite;
+
+        }
+
+        
+
+        .whatsapp-link:hover {
+
+            background-color: #128C7E;
+
+            transform: scale(1.1);
+
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        
+
+        .whatsapp-link i {
+
+            font-size: 30px;
+
+        }
+
+        
+
+        @keyframes pulse {
+
+            0% {
+
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+
+            }
+
+            70% {
+
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+
+            }
+
+            100% {
+
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+
+            }
+
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            .whatsapp-fixed {
+
+                bottom: 15px;
+
+                left: 15px;
+
+            }
+
+            
+
+            .whatsapp-link {
+
+                width: 50px;
+
+                height: 50px;
+
+            }
+
+            
+
+            .whatsapp-link i {
+
+                font-size: 24px;
+
+            }
+
+        }
+
+    </style>
+
+</body>
+
+
+
+</html>
+
+

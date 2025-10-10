@@ -51,24 +51,15 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="{% url 'home' %}">home</a></li>
-                                            <li><a href="{% url 'performer' %}">Performer</a></li>
-                                            
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="{% url 'about' %}">about</a></li>
-                                                    <li><a href="{% url 'program' %}">Program</a></li>
-                                                    <li><a href="{% url 'venue' %}">Venue</a></li>
-                                                    <li><a href="{% url 'elements' %}">elements</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="{% url 'blog' %}">blog</a></li>
-                                                    <li><a href="{% url 'single_blog' %}">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                            <li><a href="{% url 'home' %}" data-translate="home">خانه</a></li>
+                                            <li><a href="{% url 'events' %}" data-translate="events">رویدادها</a></li>
+                                            <li><a href="{% url 'tours' %}" data-translate="tours">تورها</a></li>
+                                            <li><a href="{% url 'real_estate' %}" data-translate="realEstate">املاک</a></li>
+                                            <li><a href="{% url 'advertising' %}" data-translate="advertising">تبلیغات</a></li>
+                                            <li><a href="{% url 'education' %}" data-translate="education">تحصیلی</a></li>
+                                            <li><a href="{% url 'legal' %}" data-translate="legal">امور حقوقی</a></li>
+                                            <li><a href="{% url 'about' %}" data-translate="about">درباره ما</a></li>
+                                            <li><a href="{% url 'contact' %}" data-translate="contact">تماس</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -139,31 +130,75 @@
     <!-- brand_area_end  -->
     <!-- footer_start  -->
     <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-8">
-                        <div class="footer_widget">
-                            <div class="address_details text-center">
-                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">12 Feb, 2020</h4>
-                                <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Green Avenue, New York</h3>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">The event regularly attracts a diverse range of attendees from around the world.</p>
-                                <a href="#" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Buy Tickets</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="copy-right_text">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
-                        <p class="copy_right text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
+                        <div class="footer_content">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="footer_widget">
+                                        <h4 data-translate="aboutUs">درباره ما</h4>
+                                        <p data-translate="aboutDesc">کانون همیاری ارائه‌دهنده خدمات جامع در زمینه رویدادها، تورها، املاک، تبلیغات، تحصیلی و امور حقوقی</p>
+                                        <div class="social_links">
+                                            <a href="#" class="social_link"><i class="fa fa-facebook"></i></a>
+                                            <a href="#" class="social_link"><i class="fa fa-twitter"></i></a>
+                                            <a href="#" class="social_link"><i class="fa fa-instagram"></i></a>
+                                            <a href="#" class="social_link"><i class="fa fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <div class="footer_widget">
+                                        <h4 data-translate="quickLinks">لینک‌های سریع</h4>
+                                        <ul class="footer_links">
+                                            <li><a href="{% url 'home' %}" data-translate="home">خانه</a></li>
+                                            <li><a href="{% url 'events' %}" data-translate="events">رویدادها</a></li>
+                                            <li><a href="{% url 'tours' %}" data-translate="tours">تورها</a></li>
+                                            <li><a href="{% url 'real_estate' %}" data-translate="realEstate">املاک</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <div class="footer_widget">
+                                        <h4 data-translate="services">خدمات</h4>
+                                        <ul class="footer_links">
+                                            <li><a href="{% url 'advertising' %}" data-translate="advertising">تبلیغات</a></li>
+                                            <li><a href="{% url 'education' %}" data-translate="education">تحصیلی</a></li>
+                                            <li><a href="{% url 'legal' %}" data-translate="legal">امور حقوقی</a></li>
+                                            <li><a href="{% url 'contact' %}" data-translate="contact">تماس</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="footer_widget">
+                                        <h4 data-translate="contactInfo">اطلاعات تماس</h4>
+                                        <div class="contact_info">
+                                            <p><i class="fa fa-map-marker"></i> <span data-translate="address">تهران، خیابان ولیعصر، پلاک ۱۲۳</span></p>
+                                            <p><i class="fa fa-phone"></i> <span data-translate="phone">+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸</span></p>
+                                            <p><i class="fa fa-envelope"></i> <span data-translate="email">info@kanoonhamyari.com</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_bottom">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <p class="copyright_text" data-translate="copyright">
+                                        تمام حقوق محفوظ است © <script>document.write(new Date().getFullYear());</script> کانون همیاری
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="footer_bottom_links">
+                                        <a href="#" data-translate="privacyPolicy">حریم خصوصی</a>
+                                        <a href="#" data-translate="termsOfService">شرایط استفاده</a>
+                                        <a href="#" data-translate="sitemap">نقشه سایت</a>
+                                        <a href="#" data-translate="faq">سوالات متداول</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

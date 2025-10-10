@@ -1455,3 +1455,106 @@ body.rtl .angraweb_link {
         padding: 30px 20px;
     }
 }
+
+/* === Centralized Navigation Enhancements (RTL only) === */
+body.rtl .main-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+body.rtl .main-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+
+body.rtl .main-menu ul li a {
+    display: block;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #ff6b35;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+body.rtl .main-menu ul li a:hover {
+    background-color: #ff6b35;
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Submenu alignment (RTL) */
+body.rtl .main-menu ul li .submenu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+
+/* === Language Dropdown (centralized) === */
+.language_dropdown { position: relative; display: inline-block; }
+.language_dropdown_btn {
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.language_dropdown_btn:hover { background: #e55a2b; }
+.language_dropdown_btn i { font-size: 12px; transition: transform 0.3s ease; }
+.language_dropdown_btn.active i { transform: rotate(180deg); }
+.language_dropdown_content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 140px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    z-index: 1000;
+    overflow: hidden;
+}
+.language_dropdown_content.show { display: block; }
+.language-option {
+    display: block;
+    padding: 10px 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.language-option:hover { background: #f5f5f5; color: #ff6b35; }
+.language-option.active { background: #ff6b35; color: #fff; }
+
+/* === WhatsApp Floating Button (centralized) === */
+.whatsapp-fixed { position: fixed; bottom: 20px; left: 20px; z-index: 9999; }
+.whatsapp-link {
+    display: flex; align-items: center; justify-content: center;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: #25D366; color: #fff; text-decoration: none;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s ease; animation: pulse 2s infinite;
+}
+.whatsapp-link:hover { background: #128C7E; transform: scale(1.06); color: #fff; }
+.whatsapp-link i { font-size: 28px; }
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65); }
+    70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-fixed { bottom: 15px; left: 15px; }
+    .whatsapp-link { width: 52px; height: 52px; }
+    .whatsapp-link i { font-size: 24px; }
+}
