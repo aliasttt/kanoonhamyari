@@ -42,6 +42,48 @@ const languages = {
         slide3Subtitle: "سرویس‌های یکپارچه",
         slide3Description: "از تور و املاک تا تبلیغات و خدمات حقوقی در کنار شما هستیم",
         
+        // Education Page
+        educationHero: "آموزش و تحصیل با کیفیت",
+        educationHeroSub: "با ما آینده تحصیلی خود را بسازید",
+        ourEducation: "دوره‌های آموزشی ما",
+        educationSubtitle: "بهترین تجربه‌های آموزشی با قیمت‌های مناسب",
+        consultation: "مشاوره",
+        private: "خصوصی",
+        exam: "کنکور",
+        online: "آنلاین",
+        language: "زبان",
+        skills: "مهارت",
+        category: "دسته‌بندی",
+        expert: "متخصص",
+        subjects: "دروس",
+        teacher: "استاد",
+        flexible: "انعطاف‌پذیر",
+        success: "موفقیت",
+        access: "دسترسی",
+        recorded: "ضبط شده",
+        certificate: "گواهی",
+        languages: "زبان‌ها",
+        native: "بومی",
+        softSkills: "مهارت‌های نرم",
+        career: "شغلی",
+        group: "گروهی",
+        enroll: "ثبت‌نام",
+        loadMore: "مشاهده دوره‌های بیشتر",
+        
+        // Education Course Titles
+        education1Title: "مشاوره تحصیلی",
+        education1Desc: "مشاوره و راهنمایی تحصیلی برای انتخاب رشته و مسیر تحصیلی",
+        education2Title: "آموزش خصوصی",
+        education2Desc: "آموزش خصوصی دروس مختلف با اساتید مجرب",
+        education3Title: "آمادگی کنکور",
+        education3Desc: "دوره‌های آمادگی کنکور با برنامه‌ریزی دقیق و تست‌های استاندارد",
+        education4Title: "دوره‌های آنلاین",
+        education4Desc: "دوره‌های آموزشی آنلاین با کیفیت بالا و دسترسی ۲۴ ساعته",
+        education5Title: "زبان‌های خارجی",
+        education5Desc: "آموزش زبان‌های خارجی با متدهای جدید و اساتید بومی",
+        education6Title: "مهارت‌های نرم",
+        education6Desc: "آموزش مهارت‌های نرم و توسعه فردی برای موفقیت شغلی",
+        
         // Advertising Page
         advertisingHero: "تبلیغات خلاقانه و مؤثر",
         advertisingHeroSub: "با ما برند خود را به اوج برسانید",
@@ -269,6 +311,48 @@ const languages = {
         slide3Subtitle: "Integrated Services",
         slide3Description: "From tours and real estate to advertising and legal services, we are with you",
         
+        // Education Page
+        educationHero: "Quality Education and Learning",
+        educationHeroSub: "Build your educational future with us",
+        ourEducation: "Our Educational Courses",
+        educationSubtitle: "The best educational experiences at reasonable prices",
+        consultation: "Consultation",
+        private: "Private",
+        exam: "Exam",
+        online: "Online",
+        language: "Language",
+        skills: "Skills",
+        category: "Category",
+        expert: "Expert",
+        subjects: "Subjects",
+        teacher: "Teacher",
+        flexible: "Flexible",
+        success: "Success",
+        access: "Access",
+        recorded: "Recorded",
+        certificate: "Certificate",
+        languages: "Languages",
+        native: "Native",
+        softSkills: "Soft Skills",
+        career: "Career",
+        group: "Group",
+        enroll: "Enroll",
+        loadMore: "View More Courses",
+        
+        // Education Course Titles
+        education1Title: "Educational Counseling",
+        education1Desc: "Educational counseling and guidance for choosing field and educational path",
+        education2Title: "Private Tutoring",
+        education2Desc: "Private tutoring in various subjects with experienced teachers",
+        education3Title: "Exam Preparation",
+        education3Desc: "Exam preparation courses with precise planning and standard tests",
+        education4Title: "Online Courses",
+        education4Desc: "High-quality online educational courses with 24/7 access",
+        education5Title: "Foreign Languages",
+        education5Desc: "Foreign language learning with new methods and native teachers",
+        education6Title: "Soft Skills",
+        education6Desc: "Soft skills training and personal development for career success",
+        
         // Advertising Page
         advertisingHero: "Creative and Effective Advertising",
         advertisingHeroSub: "Take your brand to the top with us",
@@ -495,6 +579,48 @@ const languages = {
         slide3Title: "Yeni Deneyim",
         slide3Subtitle: "Entegre Hizmetler",
         slide3Description: "Turlar ve emlaktan reklam ve hukuki hizmetlere kadar yanınızdayız",
+        
+        // Education Page
+        educationHero: "Kaliteli Eğitim ve Öğrenim",
+        educationHeroSub: "Bizimle eğitim geleceğinizi inşa edin",
+        ourEducation: "Eğitim Kurslarımız",
+        educationSubtitle: "En iyi eğitim deneyimleri uygun fiyatlarla",
+        consultation: "Danışmanlık",
+        private: "Özel",
+        exam: "Sınav",
+        online: "Online",
+        language: "Dil",
+        skills: "Beceriler",
+        category: "Kategori",
+        expert: "Uzman",
+        subjects: "Dersler",
+        teacher: "Öğretmen",
+        flexible: "Esnek",
+        success: "Başarı",
+        access: "Erişim",
+        recorded: "Kayıtlı",
+        certificate: "Sertifika",
+        languages: "Diller",
+        native: "Yerli",
+        softSkills: "Yumuşak Beceriler",
+        career: "Kariyer",
+        group: "Grup",
+        enroll: "Kayıt Ol",
+        loadMore: "Daha Fazla Kurs Görüntüle",
+        
+        // Education Course Titles
+        education1Title: "Eğitim Danışmanlığı",
+        education1Desc: "Alan seçimi ve eğitim yolu için eğitim danışmanlığı ve rehberlik",
+        education2Title: "Özel Ders",
+        education2Desc: "Deneyimli öğretmenlerle çeşitli konularda özel ders",
+        education3Title: "Sınav Hazırlığı",
+        education3Desc: "Hassas planlama ve standart testlerle sınav hazırlık kursları",
+        education4Title: "Online Kurslar",
+        education4Desc: "24/7 erişimle yüksek kaliteli online eğitim kursları",
+        education5Title: "Yabancı Diller",
+        education5Desc: "Yeni yöntemler ve yerli öğretmenlerle yabancı dil öğrenimi",
+        education6Title: "Yumuşak Beceriler",
+        education6Desc: "Kariyer başarısı için yumuşak beceri eğitimi ve kişisel gelişim",
         
         // Advertising Page
         advertisingHero: "Yaratıcı ve Etkili Reklamcılık",
@@ -774,6 +900,48 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="phone"]').forEach(el => el.textContent = langData.phone);
     document.querySelectorAll('[data-translate="emailLabel"]').forEach(el => el.textContent = langData.emailLabel);
     document.querySelectorAll('[data-translate="email"]').forEach(el => el.textContent = langData.email);
+    
+    // Update education section
+    document.querySelectorAll('[data-translate="educationHero"]').forEach(el => el.textContent = langData.educationHero);
+    document.querySelectorAll('[data-translate="educationHeroSub"]').forEach(el => el.textContent = langData.educationHeroSub);
+    document.querySelectorAll('[data-translate="ourEducation"]').forEach(el => el.textContent = langData.ourEducation);
+    document.querySelectorAll('[data-translate="educationSubtitle"]').forEach(el => el.textContent = langData.educationSubtitle);
+    document.querySelectorAll('[data-translate="consultation"]').forEach(el => el.textContent = langData.consultation);
+    document.querySelectorAll('[data-translate="private"]').forEach(el => el.textContent = langData.private);
+    document.querySelectorAll('[data-translate="exam"]').forEach(el => el.textContent = langData.exam);
+    document.querySelectorAll('[data-translate="online"]').forEach(el => el.textContent = langData.online);
+    document.querySelectorAll('[data-translate="language"]').forEach(el => el.textContent = langData.language);
+    document.querySelectorAll('[data-translate="skills"]').forEach(el => el.textContent = langData.skills);
+    document.querySelectorAll('[data-translate="category"]').forEach(el => el.textContent = langData.category);
+    document.querySelectorAll('[data-translate="expert"]').forEach(el => el.textContent = langData.expert);
+    document.querySelectorAll('[data-translate="subjects"]').forEach(el => el.textContent = langData.subjects);
+    document.querySelectorAll('[data-translate="teacher"]').forEach(el => el.textContent = langData.teacher);
+    document.querySelectorAll('[data-translate="flexible"]').forEach(el => el.textContent = langData.flexible);
+    document.querySelectorAll('[data-translate="success"]').forEach(el => el.textContent = langData.success);
+    document.querySelectorAll('[data-translate="access"]').forEach(el => el.textContent = langData.access);
+    document.querySelectorAll('[data-translate="recorded"]').forEach(el => el.textContent = langData.recorded);
+    document.querySelectorAll('[data-translate="certificate"]').forEach(el => el.textContent = langData.certificate);
+    document.querySelectorAll('[data-translate="languages"]').forEach(el => el.textContent = langData.languages);
+    document.querySelectorAll('[data-translate="native"]').forEach(el => el.textContent = langData.native);
+    document.querySelectorAll('[data-translate="softSkills"]').forEach(el => el.textContent = langData.softSkills);
+    document.querySelectorAll('[data-translate="career"]').forEach(el => el.textContent = langData.career);
+    document.querySelectorAll('[data-translate="group"]').forEach(el => el.textContent = langData.group);
+    document.querySelectorAll('[data-translate="enroll"]').forEach(el => el.textContent = langData.enroll);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update education course titles and descriptions
+    document.querySelectorAll('[data-translate="education1Title"]').forEach(el => el.textContent = langData.education1Title);
+    document.querySelectorAll('[data-translate="education1Desc"]').forEach(el => el.textContent = langData.education1Desc);
+    document.querySelectorAll('[data-translate="education2Title"]').forEach(el => el.textContent = langData.education2Title);
+    document.querySelectorAll('[data-translate="education2Desc"]').forEach(el => el.textContent = langData.education2Desc);
+    document.querySelectorAll('[data-translate="education3Title"]').forEach(el => el.textContent = langData.education3Title);
+    document.querySelectorAll('[data-translate="education3Desc"]').forEach(el => el.textContent = langData.education3Desc);
+    document.querySelectorAll('[data-translate="education4Title"]').forEach(el => el.textContent = langData.education4Title);
+    document.querySelectorAll('[data-translate="education4Desc"]').forEach(el => el.textContent = langData.education4Desc);
+    document.querySelectorAll('[data-translate="education5Title"]').forEach(el => el.textContent = langData.education5Title);
+    document.querySelectorAll('[data-translate="education5Desc"]').forEach(el => el.textContent = langData.education5Desc);
+    document.querySelectorAll('[data-translate="education6Title"]').forEach(el => el.textContent = langData.education6Title);
+    document.querySelectorAll('[data-translate="education6Desc"]').forEach(el => el.textContent = langData.education6Desc);
     
     // Update advertising section
     document.querySelectorAll('[data-translate="advertisingHero"]').forEach(el => el.textContent = langData.advertisingHero);

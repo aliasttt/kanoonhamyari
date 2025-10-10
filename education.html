@@ -28,6 +28,487 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Modern Education Page Styles -->
+    <style>
+        /* Modern Education Page Styles */
+        .education_hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .education_hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000&auto=format&fit=crop') center/cover;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        
+        .hero_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+        }
+        
+        .hero_content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero_title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 0 0 30px rgba(76, 175, 80, 0.5);
+        }
+        
+        .hero_subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 300;
+        }
+        
+        .hero_search {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .search_box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .search_input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 18px 25px;
+            color: white;
+            font-size: 18px;
+            outline: none;
+            font-weight: 500;
+        }
+        
+        .search_input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .search_btn {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .search_btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.5);
+        }
+        
+        /* Education Section */
+        .education_section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            position: relative;
+        }
+        
+        .education_section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2000&auto=format&fit=crop') center/cover;
+            opacity: 0.05;
+            z-index: 1;
+        }
+        
+        .education_section > .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section_subtitle {
+            color: #888;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+        
+        /* Education Grid */
+        .education_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        /* Education Cards */
+        .education_card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .education_card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+            border-color: rgba(76, 175, 80, 0.4);
+        }
+        
+        .education_image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .education_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .education_card:hover .education_image img {
+            transform: scale(1.1);
+        }
+        
+        .education_badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .education_badge.consultation {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        .education_badge.private {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            box-shadow: 0 5px 20px rgba(33, 150, 243, 0.4);
+        }
+        
+        .education_badge.exam {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 152, 0, 0.4);
+        }
+        
+        .education_badge.online {
+            background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+            color: white;
+            box-shadow: 0 5px 20px rgba(156, 39, 176, 0.4);
+        }
+        
+        .education_badge.language {
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            color: white;
+            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.4);
+        }
+        
+        .education_badge.skills {
+            background: linear-gradient(135deg, #607D8B, #455A64);
+            color: white;
+            box-shadow: 0 5px 20px rgba(96, 125, 139, 0.4);
+        }
+        
+        .education_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .education_card:hover .education_overlay {
+            opacity: 1;
+        }
+        
+        .overlay_actions {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .action_btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 18px;
+        }
+        
+        .action_btn:hover {
+            background: #4CAF50;
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.5);
+        }
+        
+        .education_content {
+            padding: 30px;
+        }
+        
+        .education_header {
+            margin-bottom: 20px;
+        }
+        
+        .education_title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .education_category {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .education_category i {
+            margin-left: 8px;
+            color: #4CAF50;
+            font-size: 16px;
+        }
+        
+        .education_description {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        
+        .education_features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .feature_item {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .feature_item i {
+            margin-left: 8px;
+            color: #4CAF50;
+            width: 18px;
+            font-size: 16px;
+        }
+        
+        .education_footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .education_price {
+            flex: 1;
+        }
+        
+        .price_amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        }
+        
+        .education_btn {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .education_btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .load_more_btn {
+            background: transparent;
+            color: #4CAF50;
+            border: 3px solid #4CAF50;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .load_more_btn:hover {
+            background: #4CAF50;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(76, 175, 80, 0.4);
+            text-decoration: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .education_card:hover {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .education_grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                gap: 35px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero_title {
+                font-size: 3rem;
+            }
+            
+            .hero_subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .education_grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .education_card {
+                margin: 0 15px;
+            }
+            
+            .education_footer {
+                flex-direction: column;
+                gap: 20px;
+                align-items: stretch;
+            }
+            
+            .education_btn {
+                text-align: center;
+                padding: 18px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero_title {
+                font-size: 2.5rem;
+            }
+            
+            .search_box {
+                flex-direction: column;
+                border-radius: 20px;
+            }
+            
+            .search_btn {
+                border-radius: 20px;
+                margin-top: 15px;
+            }
+        }
+    </style>
+    
     <!-- Dark Theme Navigation Menu with FOUC Prevention -->
     <style>
         /* Prevent FOUC - Hide content until styles are loaded */
@@ -536,99 +1017,325 @@
     </header>
     <!-- header-end -->
 
-    <!-- page_title_start -->
-    <div class="page_title_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page_title text-center">
-                        <h1 data-translate="education">تحصیلی</h1>
-                        <p data-translate="educationSubtitle">خدمات تحصیلی و آموزشی</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page_title_end -->
 
     <!-- education_area_start -->
     <div class="education_area black_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title text-center mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourCourses">دوره‌های آموزشی ما</h3>
+        <div class="container-fluid px-0">
+            <!-- Hero Section -->
+            <div class="education_hero">
+                <div class="hero_overlay"></div>
+                <div class="hero_content">
+                    <h1 class="hero_title" data-translate="educationHero">آموزش و تحصیل با کیفیت</h1>
+                    <p class="hero_subtitle" data-translate="educationHeroSub">با ما آینده تحصیلی خود را بسازید</p>
+                    <div class="hero_search">
+                        <div class="search_box">
+                            <input type="text" placeholder="جستجو در دوره‌های آموزشی..." class="search_input">
+                            <button class="search_btn"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_course wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <div class="course_image">
-                            <img src="img/courses/1.jpg" alt="دوره زبان انگلیسی">
-                            <div class="course_level">
-                                <span data-translate="beginner">مبتدی</span>
+
+            <!-- Education Grid -->
+            <div class="education_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section_title text-center mb-80">
+                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourEducation">دوره‌های آموزشی ما</h3>
+                                <p class="section_subtitle" data-translate="educationSubtitle">بهترین تجربه‌های آموزشی با قیمت‌های مناسب</p>
                             </div>
-                        </div>
-                        <div class="course_content">
-                            <h4 data-translate="course1Title">دوره زبان انگلیسی</h4>
-                            <p data-translate="course1Desc">آموزش زبان انگلیسی از پایه تا پیشرفته با متدهای جدید</p>
-                            <div class="course_meta">
-                                <span><i class="fa fa-clock-o"></i> <span data-translate="duration">۳ ماه</span></span>
-                                <span><i class="fa fa-users"></i> <span data-translate="students">۱۵ دانشجو</span></span>
-                                <span><i class="fa fa-star"></i> <span data-translate="rating">۴.۸</span></span>
-                            </div>
-                            <div class="course_price">
-                                <span data-translate="price">۲,۵۰۰,۰۰۰ تومان</span>
-                            </div>
-                            <a href="#" class="course_btn" data-translate="enrollNow">ثبت نام کنید</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_course wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                        <div class="course_image">
-                            <img src="img/courses/2.jpg" alt="دوره کامپیوتر">
-                            <div class="course_level intermediate">
-                                <span data-translate="intermediate">متوسط</span>
+                    
+                    <!-- Education Cards -->
+                    <div class="education_grid">
+                        <!-- Course 1 -->
+                        <div class="education_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="education_image">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop" alt="مشاوره تحصیلی">
+                                <div class="education_badge consultation">
+                                    <span data-translate="consultation">مشاوره</span>
+                                </div>
+                                <div class="education_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_header">
+                                    <h4 class="education_title" data-translate="education1Title">مشاوره تحصیلی</h4>
+                                    <div class="education_category">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <span data-translate="category">مشاوره</span>
+                                    </div>
+                                </div>
+                                <p class="education_description" data-translate="education1Desc">مشاوره و راهنمایی تحصیلی برای انتخاب رشته و مسیر تحصیلی</p>
+                                <div class="education_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="duration">۱ ساعت</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-user"></i>
+                                        <span data-translate="expert">متخصص</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۹ امتیاز</span>
+                                    </div>
+                                </div>
+                                <div class="education_footer">
+                                    <div class="education_price">
+                                        <span class="price_amount" data-translate="price">۱۵۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="education_btn" data-translate="enroll">ثبت‌نام</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="course_content">
-                            <h4 data-translate="course2Title">دوره کامپیوتر</h4>
-                            <p data-translate="course2Desc">آموزش مهارت‌های کامپیوتری و نرم‌افزارهای کاربردی</p>
-                            <div class="course_meta">
-                                <span><i class="fa fa-clock-o"></i> <span data-translate="duration">۲ ماه</span></span>
-                                <span><i class="fa fa-users"></i> <span data-translate="students">۲۰ دانشجو</span></span>
-                                <span><i class="fa fa-star"></i> <span data-translate="rating">۴.۹</span></span>
+
+                        <!-- Course 2 -->
+                        <div class="education_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                            <div class="education_image">
+                                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1000&auto=format&fit=crop" alt="آموزش خصوصی">
+                                <div class="education_badge private">
+                                    <span data-translate="private">خصوصی</span>
+                                </div>
+                                <div class="education_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="course_price">
-                                <span data-translate="price">۱,۸۰۰,۰۰۰ تومان</span>
+                            <div class="education_content">
+                                <div class="education_header">
+                                    <h4 class="education_title" data-translate="education2Title">آموزش خصوصی</h4>
+                                    <div class="education_category">
+                                        <i class="fa fa-book"></i>
+                                        <span data-translate="category">آموزش</span>
+                                    </div>
+                                </div>
+                                <p class="education_description" data-translate="education2Desc">آموزش خصوصی دروس مختلف با اساتید مجرب</p>
+                                <div class="education_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-book"></i>
+                                        <span data-translate="subjects">همه دروس</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-user"></i>
+                                        <span data-translate="teacher">استاد خصوصی</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span data-translate="flexible">انعطاف‌پذیر</span>
+                                    </div>
+                                </div>
+                                <div class="education_footer">
+                                    <div class="education_price">
+                                        <span class="price_amount" data-translate="price">از ۲۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="education_btn" data-translate="enroll">ثبت‌نام</a>
+                                </div>
                             </div>
-                            <a href="#" class="course_btn" data-translate="enrollNow">ثبت نام کنید</a>
+                        </div>
+
+                        <!-- Course 3 -->
+                        <div class="education_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                            <div class="education_image">
+                                <img src="https://images.unsplash.com/photo-1523240798033-32679a3ea56f?q=80&w=1000&auto=format&fit=crop" alt="آمادگی کنکور">
+                                <div class="education_badge exam">
+                                    <span data-translate="exam">کنکور</span>
+                                </div>
+                                <div class="education_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_header">
+                                    <h4 class="education_title" data-translate="education3Title">آمادگی کنکور</h4>
+                                    <div class="education_category">
+                                        <i class="fa fa-trophy"></i>
+                                        <span data-translate="category">آمادگی</span>
+                                    </div>
+                                </div>
+                                <p class="education_description" data-translate="education3Desc">دوره‌های آمادگی کنکور با برنامه‌ریزی دقیق و تست‌های استاندارد</p>
+                                <div class="education_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-trophy"></i>
+                                        <span data-translate="success">موفقیت</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۸ امتیاز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۶ ماه</span>
+                                    </div>
+                                </div>
+                                <div class="education_footer">
+                                    <div class="education_price">
+                                        <span class="price_amount" data-translate="price">۱,۵۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="education_btn" data-translate="enroll">ثبت‌نام</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 4 -->
+                        <div class="education_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                            <div class="education_image">
+                                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=1000&auto=format&fit=crop" alt="دوره‌های آنلاین">
+                                <div class="education_badge online">
+                                    <span data-translate="online">آنلاین</span>
+                                </div>
+                                <div class="education_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_header">
+                                    <h4 class="education_title" data-translate="education4Title">دوره‌های آنلاین</h4>
+                                    <div class="education_category">
+                                        <i class="fa fa-laptop"></i>
+                                        <span data-translate="category">آنلاین</span>
+                                    </div>
+                                </div>
+                                <p class="education_description" data-translate="education4Desc">دوره‌های آموزشی آنلاین با کیفیت بالا و دسترسی ۲۴ ساعته</p>
+                                <div class="education_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-laptop"></i>
+                                        <span data-translate="access">دسترسی ۲۴/۷</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-video-camera"></i>
+                                        <span data-translate="recorded">ضبط شده</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-certificate"></i>
+                                        <span data-translate="certificate">گواهی</span>
+                                    </div>
+                                </div>
+                                <div class="education_footer">
+                                    <div class="education_price">
+                                        <span class="price_amount" data-translate="price">از ۳۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="education_btn" data-translate="enroll">ثبت‌نام</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 5 -->
+                        <div class="education_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                            <div class="education_image">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="زبان‌های خارجی">
+                                <div class="education_badge language">
+                                    <span data-translate="language">زبان</span>
+                                </div>
+                                <div class="education_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_header">
+                                    <h4 class="education_title" data-translate="education5Title">زبان‌های خارجی</h4>
+                                    <div class="education_category">
+                                        <i class="fa fa-globe"></i>
+                                        <span data-translate="category">زبان</span>
+                                    </div>
+                                </div>
+                                <p class="education_description" data-translate="education5Desc">آموزش زبان‌های خارجی با متدهای جدید و اساتید بومی</p>
+                                <div class="education_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-globe"></i>
+                                        <span data-translate="languages">۵+ زبان</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-user"></i>
+                                        <span data-translate="native">استاد بومی</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-certificate"></i>
+                                        <span data-translate="certificate">گواهی بین‌المللی</span>
+                                    </div>
+                                </div>
+                                <div class="education_footer">
+                                    <div class="education_price">
+                                        <span class="price_amount" data-translate="price">از ۴۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="education_btn" data-translate="enroll">ثبت‌نام</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course 6 -->
+                        <div class="education_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                            <div class="education_image">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000&auto=format&fit=crop" alt="مهارت‌های نرم">
+                                <div class="education_badge skills">
+                                    <span data-translate="skills">مهارت</span>
+                                </div>
+                                <div class="education_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_header">
+                                    <h4 class="education_title" data-translate="education6Title">مهارت‌های نرم</h4>
+                                    <div class="education_category">
+                                        <i class="fa fa-lightbulb-o"></i>
+                                        <span data-translate="category">مهارت</span>
+                                    </div>
+                                </div>
+                                <p class="education_description" data-translate="education6Desc">آموزش مهارت‌های نرم و توسعه فردی برای موفقیت شغلی</p>
+                                <div class="education_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-lightbulb-o"></i>
+                                        <span data-translate="softSkills">مهارت‌های نرم</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-briefcase"></i>
+                                        <span data-translate="career">شغلی</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="group">گروهی</span>
+                                    </div>
+                                </div>
+                                <div class="education_footer">
+                                    <div class="education_price">
+                                        <span class="price_amount" data-translate="price">از ۲۵۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="education_btn" data-translate="enroll">ثبت‌نام</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_course wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="course_image">
-                            <img src="img/courses/3.jpg" alt="دوره حسابداری">
-                            <div class="course_level advanced">
-                                <span data-translate="advanced">پیشرفته</span>
-                            </div>
-                        </div>
-                        <div class="course_content">
-                            <h4 data-translate="course3Title">دوره حسابداری</h4>
-                            <p data-translate="course3Desc">آموزش حسابداری حرفه‌ای و نرم‌افزارهای حسابداری</p>
-                            <div class="course_meta">
-                                <span><i class="fa fa-clock-o"></i> <span data-translate="duration">۴ ماه</span></span>
-                                <span><i class="fa fa-users"></i> <span data-translate="students">۱۲ دانشجو</span></span>
-                                <span><i class="fa fa-star"></i> <span data-translate="rating">۴.۷</span></span>
-                            </div>
-                            <div class="course_price">
-                                <span data-translate="price">۳,۲۰۰,۰۰۰ تومان</span>
-                            </div>
-                            <a href="#" class="course_btn" data-translate="enrollNow">ثبت نام کنید</a>
-                        </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-80">
+                        <a href="#" class="load_more_btn" data-translate="loadMore">مشاهده دوره‌های بیشتر</a>
                     </div>
                 </div>
             </div>
