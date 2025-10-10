@@ -42,6 +42,37 @@ const languages = {
         slide3Subtitle: "سرویس‌های یکپارچه",
         slide3Description: "از تور و املاک تا تبلیغات و خدمات حقوقی در کنار شما هستیم",
         
+        // Real Estate Page
+        realEstateHero: "املاک لوکس و مدرن",
+        realEstateHeroSub: "بهترین املاک شهر را با ما پیدا کنید",
+        ourProperties: "املاک منتخب",
+        propertiesSubtitle: "بهترین املاک شهر را با قیمت‌های مناسب",
+        forSale: "فروش",
+        forRent: "اجاره",
+        area: "متراژ",
+        rooms: "اتاق",
+        bathrooms: "سرویس",
+        parking: "پارکینگ",
+        floor: "طبقه",
+        location: "موقعیت",
+        price: "قیمت",
+        viewDetails: "مشاهده جزئیات",
+        loadMore: "مشاهده املاک بیشتر",
+        
+        // Property Titles
+        property1Title: "آپارتمان تهران",
+        property1Desc: "آپارتمان ۱۲۰ متری در منطقه ولیعصر با ۳ اتاق خواب",
+        property2Title: "ویلا شمال",
+        property2Desc: "ویلا ۲۰۰ متری در شمال با باغ و استخر",
+        property3Title: "دفتر کار",
+        property3Desc: "دفتر کار ۸۰ متری در مرکز شهر با پارکینگ",
+        property4Title: "ویلا ساحلی",
+        property4Desc: "ویلا ۳۰۰ متری در ساحل شمال با دسترسی مستقیم به دریا",
+        property5Title: "پنت‌هاوس",
+        property5Desc: "پنت‌هاوس ۲۵۰ متری در برج میلاد با تراس بزرگ",
+        property6Title: "آپارتمان مدرن",
+        property6Desc: "آپارتمان ۱۵۰ متری مدرن در منطقه پاسداران",
+        
         // Contact
         contactUs: "تماس با ما",
         ourAddress: "آدرس ما",
@@ -132,6 +163,37 @@ const languages = {
         slide3Subtitle: "Integrated Services",
         slide3Description: "From tours and real estate to advertising and legal services, we are with you",
         
+        // Real Estate Page
+        realEstateHero: "Luxury & Modern Real Estate",
+        realEstateHeroSub: "Find the best properties in the city with us",
+        ourProperties: "Featured Properties",
+        propertiesSubtitle: "The best properties in the city at reasonable prices",
+        forSale: "For Sale",
+        forRent: "For Rent",
+        area: "Area",
+        rooms: "Rooms",
+        bathrooms: "Bathrooms",
+        parking: "Parking",
+        floor: "Floor",
+        location: "Location",
+        price: "Price",
+        viewDetails: "View Details",
+        loadMore: "View More Properties",
+        
+        // Property Titles
+        property1Title: "Tehran Apartment",
+        property1Desc: "120 sqm apartment in Valiasr area with 3 bedrooms",
+        property2Title: "North Villa",
+        property2Desc: "200 sqm villa in the north with garden and pool",
+        property3Title: "Office Space",
+        property3Desc: "80 sqm office in city center with parking",
+        property4Title: "Beach Villa",
+        property4Desc: "300 sqm beach villa in the north with direct sea access",
+        property5Title: "Penthouse",
+        property5Desc: "250 sqm penthouse in Milad Tower with large terrace",
+        property6Title: "Modern Apartment",
+        property6Desc: "150 sqm modern apartment in Pasdaran area",
+        
         // Contact
         contactUs: "Contact Us",
         ourAddress: "Our Address",
@@ -221,6 +283,37 @@ const languages = {
         slide3Title: "Yeni Deneyim",
         slide3Subtitle: "Entegre Hizmetler",
         slide3Description: "Turlar ve emlaktan reklam ve hukuki hizmetlere kadar yanınızdayız",
+        
+        // Real Estate Page
+        realEstateHero: "Lüks ve Modern Emlak",
+        realEstateHeroSub: "Şehrin en iyi mülklerini bizimle bulun",
+        ourProperties: "Seçkin Mülkler",
+        propertiesSubtitle: "Şehrin en iyi mülkleri uygun fiyatlarla",
+        forSale: "Satılık",
+        forRent: "Kiralık",
+        area: "Alan",
+        rooms: "Oda",
+        bathrooms: "Banyo",
+        parking: "Otopark",
+        floor: "Kat",
+        location: "Konum",
+        price: "Fiyat",
+        viewDetails: "Detayları Görüntüle",
+        loadMore: "Daha Fazla Mülk Görüntüle",
+        
+        // Property Titles
+        property1Title: "Tahran Dairesi",
+        property1Desc: "Valiasr bölgesinde 3 yatak odalı 120 metrekare daire",
+        property2Title: "Kuzey Villası",
+        property2Desc: "Bahçe ve havuzlu kuzeyde 200 metrekare villa",
+        property3Title: "Ofis Alanı",
+        property3Desc: "Otoparklı şehir merkezinde 80 metrekare ofis",
+        property4Title: "Sahil Villası",
+        property4Desc: "Kuzeyde doğrudan deniz erişimi olan 300 metrekare sahilde villa",
+        property5Title: "Penthouse",
+        property5Desc: "Milad Kulesi'nde büyük teraslı 250 metrekare penthouse",
+        property6Title: "Modern Daire",
+        property6Desc: "Pasdaran bölgesinde 150 metrekare modern daire",
         
         // Contact
         contactUs: "İletişim",
@@ -363,6 +456,37 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="phone"]').forEach(el => el.textContent = langData.phone);
     document.querySelectorAll('[data-translate="emailLabel"]').forEach(el => el.textContent = langData.emailLabel);
     document.querySelectorAll('[data-translate="email"]').forEach(el => el.textContent = langData.email);
+    
+    // Update real estate section
+    document.querySelectorAll('[data-translate="realEstateHero"]').forEach(el => el.textContent = langData.realEstateHero);
+    document.querySelectorAll('[data-translate="realEstateHeroSub"]').forEach(el => el.textContent = langData.realEstateHeroSub);
+    document.querySelectorAll('[data-translate="ourProperties"]').forEach(el => el.textContent = langData.ourProperties);
+    document.querySelectorAll('[data-translate="propertiesSubtitle"]').forEach(el => el.textContent = langData.propertiesSubtitle);
+    document.querySelectorAll('[data-translate="forSale"]').forEach(el => el.textContent = langData.forSale);
+    document.querySelectorAll('[data-translate="forRent"]').forEach(el => el.textContent = langData.forRent);
+    document.querySelectorAll('[data-translate="area"]').forEach(el => el.textContent = langData.area);
+    document.querySelectorAll('[data-translate="rooms"]').forEach(el => el.textContent = langData.rooms);
+    document.querySelectorAll('[data-translate="bathrooms"]').forEach(el => el.textContent = langData.bathrooms);
+    document.querySelectorAll('[data-translate="parking"]').forEach(el => el.textContent = langData.parking);
+    document.querySelectorAll('[data-translate="floor"]').forEach(el => el.textContent = langData.floor);
+    document.querySelectorAll('[data-translate="location"]').forEach(el => el.textContent = langData.location);
+    document.querySelectorAll('[data-translate="price"]').forEach(el => el.textContent = langData.price);
+    document.querySelectorAll('[data-translate="viewDetails"]').forEach(el => el.textContent = langData.viewDetails);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update property titles and descriptions
+    document.querySelectorAll('[data-translate="property1Title"]').forEach(el => el.textContent = langData.property1Title);
+    document.querySelectorAll('[data-translate="property1Desc"]').forEach(el => el.textContent = langData.property1Desc);
+    document.querySelectorAll('[data-translate="property2Title"]').forEach(el => el.textContent = langData.property2Title);
+    document.querySelectorAll('[data-translate="property2Desc"]').forEach(el => el.textContent = langData.property2Desc);
+    document.querySelectorAll('[data-translate="property3Title"]').forEach(el => el.textContent = langData.property3Title);
+    document.querySelectorAll('[data-translate="property3Desc"]').forEach(el => el.textContent = langData.property3Desc);
+    document.querySelectorAll('[data-translate="property4Title"]').forEach(el => el.textContent = langData.property4Title);
+    document.querySelectorAll('[data-translate="property4Desc"]').forEach(el => el.textContent = langData.property4Desc);
+    document.querySelectorAll('[data-translate="property5Title"]').forEach(el => el.textContent = langData.property5Title);
+    document.querySelectorAll('[data-translate="property5Desc"]').forEach(el => el.textContent = langData.property5Desc);
+    document.querySelectorAll('[data-translate="property6Title"]').forEach(el => el.textContent = langData.property6Title);
+    document.querySelectorAll('[data-translate="property6Desc"]').forEach(el => el.textContent = langData.property6Desc);
     
     // Update contact section
     document.querySelectorAll('[data-translate="contactUs"]').forEach(el => el.textContent = langData.contactUs);
