@@ -28,6 +28,481 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Modern Tours Page Styles -->
+    <style>
+        /* Modern Tours Page Styles */
+        .tours_hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .tours_hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2000&auto=format&fit=crop') center/cover;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        
+        .hero_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+        }
+        
+        .hero_content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero_title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .hero_subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 300;
+        }
+        
+        .hero_search {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .search_box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .search_input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 18px 25px;
+            color: white;
+            font-size: 18px;
+            outline: none;
+            font-weight: 500;
+        }
+        
+        .search_input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .search_btn {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .search_btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+        }
+        
+        /* Tours Section */
+        .tours_section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            position: relative;
+        }
+        
+        .tours_section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2000&auto=format&fit=crop') center/cover;
+            opacity: 0.05;
+            z-index: 1;
+        }
+        
+        .tours_section > .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section_subtitle {
+            color: #888;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+        
+        /* Tours Grid */
+        .tours_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        /* Tour Cards */
+        .tour_card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tour_card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 107, 53, 0.4);
+        }
+        
+        .tour_image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .tour_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .tour_card:hover .tour_image img {
+            transform: scale(1.1);
+        }
+        
+        .tour_badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tour_badge.adventure {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .tour_badge.cultural {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4);
+        }
+        
+        .tour_badge.nature {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            box-shadow: 0 5px 20px rgba(33, 150, 243, 0.4);
+        }
+        
+        .tour_badge.beach {
+            background: linear-gradient(135deg, #00BCD4, #0097A7);
+            color: white;
+            box-shadow: 0 5px 20px rgba(0, 188, 212, 0.4);
+        }
+        
+        .tour_badge.desert {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 152, 0, 0.4);
+        }
+        
+        .tour_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tour_card:hover .tour_overlay {
+            opacity: 1;
+        }
+        
+        .overlay_actions {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .action_btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 18px;
+        }
+        
+        .action_btn:hover {
+            background: #ff6b35;
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .tour_content {
+            padding: 30px;
+        }
+        
+        .tour_header {
+            margin-bottom: 20px;
+        }
+        
+        .tour_title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .tour_location {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .tour_location i {
+            margin-left: 8px;
+            color: #ff6b35;
+            font-size: 16px;
+        }
+        
+        .tour_description {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        
+        .tour_features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .feature_item {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .feature_item i {
+            margin-left: 8px;
+            color: #ff6b35;
+            width: 18px;
+            font-size: 16px;
+        }
+        
+        .tour_footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .tour_price {
+            flex: 1;
+        }
+        
+        .price_amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ff6b35;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+        }
+        
+        .tour_btn {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tour_btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .load_more_btn {
+            background: transparent;
+            color: #ff6b35;
+            border: 3px solid #ff6b35;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .load_more_btn:hover {
+            background: #ff6b35;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.4);
+            text-decoration: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .tour_card:hover {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .tours_grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                gap: 35px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero_title {
+                font-size: 3rem;
+            }
+            
+            .hero_subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .tours_grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .tour_card {
+                margin: 0 15px;
+            }
+            
+            .tour_footer {
+                flex-direction: column;
+                gap: 20px;
+                align-items: stretch;
+            }
+            
+            .tour_btn {
+                text-align: center;
+                padding: 18px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero_title {
+                font-size: 2.5rem;
+            }
+            
+            .search_box {
+                flex-direction: column;
+                border-radius: 20px;
+            }
+            
+            .search_btn {
+                border-radius: 20px;
+                margin-top: 15px;
+            }
+        }
+    </style>
+    
     <!-- Dark Theme Navigation Menu with FOUC Prevention -->
     <style>
         /* Prevent FOUC - Hide content until styles are loaded */
@@ -536,87 +1011,325 @@
     </header>
     <!-- header-end -->
 
-    <!-- page_title_start -->
-    <div class="page_title_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page_title text-center">
-                        <h1 data-translate="tours">تورها</h1>
-                        <p data-translate="toursSubtitle">تورهای تفریحی و گردشگری</p>
+
+    <!-- tours_area_start -->
+    <div class="tours_area black_bg">
+        <div class="container-fluid px-0">
+            <!-- Hero Section -->
+            <div class="tours_hero">
+                <div class="hero_overlay"></div>
+                <div class="hero_content">
+                    <h1 class="hero_title" data-translate="toursHero">ماجراجویی‌های به‌یادماندنی</h1>
+                    <p class="hero_subtitle" data-translate="toursHeroSub">با ما به زیباترین نقاط ایران و جهان سفر کنید</p>
+                    <div class="hero_search">
+                        <div class="search_box">
+                            <input type="text" placeholder="جستجو در تورها..." class="search_input">
+                            <button class="search_btn"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- page_title_end -->
 
-    <!-- tours_area_start -->
-    <div class="tours_area black_bg">
+            <!-- Tours Grid -->
+            <div class="tours_section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section_title text-center mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourTours">تورهای ما</h3>
+                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourTours">تورهای منتخب</h3>
+                                <p class="section_subtitle" data-translate="toursSubtitle">بهترین تجربه‌های سفر با قیمت‌های مناسب</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_tour wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    
+                    <!-- Tour Cards -->
+                    <div class="tours_grid">
+                        <!-- Tour 1 -->
+                        <div class="tour_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="tour_image">
-                            <img src="img/tours/1.jpg" alt="تور شمال">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1000&auto=format&fit=crop" alt="تور شمال">
+                                <div class="tour_badge adventure">
+                                    <span data-translate="adventure">ماجراجویی</span>
+                                </div>
+                                <div class="tour_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tour_content">
+                                <div class="tour_header">
+                                    <h4 class="tour_title" data-translate="tour1Title">تور شمال</h4>
+                                    <div class="tour_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">مازندران، گیلان</span>
+                                    </div>
+                                </div>
+                                <p class="tour_description" data-translate="tour1Desc">تور ۳ روزه شمال با اقامت در هتل و بازدید از جاذبه‌های طبیعی</p>
+                                <div class="tour_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۳ روز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="groupSize">۱۵ نفر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۸</span>
+                                    </div>
+                                </div>
+                                <div class="tour_footer">
                             <div class="tour_price">
-                                <span data-translate="price">۲,۵۰۰,۰۰۰ تومان</span>
+                                        <span class="price_amount" data-translate="price">۲,۵۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="tour_btn" data-translate="bookNow">رزرو کنید</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 2 -->
+                        <div class="tour_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                            <div class="tour_image">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1000&auto=format&fit=crop" alt="تور اصفهان">
+                                <div class="tour_badge cultural">
+                                    <span data-translate="cultural">فرهنگی</span>
+                                </div>
+                                <div class="tour_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
                             </div>
                         </div>
                         <div class="tour_content">
-                            <h4 data-translate="tour1Title">تور شمال</h4>
-                            <p data-translate="tour1Desc">تور ۳ روزه شمال با اقامت در هتل و بازدید از جاذبه‌های طبیعی</p>
-                            <div class="tour_meta">
-                                <span><i class="fa fa-calendar"></i> <span data-translate="duration">۳ روز</span></span>
-                                <span><i class="fa fa-users"></i> <span data-translate="capacity">۱۵ نفر</span></span>
+                                <div class="tour_header">
+                                    <h4 class="tour_title" data-translate="tour2Title">تور اصفهان</h4>
+                                    <div class="tour_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">اصفهان</span>
+                                    </div>
+                                </div>
+                                <p class="tour_description" data-translate="tour2Desc">تور ۲ روزه اصفهان با بازدید از بناهای تاریخی و معماری اسلامی</p>
+                                <div class="tour_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۲ روز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="groupSize">۲۰ نفر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۹</span>
+                                    </div>
+                                </div>
+                                <div class="tour_footer">
+                                    <div class="tour_price">
+                                        <span class="price_amount" data-translate="price">۱,۸۰۰,۰۰۰ تومان</span>
                             </div>
                             <a href="#" class="tour_btn" data-translate="bookNow">رزرو کنید</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_tour wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+
+                        <!-- Tour 3 -->
+                        <div class="tour_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                         <div class="tour_image">
-                            <img src="img/tours/2.jpg" alt="تور اصفهان">
+                                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1000&auto=format&fit=crop" alt="تور کوهنوردی">
+                                <div class="tour_badge adventure">
+                                    <span data-translate="adventure">ماجراجویی</span>
+                                </div>
+                                <div class="tour_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tour_content">
+                                <div class="tour_header">
+                                    <h4 class="tour_title" data-translate="tour3Title">تور کوهنوردی</h4>
+                                    <div class="tour_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">دماوند</span>
+                                    </div>
+                                </div>
+                                <p class="tour_description" data-translate="tour3Desc">تور ۱ روزه کوهنوردی در دماوند با راهنمای حرفه‌ای</p>
+                                <div class="tour_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۱ روز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="groupSize">۱۰ نفر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۷</span>
+                                    </div>
+                                </div>
+                                <div class="tour_footer">
                             <div class="tour_price">
-                                <span data-translate="price">۱,۸۰۰,۰۰۰ تومان</span>
+                                        <span class="price_amount" data-translate="price">۱,۲۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="tour_btn" data-translate="bookNow">رزرو کنید</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 4 -->
+                        <div class="tour_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                            <div class="tour_image">
+                                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1000&auto=format&fit=crop" alt="تور طبیعت‌گردی">
+                                <div class="tour_badge nature">
+                                    <span data-translate="nature">طبیعت</span>
+                                </div>
+                                <div class="tour_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
                             </div>
                         </div>
                         <div class="tour_content">
-                            <h4 data-translate="tour2Title">تور اصفهان</h4>
-                            <p data-translate="tour2Desc">تور ۲ روزه اصفهان با بازدید از بناهای تاریخی و معماری اسلامی</p>
-                            <div class="tour_meta">
-                                <span><i class="fa fa-calendar"></i> <span data-translate="duration">۲ روز</span></span>
-                                <span><i class="fa fa-users"></i> <span data-translate="capacity">۲۰ نفر</span></span>
+                                <div class="tour_header">
+                                    <h4 class="tour_title" data-translate="tour4Title">تور طبیعت‌گردی</h4>
+                                    <div class="tour_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">جنگل‌های شمال</span>
+                                    </div>
+                                </div>
+                                <p class="tour_description" data-translate="tour4Desc">تور ۲ روزه طبیعت‌گردی در جنگل‌های زیبای شمال</p>
+                                <div class="tour_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۲ روز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="groupSize">۱۲ نفر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۶</span>
+                                    </div>
+                                </div>
+                                <div class="tour_footer">
+                                    <div class="tour_price">
+                                        <span class="price_amount" data-translate="price">۱,۵۰۰,۰۰۰ تومان</span>
                             </div>
                             <a href="#" class="tour_btn" data-translate="bookNow">رزرو کنید</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_tour wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        <!-- Tour 5 -->
+                        <div class="tour_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
                         <div class="tour_image">
-                            <img src="img/tours/3.jpg" alt="تور کیش">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1000&auto=format&fit=crop" alt="تور ساحلی">
+                                <div class="tour_badge beach">
+                                    <span data-translate="beach">ساحلی</span>
+                                </div>
+                                <div class="tour_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tour_content">
+                                <div class="tour_header">
+                                    <h4 class="tour_title" data-translate="tour5Title">تور ساحلی</h4>
+                                    <div class="tour_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">ساحل کاسپین</span>
+                                    </div>
+                                </div>
+                                <p class="tour_description" data-translate="tour5Desc">تور ۳ روزه ساحلی با اقامت در ویلاهای ساحلی</p>
+                                <div class="tour_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۳ روز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="groupSize">۱۸ نفر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۸</span>
+                                    </div>
+                                </div>
+                                <div class="tour_footer">
                             <div class="tour_price">
-                                <span data-translate="price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="price_amount" data-translate="price">۲,۲۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <a href="#" class="tour_btn" data-translate="bookNow">رزرو کنید</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tour 6 -->
+                        <div class="tour_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                            <div class="tour_image">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1000&auto=format&fit=crop" alt="تور کویری">
+                                <div class="tour_badge desert">
+                                    <span data-translate="desert">کویری</span>
+                                </div>
+                                <div class="tour_overlay">
+                                    <div class="overlay_actions">
+                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
+                                        <button class="action_btn"><i class="fa fa-share"></i></button>
+                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
+                                    </div>
                             </div>
                         </div>
                         <div class="tour_content">
-                            <h4 data-translate="tour3Title">تور کیش</h4>
-                            <p data-translate="tour3Desc">تور ۴ روزه کیش با تفریحات دریایی و خرید</p>
-                            <div class="tour_meta">
-                                <span><i class="fa fa-calendar"></i> <span data-translate="duration">۴ روز</span></span>
-                                <span><i class="fa fa-users"></i> <span data-translate="capacity">۱۲ نفر</span></span>
+                                <div class="tour_header">
+                                    <h4 class="tour_title" data-translate="tour6Title">تور کویری</h4>
+                                    <div class="tour_location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span data-translate="location">کاشان، یزد</span>
+                                    </div>
+                                </div>
+                                <p class="tour_description" data-translate="tour6Desc">تور ۲ روزه کویری با اقامت در اقامتگاه‌های سنتی</p>
+                                <div class="tour_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-calendar"></i>
+                                        <span data-translate="duration">۲ روز</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-users"></i>
+                                        <span data-translate="groupSize">۱۴ نفر</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-star"></i>
+                                        <span data-translate="rating">۴.۵</span>
+                                    </div>
+                                </div>
+                                <div class="tour_footer">
+                                    <div class="tour_price">
+                                        <span class="price_amount" data-translate="price">۱,۶۰۰,۰۰۰ تومان</span>
                             </div>
                             <a href="#" class="tour_btn" data-translate="bookNow">رزرو کنید</a>
                         </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-80">
+                        <a href="#" class="load_more_btn" data-translate="loadMore">مشاهده تورهای بیشتر</a>
                     </div>
                 </div>
             </div>

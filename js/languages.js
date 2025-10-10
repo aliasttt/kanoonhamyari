@@ -42,6 +42,36 @@ const languages = {
         slide3Subtitle: "سرویس‌های یکپارچه",
         slide3Description: "از تور و املاک تا تبلیغات و خدمات حقوقی در کنار شما هستیم",
         
+        // Tours Page
+        toursHero: "ماجراجویی‌های به‌یادماندنی",
+        toursHeroSub: "با ما به زیباترین نقاط ایران و جهان سفر کنید",
+        ourTours: "تورهای منتخب",
+        toursSubtitle: "بهترین تجربه‌های سفر با قیمت‌های مناسب",
+        adventure: "ماجراجویی",
+        cultural: "فرهنگی",
+        nature: "طبیعت",
+        beach: "ساحلی",
+        desert: "کویری",
+        duration: "مدت",
+        groupSize: "ظرفیت",
+        rating: "امتیاز",
+        bookNow: "رزرو کنید",
+        loadMore: "مشاهده تورهای بیشتر",
+        
+        // Tour Titles
+        tour1Title: "تور شمال",
+        tour1Desc: "تور ۳ روزه شمال با اقامت در هتل و بازدید از جاذبه‌های طبیعی",
+        tour2Title: "تور اصفهان",
+        tour2Desc: "تور ۲ روزه اصفهان با بازدید از بناهای تاریخی و معماری اسلامی",
+        tour3Title: "تور کوهنوردی",
+        tour3Desc: "تور ۱ روزه کوهنوردی در دماوند با راهنمای حرفه‌ای",
+        tour4Title: "تور طبیعت‌گردی",
+        tour4Desc: "تور ۲ روزه طبیعت‌گردی در جنگل‌های زیبای شمال",
+        tour5Title: "تور ساحلی",
+        tour5Desc: "تور ۳ روزه ساحلی با اقامت در ویلاهای ساحلی",
+        tour6Title: "تور کویری",
+        tour6Desc: "تور ۲ روزه کویری با اقامت در اقامتگاه‌های سنتی",
+        
         // Real Estate Page
         realEstateHero: "املاک لوکس و مدرن",
         realEstateHeroSub: "بهترین املاک شهر را با ما پیدا کنید",
@@ -163,6 +193,36 @@ const languages = {
         slide3Subtitle: "Integrated Services",
         slide3Description: "From tours and real estate to advertising and legal services, we are with you",
         
+        // Tours Page
+        toursHero: "Unforgettable Adventures",
+        toursHeroSub: "Travel to the most beautiful places in Iran and the world with us",
+        ourTours: "Featured Tours",
+        toursSubtitle: "The best travel experiences at reasonable prices",
+        adventure: "Adventure",
+        cultural: "Cultural",
+        nature: "Nature",
+        beach: "Beach",
+        desert: "Desert",
+        duration: "Duration",
+        groupSize: "Group Size",
+        rating: "Rating",
+        bookNow: "Book Now",
+        loadMore: "View More Tours",
+        
+        // Tour Titles
+        tour1Title: "North Tour",
+        tour1Desc: "3-day north tour with hotel accommodation and visits to natural attractions",
+        tour2Title: "Isfahan Tour",
+        tour2Desc: "2-day Isfahan tour with visits to historical monuments and Islamic architecture",
+        tour3Title: "Mountaineering Tour",
+        tour3Desc: "1-day mountaineering tour in Damavand with professional guide",
+        tour4Title: "Nature Tour",
+        tour4Desc: "2-day nature tour in the beautiful forests of the north",
+        tour5Title: "Beach Tour",
+        tour5Desc: "3-day beach tour with accommodation in beach villas",
+        tour6Title: "Desert Tour",
+        tour6Desc: "2-day desert tour with accommodation in traditional lodges",
+        
         // Real Estate Page
         realEstateHero: "Luxury & Modern Real Estate",
         realEstateHeroSub: "Find the best properties in the city with us",
@@ -283,6 +343,36 @@ const languages = {
         slide3Title: "Yeni Deneyim",
         slide3Subtitle: "Entegre Hizmetler",
         slide3Description: "Turlar ve emlaktan reklam ve hukuki hizmetlere kadar yanınızdayız",
+        
+        // Tours Page
+        toursHero: "Unutulmaz Maceralar",
+        toursHeroSub: "Bizimle İran ve dünyanın en güzel yerlerine seyahat edin",
+        ourTours: "Seçkin Turlar",
+        toursSubtitle: "En iyi seyahat deneyimleri uygun fiyatlarla",
+        adventure: "Macera",
+        cultural: "Kültürel",
+        nature: "Doğa",
+        beach: "Sahil",
+        desert: "Çöl",
+        duration: "Süre",
+        groupSize: "Grup Büyüklüğü",
+        rating: "Değerlendirme",
+        bookNow: "Rezervasyon Yap",
+        loadMore: "Daha Fazla Tur Görüntüle",
+        
+        // Tour Titles
+        tour1Title: "Kuzey Turu",
+        tour1Desc: "Otel konaklamalı ve doğal güzellikleri ziyaret eden 3 günlük kuzey turu",
+        tour2Title: "İsfahan Turu",
+        tour2Desc: "Tarihi anıtları ve İslam mimarisini ziyaret eden 2 günlük İsfahan turu",
+        tour3Title: "Dağcılık Turu",
+        tour3Desc: "Profesyonel rehberle Damavand'da 1 günlük dağcılık turu",
+        tour4Title: "Doğa Turu",
+        tour4Desc: "Kuzeyin güzel ormanlarında 2 günlük doğa turu",
+        tour5Title: "Sahil Turu",
+        tour5Desc: "Sahil villalarında konaklamalı 3 günlük sahil turu",
+        tour6Title: "Çöl Turu",
+        tour6Desc: "Geleneksel konaklama yerlerinde konaklamalı 2 günlük çöl turu",
         
         // Real Estate Page
         realEstateHero: "Lüks ve Modern Emlak",
@@ -456,6 +546,36 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="phone"]').forEach(el => el.textContent = langData.phone);
     document.querySelectorAll('[data-translate="emailLabel"]').forEach(el => el.textContent = langData.emailLabel);
     document.querySelectorAll('[data-translate="email"]').forEach(el => el.textContent = langData.email);
+    
+    // Update tours section
+    document.querySelectorAll('[data-translate="toursHero"]').forEach(el => el.textContent = langData.toursHero);
+    document.querySelectorAll('[data-translate="toursHeroSub"]').forEach(el => el.textContent = langData.toursHeroSub);
+    document.querySelectorAll('[data-translate="ourTours"]').forEach(el => el.textContent = langData.ourTours);
+    document.querySelectorAll('[data-translate="toursSubtitle"]').forEach(el => el.textContent = langData.toursSubtitle);
+    document.querySelectorAll('[data-translate="adventure"]').forEach(el => el.textContent = langData.adventure);
+    document.querySelectorAll('[data-translate="cultural"]').forEach(el => el.textContent = langData.cultural);
+    document.querySelectorAll('[data-translate="nature"]').forEach(el => el.textContent = langData.nature);
+    document.querySelectorAll('[data-translate="beach"]').forEach(el => el.textContent = langData.beach);
+    document.querySelectorAll('[data-translate="desert"]').forEach(el => el.textContent = langData.desert);
+    document.querySelectorAll('[data-translate="duration"]').forEach(el => el.textContent = langData.duration);
+    document.querySelectorAll('[data-translate="groupSize"]').forEach(el => el.textContent = langData.groupSize);
+    document.querySelectorAll('[data-translate="rating"]').forEach(el => el.textContent = langData.rating);
+    document.querySelectorAll('[data-translate="bookNow"]').forEach(el => el.textContent = langData.bookNow);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update tour titles and descriptions
+    document.querySelectorAll('[data-translate="tour1Title"]').forEach(el => el.textContent = langData.tour1Title);
+    document.querySelectorAll('[data-translate="tour1Desc"]').forEach(el => el.textContent = langData.tour1Desc);
+    document.querySelectorAll('[data-translate="tour2Title"]').forEach(el => el.textContent = langData.tour2Title);
+    document.querySelectorAll('[data-translate="tour2Desc"]').forEach(el => el.textContent = langData.tour2Desc);
+    document.querySelectorAll('[data-translate="tour3Title"]').forEach(el => el.textContent = langData.tour3Title);
+    document.querySelectorAll('[data-translate="tour3Desc"]').forEach(el => el.textContent = langData.tour3Desc);
+    document.querySelectorAll('[data-translate="tour4Title"]').forEach(el => el.textContent = langData.tour4Title);
+    document.querySelectorAll('[data-translate="tour4Desc"]').forEach(el => el.textContent = langData.tour4Desc);
+    document.querySelectorAll('[data-translate="tour5Title"]').forEach(el => el.textContent = langData.tour5Title);
+    document.querySelectorAll('[data-translate="tour5Desc"]').forEach(el => el.textContent = langData.tour5Desc);
+    document.querySelectorAll('[data-translate="tour6Title"]').forEach(el => el.textContent = langData.tour6Title);
+    document.querySelectorAll('[data-translate="tour6Desc"]').forEach(el => el.textContent = langData.tour6Desc);
     
     // Update real estate section
     document.querySelectorAll('[data-translate="realEstateHero"]').forEach(el => el.textContent = langData.realEstateHero);
