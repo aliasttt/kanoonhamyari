@@ -84,6 +84,48 @@ const languages = {
         education6Title: "مهارت‌های نرم",
         education6Desc: "آموزش مهارت‌های نرم و توسعه فردی برای موفقیت شغلی",
         
+        // Legal Page
+        legalHero: "خدمات حقوقی حرفه‌ای",
+        legalHeroSub: "با ما از حقوق خود محافظت کنید",
+        ourLegal: "خدمات حقوقی ما",
+        legalSubtitle: "بهترین راه‌حل‌های حقوقی با قیمت‌های مناسب",
+        consultation: "مشاوره",
+        advocacy: "وکالت",
+        documents: "مستندات",
+        contracts: "قراردادها",
+        intellectual: "مالکیت فکری",
+        family: "خانواده",
+        category: "دسته‌بندی",
+        expert: "متخصص",
+        court: "دادگاه",
+        lawyer: "وکیل",
+        protection: "حمایت",
+        drafting: "تنظیم",
+        review: "بررسی",
+        agreement: "توافق",
+        security: "امنیت",
+        legal: "قانونی",
+        innovation: "نوآوری",
+        copyright: "کپی‌رایت",
+        divorce: "طلاق",
+        children: "فرزندان",
+        consult: "مشاوره",
+        loadMore: "مشاهده خدمات بیشتر",
+        
+        // Legal Service Titles
+        legal1Title: "مشاوره حقوقی",
+        legal1Desc: "مشاوره حقوقی تخصصی در زمینه‌های مختلف حقوقی",
+        legal2Title: "وکالت",
+        legal2Desc: "خدمات وکالت در محاکم و مراجع قضایی",
+        legal3Title: "مستندات حقوقی",
+        legal3Desc: "تهیه و تنظیم انواع مستندات و قراردادهای حقوقی",
+        legal4Title: "قراردادها",
+        legal4Desc: "تهیه، بررسی و تنظیم انواع قراردادهای تجاری و حقوقی",
+        legal5Title: "مالکیت فکری",
+        legal5Desc: "ثبت و حمایت از حقوق مالکیت فکری و معنوی",
+        legal6Title: "امور خانواده",
+        legal6Desc: "مشاوره و خدمات حقوقی در امور خانواده و طلاق",
+        
         // Advertising Page
         advertisingHero: "تبلیغات خلاقانه و مؤثر",
         advertisingHeroSub: "با ما برند خود را به اوج برسانید",
@@ -353,6 +395,48 @@ const languages = {
         education6Title: "Soft Skills",
         education6Desc: "Soft skills training and personal development for career success",
         
+        // Legal Page
+        legalHero: "Professional Legal Services",
+        legalHeroSub: "Protect your rights with us",
+        ourLegal: "Our Legal Services",
+        legalSubtitle: "The best legal solutions at reasonable prices",
+        consultation: "Consultation",
+        advocacy: "Advocacy",
+        documents: "Documents",
+        contracts: "Contracts",
+        intellectual: "Intellectual Property",
+        family: "Family",
+        category: "Category",
+        expert: "Expert",
+        court: "Court",
+        lawyer: "Lawyer",
+        protection: "Protection",
+        drafting: "Drafting",
+        review: "Review",
+        agreement: "Agreement",
+        security: "Security",
+        legal: "Legal",
+        innovation: "Innovation",
+        copyright: "Copyright",
+        divorce: "Divorce",
+        children: "Children",
+        consult: "Consult",
+        loadMore: "View More Services",
+        
+        // Legal Service Titles
+        legal1Title: "Legal Consultation",
+        legal1Desc: "Specialized legal consultation in various legal fields",
+        legal2Title: "Advocacy",
+        legal2Desc: "Legal advocacy services in courts and judicial authorities",
+        legal3Title: "Legal Documents",
+        legal3Desc: "Preparation and drafting of various legal documents and contracts",
+        legal4Title: "Contracts",
+        legal4Desc: "Preparation, review and drafting of various commercial and legal contracts",
+        legal5Title: "Intellectual Property",
+        legal5Desc: "Registration and protection of intellectual and moral property rights",
+        legal6Title: "Family Matters",
+        legal6Desc: "Legal consultation and services in family matters and divorce",
+        
         // Advertising Page
         advertisingHero: "Creative and Effective Advertising",
         advertisingHeroSub: "Take your brand to the top with us",
@@ -621,6 +705,48 @@ const languages = {
         education5Desc: "Yeni yöntemler ve yerli öğretmenlerle yabancı dil öğrenimi",
         education6Title: "Yumuşak Beceriler",
         education6Desc: "Kariyer başarısı için yumuşak beceri eğitimi ve kişisel gelişim",
+        
+        // Legal Page
+        legalHero: "Profesyonel Hukuki Hizmetler",
+        legalHeroSub: "Bizimle haklarınızı koruyun",
+        ourLegal: "Hukuki Hizmetlerimiz",
+        legalSubtitle: "En iyi hukuki çözümler uygun fiyatlarla",
+        consultation: "Danışmanlık",
+        advocacy: "Avukatlık",
+        documents: "Belgeler",
+        contracts: "Sözleşmeler",
+        intellectual: "Fikri Mülkiyet",
+        family: "Aile",
+        category: "Kategori",
+        expert: "Uzman",
+        court: "Mahkeme",
+        lawyer: "Avukat",
+        protection: "Koruma",
+        drafting: "Hazırlama",
+        review: "İnceleme",
+        agreement: "Anlaşma",
+        security: "Güvenlik",
+        legal: "Hukuki",
+        innovation: "İnovasyon",
+        copyright: "Telif Hakkı",
+        divorce: "Boşanma",
+        children: "Çocuklar",
+        consult: "Danış",
+        loadMore: "Daha Fazla Hizmet Görüntüle",
+        
+        // Legal Service Titles
+        legal1Title: "Hukuki Danışmanlık",
+        legal1Desc: "Çeşitli hukuki alanlarda uzman hukuki danışmanlık",
+        legal2Title: "Avukatlık",
+        legal2Desc: "Mahkemelerde ve yargı mercilerinde hukuki avukatlık hizmetleri",
+        legal3Title: "Hukuki Belgeler",
+        legal3Desc: "Çeşitli hukuki belgelerin ve sözleşmelerin hazırlanması ve düzenlenmesi",
+        legal4Title: "Sözleşmeler",
+        legal4Desc: "Çeşitli ticari ve hukuki sözleşmelerin hazırlanması, incelenmesi ve düzenlenmesi",
+        legal5Title: "Fikri Mülkiyet",
+        legal5Desc: "Fikri ve manevi mülkiyet haklarının tescil edilmesi ve korunması",
+        legal6Title: "Aile İşleri",
+        legal6Desc: "Aile işlerinde ve boşanmada hukuki danışmanlık ve hizmetler",
         
         // Advertising Page
         advertisingHero: "Yaratıcı ve Etkili Reklamcılık",
@@ -942,6 +1068,48 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="education5Desc"]').forEach(el => el.textContent = langData.education5Desc);
     document.querySelectorAll('[data-translate="education6Title"]').forEach(el => el.textContent = langData.education6Title);
     document.querySelectorAll('[data-translate="education6Desc"]').forEach(el => el.textContent = langData.education6Desc);
+    
+    // Update legal section
+    document.querySelectorAll('[data-translate="legalHero"]').forEach(el => el.textContent = langData.legalHero);
+    document.querySelectorAll('[data-translate="legalHeroSub"]').forEach(el => el.textContent = langData.legalHeroSub);
+    document.querySelectorAll('[data-translate="ourLegal"]').forEach(el => el.textContent = langData.ourLegal);
+    document.querySelectorAll('[data-translate="legalSubtitle"]').forEach(el => el.textContent = langData.legalSubtitle);
+    document.querySelectorAll('[data-translate="consultation"]').forEach(el => el.textContent = langData.consultation);
+    document.querySelectorAll('[data-translate="advocacy"]').forEach(el => el.textContent = langData.advocacy);
+    document.querySelectorAll('[data-translate="documents"]').forEach(el => el.textContent = langData.documents);
+    document.querySelectorAll('[data-translate="contracts"]').forEach(el => el.textContent = langData.contracts);
+    document.querySelectorAll('[data-translate="intellectual"]').forEach(el => el.textContent = langData.intellectual);
+    document.querySelectorAll('[data-translate="family"]').forEach(el => el.textContent = langData.family);
+    document.querySelectorAll('[data-translate="category"]').forEach(el => el.textContent = langData.category);
+    document.querySelectorAll('[data-translate="expert"]').forEach(el => el.textContent = langData.expert);
+    document.querySelectorAll('[data-translate="court"]').forEach(el => el.textContent = langData.court);
+    document.querySelectorAll('[data-translate="lawyer"]').forEach(el => el.textContent = langData.lawyer);
+    document.querySelectorAll('[data-translate="protection"]').forEach(el => el.textContent = langData.protection);
+    document.querySelectorAll('[data-translate="drafting"]').forEach(el => el.textContent = langData.drafting);
+    document.querySelectorAll('[data-translate="review"]').forEach(el => el.textContent = langData.review);
+    document.querySelectorAll('[data-translate="agreement"]').forEach(el => el.textContent = langData.agreement);
+    document.querySelectorAll('[data-translate="security"]').forEach(el => el.textContent = langData.security);
+    document.querySelectorAll('[data-translate="legal"]').forEach(el => el.textContent = langData.legal);
+    document.querySelectorAll('[data-translate="innovation"]').forEach(el => el.textContent = langData.innovation);
+    document.querySelectorAll('[data-translate="copyright"]').forEach(el => el.textContent = langData.copyright);
+    document.querySelectorAll('[data-translate="divorce"]').forEach(el => el.textContent = langData.divorce);
+    document.querySelectorAll('[data-translate="children"]').forEach(el => el.textContent = langData.children);
+    document.querySelectorAll('[data-translate="consult"]').forEach(el => el.textContent = langData.consult);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update legal service titles and descriptions
+    document.querySelectorAll('[data-translate="legal1Title"]').forEach(el => el.textContent = langData.legal1Title);
+    document.querySelectorAll('[data-translate="legal1Desc"]').forEach(el => el.textContent = langData.legal1Desc);
+    document.querySelectorAll('[data-translate="legal2Title"]').forEach(el => el.textContent = langData.legal2Title);
+    document.querySelectorAll('[data-translate="legal2Desc"]').forEach(el => el.textContent = langData.legal2Desc);
+    document.querySelectorAll('[data-translate="legal3Title"]').forEach(el => el.textContent = langData.legal3Title);
+    document.querySelectorAll('[data-translate="legal3Desc"]').forEach(el => el.textContent = langData.legal3Desc);
+    document.querySelectorAll('[data-translate="legal4Title"]').forEach(el => el.textContent = langData.legal4Title);
+    document.querySelectorAll('[data-translate="legal4Desc"]').forEach(el => el.textContent = langData.legal4Desc);
+    document.querySelectorAll('[data-translate="legal5Title"]').forEach(el => el.textContent = langData.legal5Title);
+    document.querySelectorAll('[data-translate="legal5Desc"]').forEach(el => el.textContent = langData.legal5Desc);
+    document.querySelectorAll('[data-translate="legal6Title"]').forEach(el => el.textContent = langData.legal6Title);
+    document.querySelectorAll('[data-translate="legal6Desc"]').forEach(el => el.textContent = langData.legal6Desc);
     
     // Update advertising section
     document.querySelectorAll('[data-translate="advertisingHero"]').forEach(el => el.textContent = langData.advertisingHero);
