@@ -84,6 +84,38 @@ const languages = {
         education6Title: "مهارت‌های نرم",
         education6Desc: "آموزش مهارت‌های نرم و توسعه فردی برای موفقیت شغلی",
         
+        // About Page
+        aboutHero: "درباره کانون همیاری",
+        aboutHeroSub: "داستان ما و تیم حرفه‌ای",
+        ourTeam: "تیم ما",
+        aboutSubtitle: "بهترین متخصصان در کنار شما",
+        ceo: "مدیرعامل",
+        marketing: "بازاریابی",
+        technical: "فنی",
+        finance: "مالی",
+        hr: "منابع انسانی",
+        pr: "روابط عمومی",
+        position: "موقعیت",
+        experience: "تجربه",
+        education: "تحصیلات",
+        rating: "امتیاز",
+        contact: "تماس",
+        loadMore: "مشاهده اعضای بیشتر",
+        
+        // Team Member Names and Descriptions
+        team1Name: "احمد محمدی",
+        team1Desc: "مدیرعامل با ۱۵ سال تجربه در مدیریت پروژه‌های بزرگ",
+        team2Name: "فاطمه احمدی",
+        team2Desc: "متخصص بازاریابی دیجیتال با تجربه در برندهای معروف",
+        team3Name: "علی رضایی",
+        team3Desc: "متخصص فناوری اطلاعات با تخصص در سیستم‌های پیشرفته",
+        team4Name: "مریم حسینی",
+        team4Desc: "متخصص امور مالی و حسابداری با تجربه در شرکت‌های بزرگ",
+        team5Name: "حسن کریمی",
+        team5Desc: "متخصص مدیریت منابع انسانی و توسعه سازمانی",
+        team6Name: "زهرا نوری",
+        team6Desc: "متخصص روابط عمومی و ارتباطات با رسانه‌ها",
+        
         // Legal Page
         legalHero: "خدمات حقوقی حرفه‌ای",
         legalHeroSub: "با ما از حقوق خود محافظت کنید",
@@ -395,6 +427,38 @@ const languages = {
         education6Title: "Soft Skills",
         education6Desc: "Soft skills training and personal development for career success",
         
+        // About Page
+        aboutHero: "About Kanoon Hamyari",
+        aboutHeroSub: "Our story and professional team",
+        ourTeam: "Our Team",
+        aboutSubtitle: "The best professionals by your side",
+        ceo: "CEO",
+        marketing: "Marketing",
+        technical: "Technical",
+        finance: "Finance",
+        hr: "Human Resources",
+        pr: "Public Relations",
+        position: "Position",
+        experience: "Experience",
+        education: "Education",
+        rating: "Rating",
+        contact: "Contact",
+        loadMore: "View More Members",
+        
+        // Team Member Names and Descriptions
+        team1Name: "Ahmad Mohammadi",
+        team1Desc: "CEO with 15 years of experience in managing large projects",
+        team2Name: "Fatemeh Ahmadi",
+        team2Desc: "Digital marketing specialist with experience in famous brands",
+        team3Name: "Ali Rezaei",
+        team3Desc: "IT specialist with expertise in advanced systems",
+        team4Name: "Maryam Hosseini",
+        team4Desc: "Finance and accounting specialist with experience in large companies",
+        team5Name: "Hassan Karimi",
+        team5Desc: "Human resources management and organizational development specialist",
+        team6Name: "Zahra Nouri",
+        team6Desc: "Public relations and media communications specialist",
+        
         // Legal Page
         legalHero: "Professional Legal Services",
         legalHeroSub: "Protect your rights with us",
@@ -705,6 +769,38 @@ const languages = {
         education5Desc: "Yeni yöntemler ve yerli öğretmenlerle yabancı dil öğrenimi",
         education6Title: "Yumuşak Beceriler",
         education6Desc: "Kariyer başarısı için yumuşak beceri eğitimi ve kişisel gelişim",
+        
+        // About Page
+        aboutHero: "Kanoon Hamyari Hakkında",
+        aboutHeroSub: "Hikayemiz ve profesyonel ekibimiz",
+        ourTeam: "Ekibimiz",
+        aboutSubtitle: "En iyi profesyoneller yanınızda",
+        ceo: "Genel Müdür",
+        marketing: "Pazarlama",
+        technical: "Teknik",
+        finance: "Mali",
+        hr: "İnsan Kaynakları",
+        pr: "Halkla İlişkiler",
+        position: "Pozisyon",
+        experience: "Deneyim",
+        education: "Eğitim",
+        rating: "Puan",
+        contact: "İletişim",
+        loadMore: "Daha Fazla Üye Görüntüle",
+        
+        // Team Member Names and Descriptions
+        team1Name: "Ahmet Muhammedi",
+        team1Desc: "Büyük projelerin yönetiminde 15 yıl deneyime sahip genel müdür",
+        team2Name: "Fateme Ahmedi",
+        team2Desc: "Ünlü markalarda deneyimli dijital pazarlama uzmanı",
+        team3Name: "Ali Rezai",
+        team3Desc: "Gelişmiş sistemlerde uzman BT uzmanı",
+        team4Name: "Meryem Hüseyni",
+        team4Desc: "Büyük şirketlerde deneyimli finans ve muhasebe uzmanı",
+        team5Name: "Hasan Kerimi",
+        team5Desc: "İnsan kaynakları yönetimi ve organizasyonel gelişim uzmanı",
+        team6Name: "Zehra Nuri",
+        team6Desc: "Halkla ilişkiler ve medya iletişimi uzmanı",
         
         // Legal Page
         legalHero: "Profesyonel Hukuki Hizmetler",
@@ -1068,6 +1164,38 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="education5Desc"]').forEach(el => el.textContent = langData.education5Desc);
     document.querySelectorAll('[data-translate="education6Title"]').forEach(el => el.textContent = langData.education6Title);
     document.querySelectorAll('[data-translate="education6Desc"]').forEach(el => el.textContent = langData.education6Desc);
+    
+    // Update about section
+    document.querySelectorAll('[data-translate="aboutHero"]').forEach(el => el.textContent = langData.aboutHero);
+    document.querySelectorAll('[data-translate="aboutHeroSub"]').forEach(el => el.textContent = langData.aboutHeroSub);
+    document.querySelectorAll('[data-translate="ourTeam"]').forEach(el => el.textContent = langData.ourTeam);
+    document.querySelectorAll('[data-translate="aboutSubtitle"]').forEach(el => el.textContent = langData.aboutSubtitle);
+    document.querySelectorAll('[data-translate="ceo"]').forEach(el => el.textContent = langData.ceo);
+    document.querySelectorAll('[data-translate="marketing"]').forEach(el => el.textContent = langData.marketing);
+    document.querySelectorAll('[data-translate="technical"]').forEach(el => el.textContent = langData.technical);
+    document.querySelectorAll('[data-translate="finance"]').forEach(el => el.textContent = langData.finance);
+    document.querySelectorAll('[data-translate="hr"]').forEach(el => el.textContent = langData.hr);
+    document.querySelectorAll('[data-translate="pr"]').forEach(el => el.textContent = langData.pr);
+    document.querySelectorAll('[data-translate="position"]').forEach(el => el.textContent = langData.position);
+    document.querySelectorAll('[data-translate="experience"]').forEach(el => el.textContent = langData.experience);
+    document.querySelectorAll('[data-translate="education"]').forEach(el => el.textContent = langData.education);
+    document.querySelectorAll('[data-translate="rating"]').forEach(el => el.textContent = langData.rating);
+    document.querySelectorAll('[data-translate="contact"]').forEach(el => el.textContent = langData.contact);
+    document.querySelectorAll('[data-translate="loadMore"]').forEach(el => el.textContent = langData.loadMore);
+    
+    // Update team member names and descriptions
+    document.querySelectorAll('[data-translate="team1Name"]').forEach(el => el.textContent = langData.team1Name);
+    document.querySelectorAll('[data-translate="team1Desc"]').forEach(el => el.textContent = langData.team1Desc);
+    document.querySelectorAll('[data-translate="team2Name"]').forEach(el => el.textContent = langData.team2Name);
+    document.querySelectorAll('[data-translate="team2Desc"]').forEach(el => el.textContent = langData.team2Desc);
+    document.querySelectorAll('[data-translate="team3Name"]').forEach(el => el.textContent = langData.team3Name);
+    document.querySelectorAll('[data-translate="team3Desc"]').forEach(el => el.textContent = langData.team3Desc);
+    document.querySelectorAll('[data-translate="team4Name"]').forEach(el => el.textContent = langData.team4Name);
+    document.querySelectorAll('[data-translate="team4Desc"]').forEach(el => el.textContent = langData.team4Desc);
+    document.querySelectorAll('[data-translate="team5Name"]').forEach(el => el.textContent = langData.team5Name);
+    document.querySelectorAll('[data-translate="team5Desc"]').forEach(el => el.textContent = langData.team5Desc);
+    document.querySelectorAll('[data-translate="team6Name"]').forEach(el => el.textContent = langData.team6Name);
+    document.querySelectorAll('[data-translate="team6Desc"]').forEach(el => el.textContent = langData.team6Desc);
     
     // Update legal section
     document.querySelectorAll('[data-translate="legalHero"]').forEach(el => el.textContent = langData.legalHero);

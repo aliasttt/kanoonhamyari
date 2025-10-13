@@ -5,12 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>درباره ما - کانون همیاری</title>
-    <meta name="description" content="">
+    <meta name="description" content="درباره کانون همیاری - ارائه‌دهنده خدمات جامع در زمینه رویدادها، تورها، املاک، تبلیغات، تحصیلی و امور حقوقی">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -23,30 +19,36 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/slicknav.css">
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
+    
     <!-- Beautiful Persian Font Library -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Dark Theme Navigation Menu with FOUC Prevention -->
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom About Page Styles -->
     <style>
-        /* Prevent FOUC - Hide content until styles are loaded */
-        #navigation, .brand_tools, .language_dropdown {
-            visibility: hidden;
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        /* Show content after styles are loaded */
-        .menu-loaded #navigation, 
-        .menu-loaded .brand_tools, 
-        .menu-loaded .language_dropdown {
-            visibility: visible;
+        body {
+            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
         }
         
-        /* Main Navigation Container - Dark Theme */
+        /* Navigation Styles */
         #navigation {
             display: flex !important;
             flex-wrap: nowrap !important;
@@ -57,22 +59,14 @@
             justify-content: center !important;
             align-items: center !important;
             gap: 1px !important;
-            background: rgba(0, 0, 0, 0.85) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
             backdrop-filter: blur(20px) !important;
             border-radius: 15px !important;
             padding: 6px 8px !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
             max-width: 100% !important;
             overflow: hidden !important;
-        }
-        
-        #navigation li {
-            flex-shrink: 0 !important;
-            white-space: nowrap !important;
-            margin: 0 !important;
-            display: inline-block !important;
-            position: relative !important;
         }
         
         #navigation li a {
@@ -88,337 +82,49 @@
             position: relative !important;
             background: transparent !important;
             border: 1px solid transparent !important;
-            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
         }
         
         #navigation li a:hover {
             color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.1) !important;
-            border-color: rgba(255, 255, 255, 0.2) !important;
-            transform: translateY(-1px) !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        #navigation li a:active {
-            transform: translateY(0) !important;
-        }
-        
-        /* Active page indicator */
-        #navigation li a.active {
-            background: rgba(255, 255, 255, 0.15) !important;
-            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.2) !important;
             border-color: rgba(255, 255, 255, 0.3) !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
         }
         
-        .main-menu {
-            overflow: hidden !important;
-            width: 100% !important;
+        #navigation li a.active {
+            background: rgba(255, 255, 255, 0.25) !important;
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
         }
         
-        .main-menu nav {
-            width: 100% !important;
-            display: flex !important;
-            justify-content: center !important;
-        }
-        
-        /* Hide scrollbars completely */
-        #navigation::-webkit-scrollbar {
-            display: none !important;
-        }
-        
-        #navigation {
-            -ms-overflow-style: none !important;
-            scrollbar-width: none !important;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1400px) {
-            #navigation li a {
-                padding: 8px 14px !important;
-                font-size: 12px !important;
-            }
-        }
-        
-        @media (max-width: 1200px) {
-            #navigation {
-                padding: 4px 6px !important;
-                border-radius: 12px !important;
-            }
-            
-            #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            #navigation {
-                flex-wrap: nowrap !important;
-                justify-content: flex-start !important;
-                padding: 4px !important;
-                border-radius: 10px !important;
-                overflow-x: auto !important;
-                -webkit-overflow-scrolling: touch !important;
-            }
-            
-            #navigation li a {
-                padding: 8px 10px !important;
-                font-size: 11px !important;
-                margin: 0 1px !important;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            #navigation {
-                flex-direction: row !important;
-                overflow-x: auto !important;
-                -webkit-overflow-scrolling: touch !important;
-                padding: 3px !important;
-            }
-            
-            #navigation li {
-                flex-shrink: 0 !important;
-                margin: 0 !important;
-            }
-            
-            #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
-                white-space: nowrap !important;
-            }
-        }
-        
-        /* Smooth animations */
-        @keyframes fadeInUp {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        #navigation {
-            animation: fadeInUp 0.5s ease-out !important;
-        }
-        
-        /* Subtle glow effect */
-        #navigation:hover {
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8) !important;
-        }
-        
-        /* Ensure no horizontal scrollbar */
-        .main-menu nav {
-            overflow: hidden !important;
-        }
-        
-        /* Perfect fit for dark theme */
-        #navigation {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.8)) !important;
-        }
-        
-        /* Typography */
-        html[lang="fa"], body {
-            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
-            font-weight: 700 !important;
-        }
-
-        /* Brand tools (Logo + Language) */
+        /* Brand tools */
         .brand_tools {
             display: flex;
             align-items: center;
             gap: 12px;
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 12px;
             padding: 6px 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
+        
         .brand_tools .logo img {
             height: 38px;
             width: auto;
             display: block;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,.3));
         }
         
-        /* Language Dropdown Styles */
+        /* Language Dropdown */
         .language_dropdown {
             position: relative;
             display: inline-block;
         }
         
         .language_dropdown_btn {
-            background: #ff6b35;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
-        }
-        
-        .language_dropdown_btn:hover {
-            background: #e55a2b;
-        }
-        
-        .language_dropdown_btn i {
-            font-size: 12px;
-            transition: transform 0.3s ease;
-        }
-        
-        .language_dropdown_btn.active i {
-            transform: rotate(180deg);
-        }
-        
-        .language_dropdown_content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 120px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1000;
-            border-radius: 5px;
-            top: 100%;
-            right: 0;
-            margin-top: 5px;
-        }
-        
-        .language_dropdown_content.show {
-            display: block;
-        }
-        
-        .language-option {
-            color: #333;
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s ease;
-            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
-        }
-        
-        .language-option:hover {
-            background-color: #f1f1f1;
-            color: #ff6b35;
-        }
-        
-        .language-option.active {
-            background-color: #ff6b35;
-            color: white;
-        }
-    </style>
-    
-    <!-- Navigation Menu Fix -->
-    <style>
-        #navigation {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-            white-space: nowrap !important;
-            list-style: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            justify-content: center !important;
-        }
-        
-        #navigation li {
-            flex-shrink: 0 !important;
-            white-space: nowrap !important;
-            margin: 0 8px !important;
-            display: inline-block !important;
-        }
-        
-        #navigation li a {
-            padding: 6px 10px !important;
-            font-size: 13px !important;
-            white-space: nowrap !important;
-            display: block !important;
-            text-decoration: none !important;
-            color: #ff0000 !important;
-            font-weight: 500 !important;
-            transition: all 0.3s ease !important;
-            border-radius: 4px !important;
-        }
-        
-        #navigation li a:hover {
-            color: #ffffff !important;
-            background-color: #ff0000 !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
-        }
-        
-        .main-menu {
-            overflow: hidden !important;
-        }
-        
-        .main-menu nav {
-            width: 100% !important;
-        }
-        
-        /* Hide horizontal scrollbar completely */
-        #navigation::-webkit-scrollbar {
-            display: none !important;
-        }
-        
-        #navigation {
-            -ms-overflow-style: none !important;
-            scrollbar-width: none !important;
-        }
-        
-        @media (min-width: 992px) and (max-width: 1200px) {
-            #navigation li a {
-                padding: 6px 8px !important;
-                font-size: 13px !important;
-                color: #ff0000 !important;
-            }
-            
-            #navigation li a:hover {
-                color: #ffffff !important;
-                background-color: #ff0000 !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
-            }
-            
-            #navigation li {
-                margin: 0 4px !important;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 14px !important;
-                color: #ff0000 !important;
-            }
-            
-            #navigation li a:hover {
-                color: #ffffff !important;
-                background-color: #ff0000 !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
-            }
-            
-            #navigation li {
-                margin: 0 8px !important;
-            }
-        }
-        
-        /* Language Dropdown Styles */
-        .language_dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .language_dropdown_btn {
-            background: #ff6b35;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
             color: white;
             border: none;
             padding: 8px 15px;
@@ -432,16 +138,7 @@
         }
         
         .language_dropdown_btn:hover {
-            background: #e55a2b;
-        }
-        
-        .language_dropdown_btn i {
-            font-size: 12px;
-            transition: transform 0.3s ease;
-        }
-        
-        .language_dropdown_btn.active i {
-            transform: rotate(180deg);
+            background: linear-gradient(135deg, #e55a2b, #d67e0a);
         }
         
         .language_dropdown_content {
@@ -477,6 +174,689 @@
         .language-option.active {
             background-color: #ff6b35;
             color: white;
+        }
+        
+        /* Hero Section */
+        .about-hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop') center/cover;
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #ff6b35, #ffffff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            font-weight: 300;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Company Story Section */
+        .company-story {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+        
+        .section-title p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .story-text {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        
+        .story-text.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .story-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ffffff, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .story-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .story-image {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .story-image.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .story-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Services Overview Section */
+        .services-overview {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+            position: relative;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            display: block;
+            animation: pulse 2s infinite;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .service-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .service-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #4facfe 0%, #00f2fe 50%, #667eea 100%);
+            position: relative;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .team-member.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-15px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            padding: 5px;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .member-position {
+            color: #ff6b35;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .member-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Achievements Section */
+        .achievements-section {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .achievement-item {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px 30px;
+        }
+        
+        .achievement-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .achievement-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .achievement-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ff6b35;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .achievement-label {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+            position: relative;
+        }
+        
+        .testimonials-carousel {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .testimonial-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            margin: 0 20px;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.4rem;
+            color: #ffffff;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .author-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            padding: 4px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .author-photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .author-info p {
+            color: #ff6b35;
+            font-size: 1rem;
+            font-weight: 600;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #ff6b35, #f7931e, #ff6b35);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop') center/cover;
+            opacity: 0.1;
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .cta-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-description {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+        
+        .cta-button {
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button.primary {
+            background: #ffffff;
+            color: #ff6b35;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button.primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 3px solid #ffffff;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #ffffff;
+            color: #ff6b35;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* WhatsApp Fixed Button */
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+        }
+        
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-link:hover {
+            background: linear-gradient(135deg, #128C7E, #25D366);
+            transform: scale(1.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .whatsapp-link i {
+            font-size: 30px;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-fixed {
+                bottom: 15px;
+                left: 15px;
+            }
+            
+            .whatsapp-link {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .whatsapp-link i {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -513,7 +893,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6">
+                            <div class="col-xl-9 col-lg-9">
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
@@ -524,23 +904,10 @@
                                             <li><a href="advertising.html" data-translate="advertising">تبلیغات</a></li>
                                             <li><a href="education.html" data-translate="education">تحصیلی</a></li>
                                             <li><a href="legal.html" data-translate="legal">امور حقوقی</a></li>
-                                            <li><a href="about.html" data-translate="about">درباره ما</a></li>
+                                            <li><a href="about.html" class="active" data-translate="about">درباره ما</a></li>
                                             <li><a href="contact.html" data-translate="contact">تماس</a></li>
                                         </ul>
                                     </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="language_dropdown">
-                                    <button class="language_dropdown_btn" id="languageBtn">
-                                        <span id="currentLang">فا</span>
-                                        <i class="fa fa-chevron-down"></i>
-                                    </button>
-                                    <div class="language_dropdown_content" id="languageDropdown">
-                                        <a href="#" class="language-option" data-lang="fa">فارسی</a>
-                                        <a href="#" class="language-option" data-lang="en">English</a>
-                                        <a href="#" class="language-option" data-lang="tr">Türkçe</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -555,189 +922,285 @@
     </header>
     <!-- header-end -->
 
-     <!-- bradcam_area -->
-     <div class="bradcam_area">
-        <div class="single_bradcam  d-flex align-items-center bradcam_bg_1 overlay">
-              <div class="container">
-                    <div class="row align-items-center justify-content-center">
-                       <div class="col-xl-12">
-                          <div class="bradcam_text text-center">
-                            <div class="shape_1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <img src="img/shape/shape_1.svg" alt="">
-                            </div>
-                            <div class="shape_2 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">
-                                <img src="img/shape/shape_2.svg" alt="">
-                            </div>
-                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">About</h3>
-                          </div>
-                       </div>
-                    </div>
-              </div>
-           </div>
-     </div>
-    <!-- bradcam_area end -->
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">درباره کانون همیاری</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">ارائه‌دهنده خدمات جامع و تخصصی</p>
+            <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                کانون همیاری با بیش از یک دهه تجربه، ارائه‌دهنده خدمات جامع در زمینه‌های مختلف از جمله تورهای گردشگری، 
+                مشاوره املاک، خدمات تحصیلی، رویدادها و امور حقوقی است. ما با تیمی مجرب و متخصص، 
+                آماده ارائه بهترین خدمات به شما هستیم.
+            </p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </section>
 
-    <!-- about_area_start  -->
-    <div class="about_area black_bg extra_padd">
+    <!-- Company Story Section -->
+    <section class="company-story">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section_title text-center mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" >About Program</h3>
-                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" >The event regularly attracts a diverse range of attendees from around the world, across different professions, and with different.</p>
-                    </div>
-                </div>
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>داستان ما</h2>
+                <p>از یک ایده کوچک تا تبدیل شدن به پیشروان خدمات جامع</p>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-7 col-md-6">
-                    <div class="about_thumb">
-                        <div class="shap_3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                            <img src="img/shape/shape_3.svg" alt="">
-                        </div>
-                        <div class="thumb_inner  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <img src="img/about/about.png" alt="">
-                        </div>
-                    </div>
+            
+            <div class="story-content">
+                <div class="story-text" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="story-title">تاریخچه کانون همیاری</h2>
+                    <p class="story-description">
+                        کانون همیاری در سال ۲۰۱۰ با هدف ارائه خدمات جامع و تخصصی تأسیس شد. 
+                        ما با تیمی کوچک اما پرانگیزه شروع به کار کردیم و به تدریج خدمات خود را 
+                        در زمینه‌های مختلف گسترش دادیم.
+                    </p>
+                    <p class="story-description">
+                        امروز با بیش از ۱۵ سال تجربه و تیمی متخصص، ما یکی از پیشروان ارائه 
+                        خدمات جامع در منطقه هستیم. از تورهای گردشگری تا مشاوره املاک، 
+                        از خدمات تحصیلی تا امور حقوقی، ما در تمامی زمینه‌ها آماده خدمت‌رسانی هستیم.
+                    </p>
                 </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="about_info pl-68">
-                        <h4 class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">It’s time to book your seat</h4>
-                        <p  class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">The event regularly attracts a diverse range of attendees from around the world, across different professions, and with different levels of experience transform your business.</p>
-                        <a href="#" class="boxed-btn3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".7s">Buy Tickets</a>
-                    </div>
+                
+                <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=800&auto=format&fit=crop" alt="تاریخچه کانون همیاری">
                 </div>
             </div>
         </div>
-    </div>
-    <!-- about_area_end  -->
+    </section>
 
-    <!-- performar_area_start  -->
-    <div class="performar_area black_bg">
+    <!-- Services Overview Section -->
+    <section class="services-overview">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Performer</h3>
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>خدمات ما</h2>
+                <p>طیف گسترده‌ای از خدمات تخصصی و حرفه‌ای</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <i class="fa fa-plane service-icon"></i>
+                    <h3 class="service-title">تورهای گردشگری</h3>
+                    <p class="service-description">
+                        تورهای داخلی و خارجی با بهترین برنامه‌ریزی و راهنمایان مجرب. 
+                        از طبیعت‌گردی تا سفرهای فرهنگی و تاریخی.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <i class="fa fa-home service-icon"></i>
+                    <h3 class="service-title">مشاوره املاک</h3>
+                    <p class="service-description">
+                        مشاوره تخصصی خرید، فروش و اجاره ملک با پایگاه داده به‌روز 
+                        و دقیق از تمامی املاک موجود در شهر.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <i class="fa fa-graduation-cap service-icon"></i>
+                    <h3 class="service-title">خدمات تحصیلی</h3>
+                    <p class="service-description">
+                        پذیرش دانشگاهی، اپلای، راهنمایی انتخاب رشته و مشاوره آموزشی تخصصی 
+                        برای موفقیت تحصیلی شما.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <i class="fa fa-calendar service-icon"></i>
+                    <h3 class="service-title">برگزاری رویدادها</h3>
+                    <p class="service-description">
+                        برگزاری حرفه‌ای انواع رویدادهای سازمانی، همایش‌ها و دورهمی‌ها 
+                        با تیم اجرایی مجرب و تجهیزات مدرن.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                    <i class="fa fa-bullhorn service-icon"></i>
+                    <h3 class="service-title">خدمات تبلیغاتی</h3>
+                    <p class="service-description">
+                        کمپین‌های خلاقانه بازاریابی دیجیتال و آفلاین برای رشد برند شما 
+                        و افزایش فروش و شناخت.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                    <i class="fa fa-gavel service-icon"></i>
+                    <h3 class="service-title">امور حقوقی</h3>
+                    <p class="service-description">
+                        مشاوره حقوقی، تنظیم قراردادها و پیگیری پرونده‌ها توسط تیم حقوقی مجرب 
+                        و متخصص در زمینه‌های مختلف.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>تیم ما</h2>
+                <p>متخصصان مجرب و با تجربه که در کنار شما هستند</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" alt="مدیرعامل">
+                    </div>
+                    <h3 class="member-name">احمد محمدی</h3>
+                    <p class="member-position">مدیرعامل</p>
+                    <p class="member-description">
+                        با بیش از ۱۵ سال تجربه در مدیریت و راهبری تیم‌های بزرگ، 
+                        رهبری کانون همیاری را بر عهده دارد.
+                    </p>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=300&auto=format&fit=crop" alt="مدیر تورها">
+                    </div>
+                    <h3 class="member-name">فاطمه احمدی</h3>
+                    <p class="member-position">مدیر تورهای گردشگری</p>
+                    <p class="member-description">
+                        متخصص در برنامه‌ریزی و اجرای تورهای داخلی و خارجی با سابقه‌ای درخشان 
+                        در راهنمایی تورهای مختلف.
+                    </p>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=300&auto=format&fit=crop" alt="مدیر املاک">
+                    </div>
+                    <h3 class="member-name">علی رضایی</h3>
+                    <p class="member-position">مدیر مشاوره املاک</p>
+                    <p class="member-description">
+                        کارشناس املاک با تخصص در مشاوره خرید، فروش و اجاره 
+                        و آشنایی کامل با بازار مسکن و قوانین مربوطه.
+                    </p>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format&fit=crop" alt="مدیر تحصیلی">
+                    </div>
+                    <h3 class="member-name">زهرا کریمی</h3>
+                    <p class="member-position">مدیر خدمات تحصیلی</p>
+                    <p class="member-description">
+                        مشاور تحصیلی با تخصص در پذیرش دانشگاهی و اپلای 
+                        برای دانشگاه‌های داخلی و خارجی.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>دستاوردهای ما</h2>
+                <p>آمار و موفقیت‌های کانون همیاری</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="achievement-number" data-count="500">0</div>
+                    <div class="achievement-label">تور موفق</div>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="achievement-number" data-count="2000">0</div>
+                    <div class="achievement-label">مشتری راضی</div>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="achievement-number" data-count="15">0</div>
+                    <div class="achievement-label">سال تجربه</div>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="achievement-number" data-count="100">0</div>
+                    <div class="achievement-label">رویداد برگزار شده</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>نظرات مشتریان</h2>
+                <p>آنچه مشتریان ما درباره خدمات ما می‌گویند</p>
+            </div>
+            
+            <div class="testimonials-carousel owl-carousel" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="testimonial-item">
+                    <p class="testimonial-quote">
+                        "تورهای کانون همیاری واقعاً فوق‌العاده است. برنامه‌ریزی دقیق و راهنمایان مجرب 
+                        که تجربه سفر به‌یادماندنی را برای ما فراهم کردند."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="مشتری">
+                        </div>
+                        <div class="author-info">
+                            <h4>محمد رضایی</h4>
+                            <p>مسافر تور اروپا</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <p class="testimonial-quote">
+                        "مشاوره املاک کانون همیاری بسیار مفید بود. با کمک آنها بهترین ملک را 
+                        در بهترین موقعیت و قیمت پیدا کردم."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-photo">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=100&auto=format&fit=crop" alt="مشتری">
+                        </div>
+                        <div class="author-info">
+                            <h4>فاطمه احمدی</h4>
+                            <p>خریدار ملک</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <p class="testimonial-quote">
+                        "خدمات تحصیلی کانون همیاری در اپلای دانشگاه‌های خارجی بسیار کمکم کرد. 
+                        مشاوران مجرب و راهنمایی دقیق."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-photo">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" alt="مشتری">
+                        </div>
+                        <div class="author-info">
+                            <h4>علی محمدی</h4>
+                            <p>دانشجوی دانشگاه خارجی</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/1.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Mr. Zosoldos</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/2.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Protik Hasan</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                <div  data-tilt class="thumb">
-                                    <img src="img/performer/3.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Salmon Vicky</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div   class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/4.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Filaris Habol</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">آماده شروع همکاری هستید؟</h2>
+            <p class="cta-description">
+                با ما در تماس باشید و از خدمات حرفه‌ای ما بهره‌مند شوید. 
+                تیم ما آماده پاسخگویی به تمام سوالات شماست.
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button primary">تماس با ما</a>
+                <a href="index.html" class="cta-button secondary">بازگشت به خانه</a>
             </div>
         </div>
-    </div>
-    <!-- performar_area_end  -->
+    </section>
 
-    <!-- map_area_start  -->
-    <div class="map_area">
-        <div id="map" style="height: 600px; position: relative; overflow: hidden;">
-        
-        </div>
-        <script>
-            function initMap() {
-                var uluru = {
-                    lat: -25.363,
-                    lng: 131.044
-                };
-                var grayStyles = [{
-                        featureType: "all",
-                        stylers: [{
-                                saturation: -90
-                            },
-                            {
-                                lightness: 50
-                            }
-                        ]
-                    },
-                    {
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#ccdee9'
-                        }]
-                    }
-                ];
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {
-                        lat: -31.197,
-                        lng: 150.744
-                    },
-                    zoom: 9,
-                    styles: grayStyles,
-                    scrollwheel: false
-                });
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
-        </script>
-        <div class="location_information black_bg wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-            <h3>Concert 2020</h3>
-            <div class="info_wrap">
-                <div class="single_info">
-                    <span>Vanue:</span>
-                    <p>26/A, Coontum Avenu
-                        New York-2783</p>
-                </div>
-                <div class="single_info">
-                    <span>Phone:</span>
-                    <p>+10 (88) 267 368 283</p>
-                </div>
-                <div class="single_info">
-                    <span>Email:</span>
-                    <p>contact@concert20.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- map_area_end  -->
-
-    
     <!-- footer_start  -->
     <footer class="footer">
         <div class="copy-right_text">
@@ -837,96 +1300,121 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
-
-
-
-    <!--contact js-->
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
-
-
     <script src="js/main.js"></script>
     <script src="js/languages.js"></script>
     
-    <!-- Language Dropdown JavaScript with FOUC Prevention -->
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Add loaded class to prevent FOUC
-            document.body.classList.add('menu-loaded');
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
             
+            // Initialize testimonials carousel
+            $('.testimonials-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                smartSpeed: 650,
+                rtl: true,
+                dots: true,
+                nav: false
+            });
+            
+            // Counter animation for achievements
+            function animateCounters() {
+                $('.achievement-number').each(function() {
+                    const $this = $(this);
+                    const countTo = $this.attr('data-count');
+                    
+                    $({ countNum: $this.text() }).animate({
+                        countNum: countTo
+                    }, {
+                        duration: 2000,
+                        easing: 'linear',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+                    });
+                });
+            }
+            
+            // Trigger counter animation when achievements section is visible
+            $(window).scroll(function() {
+                const achievementsSection = $('.achievements-section');
+                const scrollTop = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                const sectionTop = achievementsSection.offset().top;
+                
+                if (scrollTop + windowHeight > sectionTop + 200) {
+                    if (!achievementsSection.hasClass('counters-animated')) {
+                        achievementsSection.addClass('counters-animated');
+                        animateCounters();
+                    }
+                }
+            });
+            
+            // Language dropdown functionality
             const languageBtn = document.getElementById('languageBtn');
             const languageDropdown = document.getElementById('languageDropdown');
             const currentLang = document.getElementById('currentLang');
             const languageOptions = document.querySelectorAll('.language-option');
             
-            // Toggle dropdown on click
-            if (languageBtn) {
-            languageBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                languageDropdown.classList.toggle('show');
-                languageBtn.classList.toggle('active');
-            });
-            }
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (languageBtn && languageDropdown && 
-                    !languageBtn.contains(e.target) && 
-                    !languageDropdown.contains(e.target)) {
-                    languageDropdown.classList.remove('show');
-                    languageBtn.classList.remove('active');
-                }
-            });
-            
-            // Handle language selection
-            languageOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const selectedLang = this.getAttribute('data-lang');
-                    const selectedText = this.textContent;
-                    
-                    // Update current language display
-                    if (currentLang) {
-                    currentLang.textContent = selectedLang === 'fa' ? 'فا' : selectedLang.toUpperCase();
-                    }
-                    
-                    // Update active state
-                    languageOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Close dropdown
-                    if (languageDropdown) {
-                    languageDropdown.classList.remove('show');
-                    }
-                    if (languageBtn) {
-                    languageBtn.classList.remove('active');
-                    }
-                    
-                    // Trigger language change (if you have language switching functionality)
-                    if (typeof switchLanguage === 'function') {
-                        switchLanguage(selectedLang);
+            if (languageBtn && languageDropdown) {
+                languageBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageDropdown.classList.toggle('show');
+                    languageBtn.classList.toggle('active');
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                        languageDropdown.classList.remove('show');
+                        languageBtn.classList.remove('active');
                     }
                 });
-            });
-            
-            // Set initial active language
-            const activeOption = document.querySelector('.language-option[data-lang="fa"]');
-            if (activeOption) {
-                activeOption.classList.add('active');
-            }
-            
-            // Set active menu item based on current page
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const menuLinks = document.querySelectorAll('#navigation a');
-            menuLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-                    link.classList.add('active');
+                
+                languageOptions.forEach(option => {
+                    option.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const selectedLang = this.getAttribute('data-lang');
+                        const selectedText = this.textContent;
+                        
+                        currentLang.textContent = selectedLang === 'fa' ? 'فا' : selectedLang.toUpperCase();
+                        
+                        languageOptions.forEach(opt => opt.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        languageDropdown.classList.remove('show');
+                        languageBtn.classList.remove('active');
+                        
+                        if (typeof switchLanguage === 'function') {
+                            switchLanguage(selectedLang);
+                        }
+                    });
+                });
+                
+                const activeOption = document.querySelector('.language-option[data-lang="fa"]');
+                if (activeOption) {
+                    activeOption.classList.add('active');
                 }
-            });
+            }
         });
     </script>
 
@@ -936,69 +1424,6 @@
             <i class="fa fa-whatsapp"></i>
         </a>
     </div>
-
-    <style>
-        .whatsapp-fixed {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 9999;
-        }
-        
-        .whatsapp-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-link:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-            color: white;
-            text-decoration: none;
-        }
-        
-        .whatsapp-link i {
-            font-size: 30px;
-        }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .whatsapp-fixed {
-                bottom: 15px;
-                left: 15px;
-            }
-            
-            .whatsapp-link {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .whatsapp-link i {
-                font-size: 24px;
-            }
-        }
-    </style>
 </body>
 
 </html>
