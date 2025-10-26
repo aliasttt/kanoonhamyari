@@ -62,12 +62,12 @@
             justify-content: center !important;
             align-items: center !important;
             gap: 1px !important;
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(0, 0, 0, 0.85) !important;
             backdrop-filter: blur(20px) !important;
             border-radius: 15px !important;
             padding: 6px 8px !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
             max-width: 100% !important;
             overflow: hidden !important;
         }
@@ -89,16 +89,74 @@
         
         #navigation li a:hover {
             color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.2) !important;
-            border-color: rgba(255, 255, 255, 0.3) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
             transform: translateY(-1px) !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
         }
         
+        #navigation li a:active {
+            transform: translateY(0) !important;
+        }
+        
+        /* Active page indicator */
         #navigation li a.active {
-            background: rgba(255, 255, 255, 0.25) !important;
+            background: rgba(255, 255, 255, 0.15) !important;
             color: #ffffff !important;
-            border-color: rgba(255, 255, 255, 0.4) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+        
+        .main-menu {
+            overflow: hidden !important;
+            width: 100% !important;
+        }
+        
+        .main-menu nav {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+        }
+        
+        /* Hide scrollbars completely */
+        #navigation::-webkit-scrollbar {
+            display: none !important;
+        }
+        
+        #navigation {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            #navigation li a {
+                padding: 8px 14px !important;
+                font-size: 12px !important;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            #navigation {
+                padding: 4px 6px !important;
+                border-radius: 12px !important;
+            }
+            
+            #navigation li a {
+                padding: 8px 12px !important;
+                font-size: 11px !important;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            #navigation {
+                padding: 3px 5px !important;
+                border-radius: 10px !important;
+            }
+            
+            #navigation li a {
+                padding: 6px 10px !important;
+                font-size: 10px !important;
+            }
         }
         
         /* Brand tools */
@@ -992,7 +1050,7 @@
                         <p>✅ همکاری با وکلای ثبت‌شده در باروی ترکیه</p>
                         <p>✅ پشتیبانی کامل فارسی و ترکی</p>
                         <p>✅ ارائه مشاوره حضوری و آنلاین</p>
-                    </div>
+                </div>
                 </div>
                 
                 <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
@@ -1008,8 +1066,8 @@
             <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
                 <h2>🛠️ دکوراسیون داخلی و بازسازی</h2>
                 <p>تیم متخصص طراحی و اجرای پروژه‌های ساختمانی</p>
-            </div>
-            
+                </div>
+                
             <div class="story-content">
                 <div class="story-text" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="story-title">خدمات دکوراسیون داخلی و بازسازی</h2>
@@ -1057,8 +1115,8 @@
                 
                 <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
                     <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop" alt="تورها و برنامه‌های تفریحی">
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -1068,7 +1126,7 @@
             <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
                 <h2>🎉 رویدادها و جشن‌ها</h2>
                 <p>زنده نگه داشتن فرهنگ و حس ایرانی در ترکیه</p>
-            </div>
+                    </div>
             
             <div class="story-content">
                 <div class="story-text" data-aos="fade-right" data-aos-duration="1000">
@@ -1111,7 +1169,7 @@
                         <p>✅ معرفی دانشگاه‌های معتبر و رشته‌های مناسب</p>
                         <p>✅ آماده‌سازی مدارک، ترجمه رسمی و ثبت‌نام</p>
                         <p>✅ پشتیبانی کامل پس از ورود به ترکیه</p>
-                    </div>
+                </div>
                 </div>
                 
                 <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
@@ -1145,9 +1203,9 @@
                 
                 <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
                     <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop" alt="مشاوره بیزینس و رشد کسب‌وکار">
-                </div>
-            </div>
-        </div>
+                        </div>
+                        </div>
+                    </div>
     </section>
 
     <!-- Advertising Section -->
@@ -1156,8 +1214,8 @@
             <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
                 <h2>📢 تبلیغات، چاپ، تولید محتوا و برندینگ</h2>
                 <p>تیم خلاقیت و رسانه برای دیده شدن برند شما</p>
-            </div>
-            
+                </div>
+                
             <div class="story-content">
                 <div class="story-text" data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="story-title">خدمات تبلیغاتی و برندینگ</h2>
@@ -1170,8 +1228,8 @@
                         <p>✅ طراحی لوگو، پوستر و هویت برند</p>
                         <p>✅ مدیریت شبکه‌های اجتماعی و تبلیغات هدفمند</p>
                         <p>✅ ساخت ویدیو و محتوای دیجیتال</p>
-                    </div>
-                </div>
+                        </div>
+                        </div>
                 
                 <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" alt="تبلیغات، چاپ، تولید محتوا و برندینگ">

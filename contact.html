@@ -62,12 +62,12 @@
             justify-content: center !important;
             align-items: center !important;
             gap: 1px !important;
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(0, 0, 0, 0.85) !important;
             backdrop-filter: blur(20px) !important;
             border-radius: 15px !important;
             padding: 6px 8px !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
             max-width: 100% !important;
             overflow: hidden !important;
         }
@@ -89,16 +89,74 @@
         
         #navigation li a:hover {
             color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.2) !important;
-            border-color: rgba(255, 255, 255, 0.3) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
             transform: translateY(-1px) !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
         }
         
+        #navigation li a:active {
+            transform: translateY(0) !important;
+        }
+        
+        /* Active page indicator */
         #navigation li a.active {
-            background: rgba(255, 255, 255, 0.25) !important;
+            background: rgba(255, 255, 255, 0.15) !important;
             color: #ffffff !important;
-            border-color: rgba(255, 255, 255, 0.4) !important;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+        
+        .main-menu {
+            overflow: hidden !important;
+            width: 100% !important;
+        }
+        
+        .main-menu nav {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+        }
+        
+        /* Hide scrollbars completely */
+        #navigation::-webkit-scrollbar {
+            display: none !important;
+        }
+        
+        #navigation {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            #navigation li a {
+                padding: 8px 14px !important;
+                font-size: 12px !important;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            #navigation {
+                padding: 4px 6px !important;
+                border-radius: 12px !important;
+            }
+            
+            #navigation li a {
+                padding: 8px 12px !important;
+                font-size: 11px !important;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            #navigation {
+                padding: 3px 5px !important;
+                border-radius: 10px !important;
+            }
+            
+            #navigation li a {
+                padding: 6px 10px !important;
+                font-size: 10px !important;
+            }
         }
         
         /* Brand tools */
