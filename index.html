@@ -546,6 +546,20 @@
             border-radius: 8px;
         }
 
+        /* Map Section */
+        .map_area {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .map_wrapper {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .map_wrapper iframe {
+            border-radius: 12px;
+        }
+
         /* Responsive for new sections */
         @media (max-width: 768px) {
             .mission_area {
@@ -569,6 +583,12 @@
             }
             .program_detail_wrap .thumb img {
                 height: 150px;
+            }
+            .map_area {
+                padding: 60px 0;
+            }
+            .map_wrapper iframe {
+                height: 300px;
             }
         }
     </style>
@@ -960,7 +980,9 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <h4 data-translate="phoneNumber">تلفن</h4>
-                            <p data-translate="phone">+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸</p>
+                            <p>+90 552 561 22 21</p>
+                            <p>+90 555 143 32 88</p>
+                            <p>+90 537 330 34 40</p>
                             </div>
                         <div class="single_contact_info text-center">
                             <div class="contact_icon">
@@ -975,6 +997,36 @@
         </div>
     </div>
     <!-- contact_area_end  -->
+
+    <!-- map_area_start -->
+    <div class="map_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center mb-80">
+                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">موقعیت ما</h3>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="map_wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.123456789!2d28.6482778!3d41.0116111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAwJzQxLjgiTiAyOMKwMzgnNTcuOCJF!5e0!3m2!1sen!2str!4v1234567890123!5m2!1sen!2str"
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- map_area_end -->
 
     <!-- footer_start  -->
     <footer class="footer">
@@ -1023,7 +1075,7 @@
                                         <h4 data-translate="contactInfo">اطلاعات تماس</h4>
                                         <div class="contact_info">
                                             <p><i class="fa fa-map-marker"></i> <span data-translate="address">تهران، خیابان ولیعصر، پلاک ۱۲۳</span></p>
-                                            <p><i class="fa fa-phone"></i> <span data-translate="phone">+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸</span></p>
+                                            <p><i class="fa fa-phone"></i> <span>+90 552 561 22 21 | +90 555 143 32 88 | +90 537 330 34 40</span></p>
                                             <p><i class="fa fa-envelope"></i> <span data-translate="email">info@kanoonhamyari.com</span></p>
                                         </div>
                                     </div>
