@@ -1,33 +1,4 @@
-# Django
-*.log
-*.pot
-*.pyc
-__pycache__/
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-media/
-
-# Static files
-staticfiles/
-static/
-
-# Environment
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -36,8 +7,46 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
 # Node modules (if any)
 node_modules/
+
+# Python files (removed for static site)
+*.py
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Database files
+*.db
+*.sqlite3
+
+# PHP files (removed for static site)
+*.php
+
+# Django files (removed for static site)
+manage.py
+*/migrations/
+*/__pycache__/
 
 # Backup files
 *.bak
