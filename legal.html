@@ -263,47 +263,6 @@
             box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
         }
         
-        .legal_overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .legal_card:hover .legal_overlay {
-            opacity: 1;
-        }
-        
-        .overlay_actions {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .action_btn {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            font-size: 18px;
-        }
-        
-        .action_btn:hover {
-            background: #FF6B35;
-            transform: scale(1.15);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
-        }
         
         .legal_content {
             padding: 30px;
@@ -438,20 +397,10 @@
             }
         }
         
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
         
         .legal_card:hover {
-            animation: pulse 2s infinite;
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
         }
         
         /* Responsive Design */
@@ -1025,8 +974,8 @@
             <div class="legal_hero">
                 <div class="hero_overlay"></div>
                 <div class="hero_content">
-                    <h1 class="hero_title" data-translate="legalHero">خدمات حقوقی حرفه‌ای</h1>
-                    <p class="hero_subtitle" data-translate="legalHeroSub">با ما از حقوق خود محافظت کنید</p>
+                    <h1 class="hero_title">⚖️ بخش حقوقی و اقامتی</h1>
+                    <p class="hero_subtitle">تیم حقوقی کانون همیاری متشکل از وکلای رسمی، مشاوران مهاجرتی و کارشناسان امور اقامت است که سال‌ها تجربه فعالیت حرفه‌ای در ترکیه را دارند.</p>
                     <div class="hero_search">
                         <div class="search_box">
                             <input type="text" placeholder="جستجو در خدمات حقوقی..." class="search_input">
@@ -1042,292 +991,269 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section_title text-center mb-80">
-                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" data-translate="ourLegal">خدمات حقوقی ما</h3>
-                                <p class="section_subtitle" data-translate="legalSubtitle">بهترین راه‌حل‌های حقوقی با قیمت‌های مناسب</p>
+                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">خدمات حقوقی و اقامتی</h3>
+                                <p class="section_subtitle">ما تمامی فرآیندهای قانونی زندگی، کار، اقامت و سرمایه‌گذاری را برای فارسی‌زبانان تسهیل و مدیریت می‌کنیم. هدف ما، ارائه خدمات حقوقی مطمئن، دقیق و مبتنی بر قوانین روز ترکیه است.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Legal Cards -->
+                    <!-- Legal Services -->
                     <div class="legal_grid">
-                        <!-- Service 1 -->
+                        <!-- Service 1: مشاوره حقوقی تخصصی -->
                         <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <div class="legal_image">
-                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000&auto=format&fit=crop" alt="مشاوره حقوقی">
+                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000&auto=format&fit=crop" alt="مشاوره حقوقی تخصصی">
                                 <div class="legal_badge consultation">
-                                    <span data-translate="consultation">مشاوره</span>
-                                </div>
-                                <div class="legal_overlay">
-                                    <div class="overlay_actions">
-                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
-                                        <button class="action_btn"><i class="fa fa-share"></i></button>
-                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
-                                    </div>
+                                    <span>مشاوره</span>
                                 </div>
                             </div>
                             <div class="legal_content">
                                 <div class="legal_header">
-                                    <h4 class="legal_title" data-translate="legal1Title">مشاوره حقوقی</h4>
+                                    <h4 class="legal_title">مشاوره حقوقی تخصصی</h4>
                                     <div class="legal_category">
                                         <i class="fa fa-gavel"></i>
-                                        <span data-translate="category">مشاوره</span>
+                                        <span>مشاوره</span>
                                     </div>
                                 </div>
-                                <p class="legal_description" data-translate="legal1Desc">مشاوره حقوقی تخصصی در زمینه‌های مختلف حقوقی</p>
+                                <p class="legal_description">بررسی وضعیت اقامت، سرمایه‌گذاری، مالی و قراردادها با وکلای مجرب</p>
                                 <div class="legal_features">
                                     <div class="feature_item">
                                         <i class="fa fa-clock-o"></i>
-                                        <span data-translate="duration">۱ ساعت</span>
+                                        <span>۲۴/۷</span>
                                     </div>
                                     <div class="feature_item">
                                         <i class="fa fa-user"></i>
-                                        <span data-translate="expert">متخصص</span>
+                                        <span>متخصص</span>
                                     </div>
                                     <div class="feature_item">
                                         <i class="fa fa-star"></i>
-                                        <span data-translate="rating">۴.۹ امتیاز</span>
+                                        <span>۴.۹ امتیاز</span>
                                     </div>
                                 </div>
                                 <div class="legal_footer">
-                                    <div class="legal_price">
-                                        <span class="price_amount" data-translate="price">۲۰۰,۰۰۰ تومان</span>
-                                    </div>
-                                    <a href="#" class="legal_btn" data-translate="consult">مشاوره</a>
+                                    <a href="contact.html" class="legal_btn">مشاوره</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Service 2 -->
+                        <!-- Service 2: دریافت اقامت ترکیه -->
                         <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                             <div class="legal_image">
-                                <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1000&auto=format&fit=crop" alt="وکالت">
+                                <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1000&auto=format&fit=crop" alt="دریافت اقامت ترکیه">
                                 <div class="legal_badge advocacy">
-                                    <span data-translate="advocacy">وکالت</span>
-                                </div>
-                                <div class="legal_overlay">
-                                    <div class="overlay_actions">
-                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
-                                        <button class="action_btn"><i class="fa fa-share"></i></button>
-                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
-                                    </div>
+                                    <span>اقامت</span>
                                 </div>
                             </div>
                             <div class="legal_content">
                                 <div class="legal_header">
-                                    <h4 class="legal_title" data-translate="legal2Title">وکالت</h4>
+                                    <h4 class="legal_title">دریافت اقامت ترکیه</h4>
                                     <div class="legal_category">
-                                        <i class="fa fa-balance-scale"></i>
-                                        <span data-translate="category">وکالت</span>
+                                        <i class="fa fa-passport"></i>
+                                        <span>اقامت</span>
                                     </div>
                                 </div>
-                                <p class="legal_description" data-translate="legal2Desc">خدمات وکالت در محاکم و مراجع قضایی</p>
+                                <p class="legal_description">ارائه کامل خدمات ثبت و تمدید اقامت توریستی، کاری، خانوادگی و دانشجویی</p>
                                 <div class="legal_features">
                                     <div class="feature_item">
-                                        <i class="fa fa-balance-scale"></i>
-                                        <span data-translate="court">دادگاه</span>
+                                        <i class="fa fa-passport"></i>
+                                        <span>توریستی</span>
                                     </div>
                                     <div class="feature_item">
-                                        <i class="fa fa-user"></i>
-                                        <span data-translate="lawyer">وکیل</span>
+                                        <i class="fa fa-briefcase"></i>
+                                        <span>کاری</span>
                                     </div>
                                     <div class="feature_item">
-                                        <i class="fa fa-shield"></i>
-                                        <span data-translate="protection">حمایت</span>
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <span>دانشجویی</span>
                                     </div>
                                 </div>
                                 <div class="legal_footer">
-                                    <div class="legal_price">
-                                        <span class="price_amount" data-translate="price">از ۵۰۰,۰۰۰ تومان</span>
-                                    </div>
-                                    <a href="#" class="legal_btn" data-translate="consult">مشاوره</a>
+                                    <a href="contact.html" class="legal_btn">درخواست</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Service 3 -->
+                        <!-- Service 3: دریافت اجازه کار -->
                         <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                             <div class="legal_image">
-                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000&auto=format&fit=crop" alt="مستندات حقوقی">
+                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000&auto=format&fit=crop" alt="دریافت اجازه کار">
                                 <div class="legal_badge documents">
-                                    <span data-translate="documents">مستندات</span>
-                                </div>
-                                <div class="legal_overlay">
-                                    <div class="overlay_actions">
-                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
-                                        <button class="action_btn"><i class="fa fa-share"></i></button>
-                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
-                                    </div>
+                                    <span>اجازه کار</span>
                                 </div>
                             </div>
                             <div class="legal_content">
                                 <div class="legal_header">
-                                    <h4 class="legal_title" data-translate="legal3Title">مستندات حقوقی</h4>
+                                    <h4 class="legal_title">دریافت اجازه کار (İzin Çalışma)</h4>
                                     <div class="legal_category">
-                                        <i class="fa fa-file-text"></i>
-                                        <span data-translate="category">مستندات</span>
+                                        <i class="fa fa-briefcase"></i>
+                                        <span>اجازه کار</span>
                                     </div>
                                 </div>
-                                <p class="legal_description" data-translate="legal3Desc">تهیه و تنظیم انواع مستندات و قراردادهای حقوقی</p>
+                                <p class="legal_description">آماده‌سازی مدارک، تنظیم پرونده و پیگیری مجوز از وزارت کار ترکیه</p>
                                 <div class="legal_features">
                                     <div class="feature_item">
                                         <i class="fa fa-file-text"></i>
-                                        <span data-translate="documents">مستندات</span>
+                                        <span>مدارک</span>
                                     </div>
                                     <div class="feature_item">
                                         <i class="fa fa-edit"></i>
-                                        <span data-translate="drafting">تنظیم</span>
+                                        <span>تنظیم</span>
                                     </div>
                                     <div class="feature_item">
                                         <i class="fa fa-check"></i>
-                                        <span data-translate="review">بررسی</span>
+                                        <span>پیگیری</span>
                                     </div>
                                 </div>
                                 <div class="legal_footer">
-                                    <div class="legal_price">
-                                        <span class="price_amount" data-translate="price">از ۳۰۰,۰۰۰ تومان</span>
-                                    </div>
-                                    <a href="#" class="legal_btn" data-translate="consult">مشاوره</a>
+                                    <a href="contact.html" class="legal_btn">درخواست</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Service 4 -->
+                        <!-- Service 4: رفع ریجکتی اقامت -->
                         <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                             <div class="legal_image">
-                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1000&auto=format&fit=crop" alt="قراردادها">
+                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1000&auto=format&fit=crop" alt="رفع ریجکتی اقامت">
                                 <div class="legal_badge contracts">
-                                    <span data-translate="contracts">قراردادها</span>
-                                </div>
-                                <div class="legal_overlay">
-                                    <div class="overlay_actions">
-                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
-                                        <button class="action_btn"><i class="fa fa-share"></i></button>
-                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
-                                    </div>
+                                    <span>رفع ریجکتی</span>
                                 </div>
                             </div>
                             <div class="legal_content">
                                 <div class="legal_header">
-                                    <h4 class="legal_title" data-translate="legal4Title">قراردادها</h4>
+                                    <h4 class="legal_title">رفع ریجکتی اقامت</h4>
                                     <div class="legal_category">
-                                        <i class="fa fa-handshake-o"></i>
-                                        <span data-translate="category">قرارداد</span>
+                                        <i class="fa fa-refresh"></i>
+                                        <span>رفع ریجکتی</span>
                                     </div>
                                 </div>
-                                <p class="legal_description" data-translate="legal4Desc">تهیه، بررسی و تنظیم انواع قراردادهای تجاری و حقوقی</p>
+                                <p class="legal_description">بررسی علت ریجکت، آماده‌سازی اعتراض رسمی و تشکیل پرونده جدید با استراتژی دقیق</p>
                                 <div class="legal_features">
                                     <div class="feature_item">
-                                        <i class="fa fa-handshake-o"></i>
-                                        <span data-translate="agreement">توافق</span>
+                                        <i class="fa fa-search"></i>
+                                        <span>بررسی</span>
                                     </div>
                                     <div class="feature_item">
-                                        <i class="fa fa-shield"></i>
-                                        <span data-translate="security">امنیت</span>
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                        <span>اعتراض</span>
                                     </div>
                                     <div class="feature_item">
-                                        <i class="fa fa-legal"></i>
-                                        <span data-translate="legal">قانونی</span>
+                                        <i class="fa fa-file"></i>
+                                        <span>پرونده جدید</span>
                                     </div>
                                 </div>
                                 <div class="legal_footer">
-                                    <div class="legal_price">
-                                        <span class="price_amount" data-translate="price">از ۴۰۰,۰۰۰ تومان</span>
-                                    </div>
-                                    <a href="#" class="legal_btn" data-translate="consult">مشاوره</a>
+                                    <a href="contact.html" class="legal_btn">درخواست</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Service 5 -->
+                        <!-- Service 5: پیگیری پرونده‌های مالی و مالیاتی -->
                         <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
                             <div class="legal_image">
-                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1000&auto=format&fit=crop" alt="مالکیت فکری">
+                                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop" alt="پیگیری پرونده‌های مالی">
                                 <div class="legal_badge intellectual">
-                                    <span data-translate="intellectual">مالکیت فکری</span>
-                                </div>
-                                <div class="legal_overlay">
-                                    <div class="overlay_actions">
-                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
-                                        <button class="action_btn"><i class="fa fa-share"></i></button>
-                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
-                                    </div>
+                                    <span>مالیاتی</span>
                                 </div>
                             </div>
                             <div class="legal_content">
                                 <div class="legal_header">
-                                    <h4 class="legal_title" data-translate="legal5Title">مالکیت فکری</h4>
+                                    <h4 class="legal_title">پیگیری پرونده‌های مالی و مالیاتی</h4>
                                     <div class="legal_category">
-                                        <i class="fa fa-lightbulb-o"></i>
-                                        <span data-translate="category">مالکیت</span>
+                                        <i class="fa fa-calculator"></i>
+                                        <span>مالیاتی</span>
                                     </div>
                                 </div>
-                                <p class="legal_description" data-translate="legal5Desc">ثبت و حمایت از حقوق مالکیت فکری و معنوی</p>
+                                <p class="legal_description">همکاری با حسابداران رسمی و کارشناسان مالی برای تسویه و اصلاح پرونده‌های مالیاتی</p>
                                 <div class="legal_features">
                                     <div class="feature_item">
-                                        <i class="fa fa-lightbulb-o"></i>
-                                        <span data-translate="innovation">نوآوری</span>
+                                        <i class="fa fa-calculator"></i>
+                                        <span>مالیاتی</span>
                                     </div>
                                     <div class="feature_item">
-                                        <i class="fa fa-copyright"></i>
-                                        <span data-translate="copyright">کپی‌رایت</span>
+                                        <i class="fa fa-user"></i>
+                                        <span>حسابدار</span>
                                     </div>
                                     <div class="feature_item">
-                                        <i class="fa fa-shield"></i>
-                                        <span data-translate="protection">حمایت</span>
+                                        <i class="fa fa-check"></i>
+                                        <span>تسویه</span>
                                     </div>
                                 </div>
                                 <div class="legal_footer">
-                                    <div class="legal_price">
-                                        <span class="price_amount" data-translate="price">از ۶۰۰,۰۰۰ تومان</span>
-                                    </div>
-                                    <a href="#" class="legal_btn" data-translate="consult">مشاوره</a>
+                                    <a href="contact.html" class="legal_btn">درخواست</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Service 6 -->
+                        <!-- Service 6: ثبت رسمی اسناد و قراردادها -->
                         <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
                             <div class="legal_image">
-                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1000&auto=format&fit=crop" alt="امور خانواده">
+                                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000&auto=format&fit=crop" alt="ثبت رسمی اسناد">
                                 <div class="legal_badge family">
-                                    <span data-translate="family">خانواده</span>
+                                    <span>ثبت رسمی</span>
                                 </div>
-                                <div class="legal_overlay">
-                                    <div class="overlay_actions">
-                                        <button class="action_btn"><i class="fa fa-heart"></i></button>
-                                        <button class="action_btn"><i class="fa fa-share"></i></button>
-                                        <button class="action_btn"><i class="fa fa-eye"></i></button>
                                     </div>
+                            <div class="legal_content">
+                                <div class="legal_header">
+                                    <h4 class="legal_title">ثبت رسمی اسناد و قراردادها</h4>
+                                    <div class="legal_category">
+                                        <i class="fa fa-file-text"></i>
+                                        <span>ثبت رسمی</span>
+                                    </div>
+                                </div>
+                                <p class="legal_description">تنظیم و ترجمه رسمی انواع قراردادها (خرید، اجاره، شراکت و…) با مهر نوتر</p>
+                                <div class="legal_features">
+                                    <div class="feature_item">
+                                        <i class="fa fa-file-text"></i>
+                                        <span>اسناد</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-handshake-o"></i>
+                                        <span>قرارداد</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-stamp"></i>
+                                        <span>مهر نوتر</span>
+                                    </div>
+                                </div>
+                                <div class="legal_footer">
+                                    <a href="contact.html" class="legal_btn">درخواست</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 7: انواع بیمه‌نامه‌ها -->
+                        <div class="legal_card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s">
+                            <div class="legal_image">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6f?q=80&w=1000&auto=format&fit=crop" alt="انواع بیمه‌نامه‌ها">
+                                <div class="legal_badge family">
+                                    <span>بیمه</span>
                                 </div>
                             </div>
                             <div class="legal_content">
                                 <div class="legal_header">
-                                    <h4 class="legal_title" data-translate="legal6Title">امور خانواده</h4>
+                                    <h4 class="legal_title">انواع بیمه‌نامه‌ها</h4>
                                     <div class="legal_category">
-                                        <i class="fa fa-home"></i>
-                                        <span data-translate="category">خانواده</span>
+                                        <i class="fa fa-shield"></i>
+                                        <span>بیمه</span>
                                     </div>
                                 </div>
-                                <p class="legal_description" data-translate="legal6Desc">مشاوره و خدمات حقوقی در امور خانواده و طلاق</p>
+                                <p class="legal_description">ارائه بیمه سلامت، درمانی، کار، خودرو و اقامت برای متقاضیان ایرانی</p>
                                 <div class="legal_features">
                                     <div class="feature_item">
+                                        <i class="fa fa-heartbeat"></i>
+                                        <span>سلامت</span>
+                                    </div>
+                                    <div class="feature_item">
+                                        <i class="fa fa-car"></i>
+                                        <span>خودرو</span>
+                                    </div>
+                                    <div class="feature_item">
                                         <i class="fa fa-home"></i>
-                                        <span data-translate="family">خانواده</span>
-                                    </div>
-                                    <div class="feature_item">
-                                        <i class="fa fa-heart"></i>
-                                        <span data-translate="divorce">طلاق</span>
-                                    </div>
-                                    <div class="feature_item">
-                                        <i class="fa fa-child"></i>
-                                        <span data-translate="children">فرزندان</span>
+                                        <span>اقامت</span>
                                     </div>
                                 </div>
                                 <div class="legal_footer">
-                                    <div class="legal_price">
-                                        <span class="price_amount" data-translate="price">از ۳۵۰,۰۰۰ تومان</span>
-                                    </div>
-                                    <a href="#" class="legal_btn" data-translate="consult">مشاوره</a>
+                                    <a href="contact.html" class="legal_btn">درخواست</a>
                                 </div>
                             </div>
                         </div>
@@ -1335,7 +1261,7 @@
 
                     <!-- Load More Button -->
                     <div class="text-center mt-80">
-                        <a href="#" class="load_more_btn" data-translate="loadMore">مشاهده خدمات بیشتر</a>
+                        <a href="contact.html" class="load_more_btn">تماس با ما برای مشاوره</a>
                     </div>
                 </div>
             </div>
