@@ -204,10 +204,10 @@ const languages = {
         advertising6Desc: "تبلیغات بیلبورد، بنر و تابلوهای محیطی در نقاط پرترافیک",
         
         // Events Page
-        eventsHero: "رویدادهای به‌یادماندنی",
-        eventsHeroSub: "با ما در بهترین رویدادهای شهر شرکت کنید",
-        ourEvents: "رویدادهای منتخب",
-        eventsSubtitle: "بهترین تجربه‌های رویداد با قیمت‌های مناسب",
+        eventsHero: "بخش رویدادها و مناسبت‌ها",
+        eventsHeroSub: "واحد رویدادهای کانون همیاری با تیمی از برگزارکنندگان حرفه‌ای و طراحان مراسم، ویژه‌ترین برنامه‌های ایرانیان در ترکیه را اجرا می‌کند.",
+        ourEvents: "زیرمجموعه خدمات رویداد",
+        eventsSubtitle: "خدمات متنوع رویداد و مناسبت برای ایرانیان مقیم ترکیه",
         conference: "کنفرانس",
         festival: "فستیوال",
         workshop: "ورکشاپ",
@@ -235,10 +235,10 @@ const languages = {
         event6Desc: "پارتی شبانه با موسیقی زنده و فضای شاد",
         
         // Tours Page
-        toursHero: "ماجراجویی‌های به‌یادماندنی",
-        toursHeroSub: "با ما به زیباترین نقاط ایران و جهان سفر کنید",
-        ourTours: "تورهای منتخب",
-        toursSubtitle: "بهترین تجربه‌های سفر با قیمت‌های مناسب",
+        toursHero: "بخش گردشگری و تفریحی",
+        toursHeroSub: "ما با تیمی از لیدرهای فارسی‌زبان و متخصصان گردشگری، تجربه‌ای امن و دل‌انگیز از سفرهای داخلی ترکیه فراهم می‌کنیم.",
+        ourTours: "زیرمجموعه خدمات تفریحی",
+        toursSubtitle: "خدمات متنوع گردشگری و تفریحی برای تمام سلیقه‌ها",
         adventure: "ماجراجویی",
         cultural: "فرهنگی",
         nature: "طبیعت",
@@ -547,10 +547,10 @@ const languages = {
         advertising6Desc: "Billboard, banner and outdoor advertising in high-traffic areas",
         
         // Events Page
-        eventsHero: "Unforgettable Events",
-        eventsHeroSub: "Join the best events in the city with us",
-        ourEvents: "Featured Events",
-        eventsSubtitle: "The best event experiences at reasonable prices",
+        eventsHero: "Events and Occasions Section",
+        eventsHeroSub: "Kanoon Hamyari's events unit, with a team of professional organizers and ceremony designers, executes the most special programs for Iranians in Turkey.",
+        ourEvents: "Event Services Subcategories",
+        eventsSubtitle: "Diverse event and occasion services for Iranians residing in Turkey",
         conference: "Conference",
         festival: "Festival",
         workshop: "Workshop",
@@ -578,10 +578,10 @@ const languages = {
         event6Desc: "Night party with live music and fun atmosphere",
         
         // Tours Page
-        toursHero: "Unforgettable Adventures",
-        toursHeroSub: "Travel to the most beautiful places in Iran and the world with us",
-        ourTours: "Featured Tours",
-        toursSubtitle: "The best travel experiences at reasonable prices",
+        toursHero: "Tourism and Recreation Section",
+        toursHeroSub: "We provide a safe and enjoyable experience of domestic Turkey tours with a team of Persian-speaking leaders and tourism specialists.",
+        ourTours: "Recreation Services Subcategories",
+        toursSubtitle: "Diverse tourism and recreation services for all tastes",
         adventure: "Adventure",
         cultural: "Cultural",
         nature: "Nature",
@@ -890,10 +890,10 @@ const languages = {
         advertising6Desc: "Yüksek trafikli alanlarda billboard, banner ve açık hava reklamcılığı",
         
         // Events Page
-        eventsHero: "Unutulmaz Etkinlikler",
-        eventsHeroSub: "Bizimle şehrin en iyi etkinliklerine katılın",
-        ourEvents: "Seçkin Etkinlikler",
-        eventsSubtitle: "En iyi etkinlik deneyimleri uygun fiyatlarla",
+        eventsHero: "Etkinlikler ve Özel Günler Bölümü",
+        eventsHeroSub: "Kanoon Hamyari'nin etkinlik birimi, profesyonel organizatörler ve tören tasarımcıları ekibiyle, Türkiye'deki İranlılar için en özel programları yürütür.",
+        ourEvents: "Etkinlik Hizmetleri Alt Kategorileri",
+        eventsSubtitle: "Türkiye'de yaşayan İranlılar için çeşitli etkinlik ve özel gün hizmetleri",
         conference: "Konferans",
         festival: "Festival",
         workshop: "Atölye",
@@ -921,10 +921,10 @@ const languages = {
         event6Desc: "Canlı müzik ve eğlenceli atmosferle gece partisi",
         
         // Tours Page
-        toursHero: "Unutulmaz Maceralar",
-        toursHeroSub: "Bizimle İran ve dünyanın en güzel yerlerine seyahat edin",
-        ourTours: "Seçkin Turlar",
-        toursSubtitle: "En iyi seyahat deneyimleri uygun fiyatlarla",
+        toursHero: "Turizm ve Rekreasyon Bölümü",
+        toursHeroSub: "Farsça konuşan liderler ve turizm uzmanları ekibimizle, Türkiye içi turların güvenli ve keyifli bir deneyimini sunuyoruz.",
+        ourTours: "Rekreasyon Hizmetleri Alt Kategorileri",
+        toursSubtitle: "Her zevke hitap eden çeşitli turizm ve rekreasyon hizmetleri",
         adventure: "Macera",
         cultural: "Kültürel",
         nature: "Doğa",
