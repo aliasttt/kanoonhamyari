@@ -159,10 +159,10 @@ const languages = {
         legal6Desc: "مشاوره و خدمات حقوقی در امور خانواده و طلاق",
         
         // Advertising Page
-        advertisingHero: "تبلیغات خلاقانه و مؤثر",
-        advertisingHeroSub: "با ما برند خود را به اوج برسانید",
-        ourAdvertising: "خدمات تبلیغاتی ما",
-        advertisingSubtitle: "بهترین راه‌حل‌های تبلیغاتی با قیمت‌های مناسب",
+        advertisingHero: "بخش تبلیغات، چاپ و برندینگ",
+        advertisingHeroSub: "تیم خلاقیت و رسانه کانون همیاری با سابقه فعالیت حرفه‌ای در تبلیغات و برندینگ، همراه بیزینس‌های ایرانی در مسیر دیده‌شدن و رشد است.",
+        ourAdvertising: "زیرمجموعه خدمات تبلیغات",
+        advertisingSubtitle: "خدمات جامع تبلیغات، چاپ و برندینگ برای بیزینس‌های ایرانی",
         digital: "دیجیتال",
         print: "چاپی",
         tv: "تلویزیونی",
@@ -502,10 +502,10 @@ const languages = {
         legal6Desc: "Legal consultation and services in family matters and divorce",
         
         // Advertising Page
-        advertisingHero: "Creative and Effective Advertising",
-        advertisingHeroSub: "Take your brand to the top with us",
-        ourAdvertising: "Our Advertising Services",
-        advertisingSubtitle: "The best advertising solutions at reasonable prices",
+        advertisingHero: "Advertising, Printing and Branding Section",
+        advertisingHeroSub: "Kanoon Hamyari's creativity and media team, with a professional background in advertising and branding, accompanies Iranian businesses on the path to visibility and growth.",
+        ourAdvertising: "Advertising Services Subcategories",
+        advertisingSubtitle: "Comprehensive advertising, printing and branding services for Iranian businesses",
         digital: "Digital",
         print: "Print",
         tv: "Television",
@@ -845,10 +845,10 @@ const languages = {
         legal6Desc: "Aile işlerinde ve boşanmada hukuki danışmanlık ve hizmetler",
         
         // Advertising Page
-        advertisingHero: "Yaratıcı ve Etkili Reklamcılık",
-        advertisingHeroSub: "Bizimle markanızı zirveye taşıyın",
-        ourAdvertising: "Reklamcılık Hizmetlerimiz",
-        advertisingSubtitle: "En iyi reklamcılık çözümleri uygun fiyatlarla",
+        advertisingHero: "Reklamcılık, Baskı ve Marka Bölümü",
+        advertisingHeroSub: "Kanoon Hamyari'nin yaratıcılık ve medya ekibi, reklamcılık ve marka alanında profesyonel geçmişiyle, İran işletmelerini görünürlük ve büyüme yolunda destekler.",
+        ourAdvertising: "Reklamcılık Hizmetleri Alt Kategorileri",
+        advertisingSubtitle: "İran işletmeleri için kapsamlı reklamcılık, baskı ve marka hizmetleri",
         digital: "Dijital",
         print: "Baskı",
         tv: "Televizyon",

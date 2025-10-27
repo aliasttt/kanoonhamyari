@@ -335,7 +335,7 @@
         .hero_overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.6));
+            background: linear-gradient(135deg, rgba(0,0,0,.5), rgba(0,0,0,.7), rgba(0,0,0,.4));
         }
         .hero-caption {
             position: absolute;
@@ -350,6 +350,7 @@
             transform: translateY(-24px);
             transition: all .6s ease;
             max-width: 960px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
         }
         .hero-caption.show {
             opacity: 1;
@@ -357,17 +358,36 @@
         }
         .hero-caption span {
             display: inline-block;
-            font-size: 16px;
-            opacity: .9;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            background: linear-gradient(135deg, #ffd700, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
         }
         .hero-caption h3 {
             margin: 10px 0 8px 0;
-            font-size: 44px;
+            font-size: 48px;
             line-height: 1.2;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .hero-caption p {
-            font-size: 16px;
-            opacity: .95;
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .hero_progress {
             position: absolute;
@@ -377,6 +397,31 @@
             height: 4px;
             background: rgba(255,255,255,.2);
             z-index: 5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-caption h3 {
+                font-size: 32px;
+            }
+            .hero-caption p {
+                font-size: 16px;
+            }
+            .hero-caption span {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-caption h3 {
+                font-size: 28px;
+            }
+            .hero-caption p {
+                font-size: 14px;
+            }
+            .hero-caption span {
+                font-size: 14px;
+            }
         }
         .hero_progress span {
             display: block;
@@ -662,16 +707,15 @@
         <div class="hero_progress"><span id="heroProgress"></span></div>
         <div class="owl-carousel hero-carousel">
             <div class="hero_slide">
-                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt="slide-1">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1600&auto=format&fit=crop" alt="Istanbul Skyline">
                 <div class="hero_overlay"></div>
                 <div class="hero-caption" id="heroCaption1">
-                    <span data-translate="welcome">خوش آمدید</span>
                     <h3 data-translate="mainTitle">کانون همیاری فارسی‌زبانان ترکیه</h3>
                     <p data-translate="subtitle">مجموعه‌ای اجتماعی، خدماتی و حمایتی برای ایرانیان و فارسی‌زبانان مقیم ترکیه</p>
                             </div>
                             </div>
             <div class="hero_slide">
-                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="slide-2">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop" alt="Community Meeting">
                 <div class="hero_overlay"></div>
                 <div class="hero-caption" id="heroCaption2">
                     <span data-translate="slide2Title">🎯 مأموریت ما</span>
@@ -680,7 +724,7 @@
                         </div>
                     </div>
             <div class="hero_slide">
-                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop" alt="slide-3">
+                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1600&auto=format&fit=crop" alt="Business Services">
                 <div class="hero_overlay"></div>
                 <div class="hero-caption" id="heroCaption3">
                     <span data-translate="slide3Title">🌟 اهداف ما</span>
