@@ -541,46 +541,17 @@
             overflow: hidden;
         }
         
-        .map-placeholder {
+        .map-embed {
             height: 500px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
             overflow: hidden;
         }
-        
-        .map-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop') center/cover;
-            opacity: 0.3;
-        }
-        
-        .map-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-        }
-        
-        .map-content h3 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .map-content p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+        .map-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
         }
         
         /* Social Media Section */
@@ -1107,11 +1078,13 @@
     <section class="map-section">
         <div class="map-container">
             <div class="map-wrapper" data-aos="fade-up" data-aos-duration="1000">
-                <div class="map-placeholder">
-                    <div class="map-content">
-                        <h3>موقعیت ما</h3>
-                        <p>دفتر مرکزی کانون همیاری در قلب تهران</p>
-                    </div>
+                <div class="map-embed">
+                    <iframe
+                        title="نقشه گوگل کانون همیاری"
+                        src="https://www.google.com/maps?q=41.0431,29.0082&z=15&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -1165,7 +1138,7 @@
                 تیم ما آماده پاسخگویی به تمام سوالات شماست.
             </p>
             <div class="cta-buttons">
-                <a href="tel:+982112345678" class="cta-button primary">تماس مستقیم</a>
+                <a href="tel:+905525612221" class="cta-button primary">تماس مستقیم</a>
                 <a href="index.html" class="cta-button secondary">بازگشت به خانه</a>
             </div>
         </div>
@@ -1184,10 +1157,9 @@
                                         <h4 data-translate="aboutUs">درباره ما</h4>
                                         <p data-translate="aboutDesc">کانون همیاری ارائه‌دهنده خدمات جامع در زمینه رویدادها، تورها، املاک، تبلیغات، تحصیلی و امور حقوقی</p>
                                         <div class="social_links">
-                                            <a href="#" class="social_link"><i class="fa fa-facebook"></i></a>
-                                            <a href="#" class="social_link"><i class="fa fa-twitter"></i></a>
+                                            <a href="#" class="social_link"><i class="fa fa-youtube-play"></i></a>
+                                            <a href="#" class="social_link"><i class="fa fa-telegram"></i></a>
                                             <a href="#" class="social_link"><i class="fa fa-instagram"></i></a>
-                                            <a href="#" class="social_link"><i class="fa fa-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1219,8 +1191,10 @@
                                     <div class="footer_widget">
                                         <h4 data-translate="contactInfo">اطلاعات تماس</h4>
                                         <div class="contact_info">
-                                            <p><i class="fa fa-map-marker"></i> <span data-translate="address">تهران، خیابان ولیعصر، پلاک ۱۲۳</span></p>
-                                            <p><i class="fa fa-phone"></i> <span data-translate="phone">+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸</span></p>
+                                            <p><i class="fa fa-map-marker"></i> <span data-translate="address">ترکیه، استانبول، بیلیکدوزو، پاساژ بیلیجیوم، طبقه ۴</span></p>
+                                            <p><i class="fa fa-phone"></i> <span data-translate="phone" style="direction: ltr; text-align: left; unicode-bidi: bidi-override;">+90 552 561 22 21</span></p>
+                                            <p><i class="fa fa-phone"></i> <span data-translate="phone" style="direction: ltr; text-align: left; unicode-bidi: bidi-override;">+90 555 143 32 88</span></p>
+                                            <p><i class="fa fa-phone"></i> <span data-translate="phone" style="direction: ltr; text-align: left; unicode-bidi: bidi-override;">+90 537 330 34 40</span></p>
                                             <p><i class="fa fa-envelope"></i> <span data-translate="email">info@kanoonhamyari.com</span></p>
                                         </div>
                                     </div>
@@ -1240,7 +1214,6 @@
                                         <a href="#" data-translate="termsOfService">شرایط استفاده</a>
                                         <a href="#" data-translate="sitemap">نقشه سایت</a>
                                         <a href="#" data-translate="faq">سوالات متداول</a>
-                                        <a href="#" data-translate="blog">وبلاگ</a>
                                     </div>
                                 </div>
                             </div>

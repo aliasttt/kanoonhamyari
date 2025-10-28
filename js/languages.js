@@ -300,7 +300,7 @@ const languages = {
         ourAddress: "آدرس ما",
         address: "ترکیه، استانبول، بیلیکدوزو، پاساژ بیلیجیوم، طبقه ۴",
         phoneNumber: "تلفن",
-        phone: "+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸",
+        phone: "+90 552 561 22 21",
         email: "info@kanoonhamyari.com",
         
         // Performer Section
@@ -324,7 +324,7 @@ const languages = {
         venueLabel: "مکان:",
         venueAddress: "۲۶/آ، خیابان کونتوم\nنیویورک-۲۷۸۳",
         phoneLabel: "تلفن:",
-        phone: "+۱۰ (۸۸) ۲۶۷ ۳۶۸ ۲۸۳",
+        phone: "+90 552 561 22 21",
         emailLabel: "ایمیل:",
         email: "contact@concert20.com",
         
@@ -636,9 +636,9 @@ const languages = {
         // Contact
         contactUs: "Contact Us",
         ourAddress: "Our Address",
-        address: "Tehran, Valiasr Street, No. 123",
+        address: "Turkey, Istanbul, Beylikdüzü, Belicium Passage, 4th floor",
         phoneNumber: "Phone",
-        phone: "+98 21 1234 5678",
+        phone: "+90 552 561 22 21",
         email: "info@kanoonhamyari.com",
         
         // Performer Section
@@ -662,7 +662,7 @@ const languages = {
         venueLabel: "Venue:",
         venueAddress: "26/A, Coontum Avenue\nNew York-2783",
         phoneLabel: "Phone:",
-        phone: "+10 (88) 267 368 283",
+        phone: "+90 552 561 22 21",
         emailLabel: "Email:",
         email: "contact@concert20.com",
         
@@ -974,9 +974,9 @@ const languages = {
         // Contact
         contactUs: "İletişim",
         ourAddress: "Adresimiz",
-        address: "Tahran, Valiasr Caddesi, No. 123",
+        address: "Türkiye, İstanbul, Beylikdüzü, Belicium Pasajı, 4. kat",
         phoneNumber: "Telefon",
-        phone: "+98 21 1234 5678",
+        phone: "+90 552 561 22 21",
         email: "info@kanoonhamyari.com",
         
         // Performer Section
@@ -1000,7 +1000,7 @@ const languages = {
         venueLabel: "Mekan:",
         venueAddress: "26/A, Coontum Caddesi\nNew York-2783",
         phoneLabel: "Telefon:",
-        phone: "+10 (88) 267 368 283",
+        phone: "+90 552 561 22 21",
         emailLabel: "E-posta:",
         email: "contact@concert20.com",
         
