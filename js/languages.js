@@ -298,7 +298,7 @@ const languages = {
         // Contact
         contactUs: "تماس با ما",
         ourAddress: "آدرس ما",
-        address: "تهران، خیابان ولیعصر، پلاک ۱۲۳",
+        address: "ترکیه، استانبول، بیلیکدوزو، پاساژ بیلیجیوم، طبقه ۴",
         phoneNumber: "تلفن",
         phone: "+۹۸ ۲۱ ۱۲۳۴ ۵۶۷۸",
         email: "info@kanoonhamyari.com",
@@ -334,11 +334,6 @@ const languages = {
         quickLinks: "لینک‌های سریع",
         services: "خدمات",
         contactInfo: "اطلاعات تماس",
-        privacyPolicy: "حریم خصوصی",
-        termsOfService: "شرایط استفاده",
-        sitemap: "نقشه سایت",
-        faq: "سوالات متداول",
-        blog: "وبلاگ",
         websiteBy: "طراحی و توسعه وبسایت توسط",
         copyright: "تمام حقوق محفوظ است © کانون همیاری"
     },
@@ -677,11 +672,6 @@ const languages = {
         quickLinks: "Quick Links",
         services: "Services",
         contactInfo: "Contact Info",
-        privacyPolicy: "Privacy Policy",
-        termsOfService: "Terms of Service",
-        sitemap: "Sitemap",
-        faq: "FAQ",
-        blog: "Blog",
         websiteBy: "Website designed and developed by",
         copyright: "All rights reserved © Kanoon Hamyari"
     },
@@ -1020,11 +1010,6 @@ const languages = {
         quickLinks: "Hızlı Bağlantılar",
         services: "Hizmetler",
         contactInfo: "İletişim Bilgileri",
-        privacyPolicy: "Gizlilik Politikası",
-        termsOfService: "Kullanım Şartları",
-        sitemap: "Site Haritası",
-        faq: "SSS",
-        blog: "Blog",
         websiteBy: "Web sitesi tasarım ve geliştirme",
         copyright: "Tüm hakları saklıdır © Kanoon Hamyari"
     }

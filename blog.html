@@ -815,6 +815,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </a>
     </div>
 
+    <!-- Phone Fixed Button -->
+    <div class="phone-fixed">
+        <a href="tel:+905525612221" class="phone-link">
+            <i class="fa fa-phone"></i>
+        </a>
+    </div>
+
     <style>
         .whatsapp-fixed {
             position: fixed;
@@ -849,6 +856,40 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             font-size: 30px;
         }
         
+        /* Phone Fixed Button */
+        .phone-fixed {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 9999;
+        }
+        
+        .phone-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+            animation: phonePulse 2s infinite;
+        }
+        
+        .phone-link:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35);
+            transform: scale(1.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .phone-link i {
+            font-size: 30px;
+        }
+        
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
@@ -861,9 +902,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             }
         }
         
+        @keyframes phonePulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+            }
+        }
+        
         @media (max-width: 768px) {
             .whatsapp-fixed {
-                bottom: 15px;
+                bottom: 80px;
                 left: 15px;
             }
             
@@ -873,6 +926,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             }
             
             .whatsapp-link i {
+                font-size: 24px;
+            }
+            
+            .phone-fixed {
+                bottom: 80px;
+                right: 15px;
+            }
+            
+            .phone-link {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .phone-link i {
                 font-size: 24px;
             }
         }
