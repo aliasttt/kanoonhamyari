@@ -637,6 +637,126 @@
             border-radius: 12px;
         }
 
+        /* Testimonials Section */
+        .testimonials_area {
+            padding: 80px 0;
+            background: #0a0a0a;
+            position: relative;
+        }
+        
+        .testimonials_area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="testimonialPattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,107,53,0.1)"/><circle cx="10" cy="10" r="0.5" fill="rgba(255,107,53,0.05)"/><circle cx="40" cy="40" r="0.5" fill="rgba(255,107,53,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23testimonialPattern)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .testimonial_item {
+            background: #141414;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial_item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .testimonial_item:hover::before {
+            left: 100%;
+        }
+        
+        .testimonial_item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+        
+        .testimonial_content {
+            margin-bottom: 25px;
+        }
+        
+        .stars {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 3px;
+        }
+        
+        .stars i {
+            color: #ffd700;
+            font-size: 16px;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+        
+        .testimonial_content p {
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.8;
+            font-style: italic;
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        .testimonial_content p::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            right: 0;
+            font-size: 40px;
+            color: #ff6b35;
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .testimonial_author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author_info h4 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        /* Responsive for testimonials */
+        @media (max-width: 768px) {
+            .testimonials_area {
+                padding: 60px 0;
+            }
+            
+            .testimonial_item {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+            
+            .testimonial_content p {
+                font-size: 15px;
+            }
+            
+            .author_info h4 {
+                font-size: 16px;
+            }
+        }
+
         /* Responsive for new sections */
         @media (max-width: 768px) {
             .mission_area {
@@ -1103,6 +1223,137 @@
         </div>
     </div>
     <!-- services_area_end  -->
+
+    <!-- testimonials_area_start  -->
+    <div class="testimonials_area black_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center mb-80">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">نظرات اعضای کانون همیاری</h3>
+                        <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">تجربیات واقعی اعضای ما از خدمات کانون همیاری</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="testimonial_content">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>"کانون همیاری واقعاً زندگی من را در ترکیه تغییر داد. از طریق خدمات املاکشان، خانه رویایی‌ام را پیدا کردم و با مشاوره حقوقی‌شان، تمام مراحل اقامت را بدون مشکل پشت سر گذاشتم."</p>
+                        </div>
+                        <div class="testimonial_author">
+                            <div class="author_info">
+                                <h4>احمد محمدی</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="testimonial_content">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>"تورهای کانون همیاری فوق‌العاده است! با خانواده‌ام در تور کاپادوکیا شرکت کردیم و خاطرات زیبایی ساختیم. تیم راهنمایشان بسیار حرفه‌ای و دوستانه بودند."</p>
+                        </div>
+                        <div class="testimonial_author">
+                            <div class="author_info">
+                                <h4>فاطمه احمدی</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="testimonial_content">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>"مشاوره تحصیلی کانون همیاری کمک بزرگی برای پذیرش در دانشگاه استانبول بود. از انتخاب رشته تا ثبت‌نام، تمام مراحل را با دقت و حرفه‌ای بودن انجام دادند."</p>
+                        </div>
+                        <div class="testimonial_author">
+                            <div class="author_info">
+                                <h4>علی رضایی</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <div class="testimonial_content">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>"خدمات تبلیغاتی کانون همیاری باعث رشد کسب‌وکار من شد. از طراحی لوگو تا مدیریت شبکه‌های اجتماعی، همه چیز را حرفه‌ای انجام دادند. مشتریانم چند برابر شدند!"</p>
+                        </div>
+                        <div class="testimonial_author">
+                            <div class="author_info">
+                                <h4>مریم حسینی</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                        <div class="testimonial_content">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>"رویدادهای کانون همیاری واقعاً خاص است. از جشن نوروز تا مراسم یلدا، همیشه حس وطن را در دل ما زنده نگه می‌دارند. جامعه‌ای گرم و دوستانه ایجاد کرده‌اند."</p>
+                        </div>
+                        <div class="testimonial_author">
+                            <div class="author_info">
+                                <h4>حسن کریمی</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial_item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                        <div class="testimonial_content">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>"مشاوره بیزینس کانون همیاری کمک کرد تا کسب‌وکارم را در ترکیه راه‌اندازی کنم. از ثبت شرکت تا بازاریابی، تمام مراحل را با موفقیت پشت سر گذاشتم. تیمشان واقعاً حرفه‌ای است."</p>
+                        </div>
+                        <div class="testimonial_author">
+                            <div class="author_info">
+                                <h4>رضا نوری</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonials_area_end  -->
 
     <!-- contact_area_start  -->
     <div class="contact_area black_bg">
