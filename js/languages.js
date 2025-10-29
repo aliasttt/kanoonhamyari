@@ -7,8 +7,8 @@ const languages = {
         tours: "تورها",
         realEstate: "املاک",
         advertising: "تبلیغات",
-        education: "تحصیلی",
-        legal: "امور حقوقی",
+        educationMenu: "دانشجویی",
+        legalMenu: "حقوقی",
         blog: "وبلاگ",
         about: "درباره ما",
         contact: "تماس",
@@ -345,8 +345,8 @@ const languages = {
         tours: "Tours",
         realEstate: "Real Estate",
         advertising: "Advertising",
-        education: "Education",
-        legal: "Legal Affairs",
+        educationMenu: "Student",
+        legalMenu: "Legal",
         blog: "Blog",
         about: "About Us",
         contact: "Contact",
@@ -683,8 +683,8 @@ const languages = {
         tours: "Turlar",
         realEstate: "Emlak",
         advertising: "Reklam",
-        education: "Eğitim",
-        legal: "Hukuki İşler",
+        educationMenu: "Öğrencilik",
+        legalMenu: "Hukuki",
         blog: "Blog",
         about: "Hakkımızda",
         contact: "İletişim",
@@ -1055,8 +1055,8 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="tours"]').forEach(el => el.textContent = langData.tours);
     document.querySelectorAll('[data-translate="realEstate"]').forEach(el => el.textContent = langData.realEstate);
     document.querySelectorAll('[data-translate="advertising"]').forEach(el => el.textContent = langData.advertising);
-    document.querySelectorAll('[data-translate="education"]').forEach(el => el.textContent = langData.education);
-    document.querySelectorAll('[data-translate="legal"]').forEach(el => el.textContent = langData.legal);
+    document.querySelectorAll('[data-translate="educationMenu"]').forEach(el => el.textContent = langData.educationMenu);
+    document.querySelectorAll('[data-translate="legalMenu"]').forEach(el => el.textContent = langData.legalMenu);
     document.querySelectorAll('[data-translate="about"]').forEach(el => el.textContent = langData.about);
     document.querySelectorAll('[data-translate="contact"]').forEach(el => el.textContent = langData.contact);
     document.querySelectorAll('[data-translate="buyTickets"]').forEach(el => el.textContent = langData.buyTickets);
