@@ -366,3 +366,14 @@ mailChimp();
       }
 
 })(jQuery);	
+
+// Load unified footer on all pages that include main.js
+(function(){
+	if (!document.getElementById('kh-footer-loader')) {
+		var s = document.createElement('script');
+		s.id = 'kh-footer-loader';
+		s.src = 'js/footer.js';
+		s.defer = true;
+		document.head.appendChild(s);
+	}
+})();

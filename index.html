@@ -69,6 +69,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
+    <link id="kh-footer-css" rel="stylesheet" href="css/footer.css">
     <!-- Beautiful Persian Font Library -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1429,72 +1430,70 @@
     <!-- map_area_end -->
 
     <!-- footer_start  -->
-    <footer class="footer">
-        <div class="copy-right_text">
+    <footer class="footer kh-footer">
+        <div class="kh-footer__top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="footer_content">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="footer_widget">
-                                        <h4 data-translate="aboutUs">درباره ما</h4>
-                                        <p data-translate="aboutDesc">کانون همیاری ارائه‌دهنده خدمات جامع در زمینه رویدادها، تورها، املاک، تبلیغات، تحصیلی و امور حقوقی</p>
-                                        <div class="social_links">
-                                            <a href="https://m.youtube.com/%40kanoonhamyari" target="_blank" class="social_link"><i class="fa fa-youtube-play"></i></a>
-                                            <a href="https://t.me/KANOONEHAMYARI" target="_blank" class="social_link"><i class="fa fa-telegram"></i></a>
-                                            <a href="https://www.instagram.com/kanoon.hamyari" target="_blank" class="social_link"><i class="fa fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-6">
-                                    <div class="footer_widget">
-                                        <h4 data-translate="quickLinks">لینک‌های سریع</h4>
-                                        <ul class="footer_links">
-                                            <li><a href="index.html" data-translate="home">خانه</a></li>
-                                            <li><a href="events.html" data-translate="events">رویدادها</a></li>
-                                            <li><a href="tours.html" data-translate="tours">تورها</a></li>
-                                            <li><a href="real-estate.html" data-translate="realEstate">املاک</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-6">
-                                    <div class="footer_widget">
-                                        <h4 data-translate="services">خدمات</h4>
-                                        <ul class="footer_links">
-                                            <li><a href="advertising.html" data-translate="advertising">تبلیغات</a></li>
-                                            <li><a href="education.html" data-translate="education">تحصیلی</a></li>
-                                            <li><a href="legal.html" data-translate="legal">امور حقوقی</a></li>
-                                            <li><a href="contact.html" data-translate="contact">تماس</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="footer_widget">
-                                        <h4 data-translate="contactInfo">اطلاعات تماس</h4>
-                                        <div class="contact_info">
-                                            <p><i class="fa fa-map-marker"></i> <span data-translate="address">ترکیه، استانبول، بیلیکدوزو، پاساژ بیلیجیوم، طبقه ۴</span></p>
-                                            <p><i class="fa fa-phone"></i> <span data-translate="phone" style="direction: ltr; text-align: left; unicode-bidi: bidi-override;">+90 552 561 22 21</span></p>
-                                            <p><i class="fa fa-phone"></i> <span data-translate="phone" style="direction: ltr; text-align: left; unicode-bidi: bidi-override;">+90 555 143 32 88</span></p>
-                                            <p><i class="fa fa-phone"></i> <span data-translate="phone" style="direction: ltr; text-align: left; unicode-bidi: bidi-override;">+90 537 330 34 40</span></p>
-                                            <p><i class="fa fa-envelope"></i> <span data-translate="email">info@kanoonhamyari.com</span></p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="kh-footer__about">
+                            <a href="index.html" class="kh-footer__logo">
+                                <img src="static/img/kanoonlogo.jpg" alt="کانون همیاری" onerror="this.src='img/logo.png'">
+                            </a>
+                            <p>کانون همیاری ارائه‌دهنده خدمات جامع در زمینه رویدادها، تورها، املاک، تبلیغات، تحصیلی و امور حقوقی</p>
+                            <div class="kh-footer__social">
+                                <a href="https://www.instagram.com/kanoon.hamyari" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://t.me/KANOONEHAMYARI" target="_blank" aria-label="Telegram"><i class="fa fa-telegram"></i></a>
+                                <a href="https://m.youtube.com/@kanoonhamyari" target="_blank" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
-                        <div class="footer_bottom">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <p class="copyright_text" data-translate="copyright">
-                                        تمام حقوق محفوظ است © <script>document.write(new Date().getFullYear());</script> کانون همیاری
-                                    </p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="footer_bottom_links">
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="kh-footer__widget">
+                            <h4>لینک‌های سریع</h4>
+                            <ul class="kh-list kh-list--grid">
+                                <li><a href="index.html"><i class="fa fa-angle-left"></i> خانه</a></li>
+                                <li><a href="events.html"><i class="fa fa-angle-left"></i> رویدادها</a></li>
+                                <li><a href="tours.html"><i class="fa fa-angle-left"></i> تورها</a></li>
+                                <li><a href="real-estate.html"><i class="fa fa-angle-left"></i> املاک</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-6">
+                        <div class="kh-footer__widget">
+                            <h4>خدمات</h4>
+                            <ul class="kh-list">
+                                <li><a href="advertising.html"><i class="fa fa-bullhorn"></i> تبلیغات</a></li>
+                                <li><a href="education.html"><i class="fa fa-graduation-cap"></i> تحصیلی</a></li>
+                                <li><a href="legal.html"><i class="fa fa-balance-scale"></i> امور حقوقی</a></li>
+                                <li><a href="contact.html"><i class="fa fa-phone"></i> تماس</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="kh-footer__widget">
+                            <h4>اطلاعات تماس</h4>
+                            <ul class="kh-contact">
+                                <li><i class="fa fa-map-marker"></i><span>ترکیه، استانبول، بیلیکدوزو، پاساژ بیلیجیوم، طبقه ۴</span></li>
+                                <li><i class="fa fa-phone"></i><a href="tel:+905525612221">+90 552 561 22 21</a></li>
+                                <li><i class="fa fa-phone"></i><a href="tel:+905551433288">+90 555 143 32 88</a></li>
+                                <li><i class="fa fa-phone"></i><a href="tel:+905373303440">+90 537 330 34 40</a></li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:info@kanoonhamyari.com">info@kanoonhamyari.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kh-footer__bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p>تمام حقوق محفوظ است © <script>document.write(new Date().getFullYear());</script> کانون همیاری</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="kh-footer__bottom-links">
+                            <a href="sitemap.xml">نقشه سایت</a>
+                            <a href="robots.txt">ربات‌ها</a>
                         </div>
                     </div>
                 </div>
