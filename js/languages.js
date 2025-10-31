@@ -335,7 +335,49 @@ const languages = {
         services: "خدمات",
         contactInfo: "اطلاعات تماس",
         websiteBy: "طراحی و توسعه وبسایت توسط",
-        copyright: "تمام حقوق محفوظ است © کانون همیاری"
+        copyright: "تمام حقوق محفوظ است © کانون همیاری",
+        sitemap: "نقشه سایت",
+        robots: "ربات‌ها",
+        
+        // Program Page
+        programs: "برنامه‌ها",
+        programDetails: "جزئیات برنامه",
+        programsTitle: "اهداف ما",
+        performerTitle: "اجراکنندگان",
+        concert2020: "کنسرت ۲۰۲۰",
+        venueLabel: "مکان:",
+        venueAddress: "۲۶/آ، خیابان کونتوم\nنیویورک-۲۷۸۳",
+        business: "بیزینس",
+        businessDesc: "راه‌اندازی و گسترش کسب‌وکار در ترکیه نیاز به شناخت قوانین و بازار دارد. کانون همیاری با مشاوران حرفه‌ای در حوزه بیزینس، مالیات، ثبت شرکت، بازاریابی و توسعه تجاری، مسیر رشد و موفقیت شما را هموار می‌کند.",
+        decoration: "دکوراسیون",
+        decorationDesc: "اگر قصد بازسازی منزل یا دفتر خود را دارید، تیم متخصص دکوراسیون کانون همیاری در کنار شماست. از طراحی اولیه تا اجرای کامل پروژه، خدمات ما شامل بازسازی فضاهای مسکونی و تجاری، طراحی داخلی، رنگ‌آمیزی، کابینت، نورپردازی، پارکت و کاغذ دیواری است.",
+        address: "ترکیه، استانبول، بیلیکدوزو، پاساژ بیلیجیوم، طبقه ۴",
+        education: "تحصیلی",
+        
+        // Index Page additional
+        missionTitle: "مأموریت ما",
+        missionDesc1: "هدف ما ایجاد جامعه‌ای پویا، همدل و آگاه است؛ جایی که هر فارسی‌زبان در ترکیه احساس تعلق، امنیت و فرصت کند.",
+        missionDesc2: "ما باور داریم با همدلی و همکاری می‌توانیم مسیر مهاجرت، زندگی و کار در ترکیه را برای هم‌وطنانمان آسان‌تر و مطمئن‌تر کنیم.",
+        goalsTitle: "اهداف ما",
+        goal1: "هدف ۱",
+        goal1Title: "ایجاد شبکه ارتباطی میان ایرانیان و فارسی‌زبانان ترکیه",
+        goal2: "هدف ۲",
+        goal2Title: "ارائه خدمات حرفه‌ای در حوزه حقوقی، اقامت، املاک و آموزش",
+        goal3: "هدف ۳",
+        goal3Title: "حمایت از کسب‌وکارهای ایرانی و رشد اقتصادی جامعه فارسی‌زبان",
+        goal4: "هدف ۴",
+        goal4Title: "برگزاری رویدادها، جشن‌ها و تورهای فرهنگی برای حفظ ارتباط اجتماعی",
+        goal5: "هدف ۵",
+        goal5Title: "کمک به معرفی فرصت‌های تحصیلی، شغلی و سرمایه‌گذاری در ترکیه",
+        testimonialsTitle: "نظرات اعضای کانون همیاری",
+        testimonialsSubtitle: "تجربیات واقعی اعضای ما از خدمات کانون همیاری",
+        locationTitle: "موقعیت ما",
+        
+        // Additional Services
+        interiorDesign: "دکوراسیون داخلی و بازسازی",
+        interiorDesignDesc: "اگر قصد بازسازی منزل یا دفتر خود را دارید، تیم متخصص دکوراسیون کانون همیاری در کنار شماست. از طراحی اولیه تا اجرای کامل پروژه، خدمات ما شامل بازسازی فضاهای مسکونی و تجاری، طراحی داخلی، رنگ‌آمیزی، کابینت، نورپردازی، پارکت و کاغذ دیواری است.",
+        businessConsulting: "مشاوره بیزینس و رشد کسب‌وکار",
+        businessConsultingDesc: "راه‌اندازی و گسترش کسب‌وکار در ترکیه نیاز به شناخت قوانین و بازار دارد. کانون همیاری با مشاوران حرفه‌ای در حوزه بیزینس، مالیات، ثبت شرکت، بازاریابی و توسعه تجاری، مسیر رشد و موفقیت شما را هموار می‌کند."
     },
     
     en: {
@@ -673,7 +715,50 @@ const languages = {
         services: "Services",
         contactInfo: "Contact Info",
         websiteBy: "Website designed and developed by",
-        copyright: "All rights reserved © Kanoon Hamyari"
+        copyright: "All rights reserved © Kanoon Hamyari",
+        sitemap: "Sitemap",
+        robots: "Robots",
+        
+        // Program Page
+        programs: "Programs",
+        programDetails: "Program Details",
+        programsTitle: "Our Goals",
+        performerTitle: "Performers",
+        concert2020: "Concert 2020",
+        venueLabel: "Venue:",
+        venueAddress: "26/A, Coontum Avenue\nNew York-2783",
+        business: "Business",
+        businessDesc: "Starting and expanding a business in Turkey requires knowledge of laws and markets. Kanoon Hamyari, with professional consultants in business, taxation, company registration, marketing and commercial development, paves the way for your growth and success.",
+        decoration: "Decoration",
+        decorationDesc: "If you plan to renovate your home or office, Kanoon Hamyari's professional decoration team is by your side. From initial design to complete project execution, our services include renovation of residential and commercial spaces, interior design, painting, cabinets, lighting, parquet and wallpaper.",
+        address: "Turkey, Istanbul, Beylikdüzü, Bilgiyum Passage, Floor 4",
+        education: "Education",
+        legal: "Legal Affairs",
+        
+        // Index Page additional
+        missionTitle: "Our Mission",
+        missionDesc1: "Our goal is to create a dynamic, empathetic and aware community; where every Persian speaker in Turkey feels belonging, security and opportunity.",
+        missionDesc2: "We believe that with empathy and cooperation, we can make the path of immigration, life and work in Turkey easier and more confident for our compatriots.",
+        goalsTitle: "Our Goals",
+        goal1: "Goal 1",
+        goal1Title: "Creating a communication network among Iranians and Persian speakers in Turkey",
+        goal2: "Goal 2",
+        goal2Title: "Providing professional services in legal, residence, real estate and education",
+        goal3: "Goal 3",
+        goal3Title: "Supporting Iranian businesses and economic growth of the Persian-speaking community",
+        goal4: "Goal 4",
+        goal4Title: "Holding events, celebrations and cultural tours to maintain social connections",
+        goal5: "Goal 5",
+        goal5Title: "Helping to introduce educational, job and investment opportunities in Turkey",
+        testimonialsTitle: "Member Testimonials",
+        testimonialsSubtitle: "Real experiences of our members from Kanoon Hamyari services",
+        locationTitle: "Our Location",
+        
+        // Additional Services
+        interiorDesign: "Interior Design and Renovation",
+        interiorDesignDesc: "If you plan to renovate your home or office, Kanoon Hamyari's professional decoration team is by your side. From initial design to complete project execution, our services include renovation of residential and commercial spaces, interior design, painting, cabinets, lighting, parquet and wallpaper.",
+        businessConsulting: "Business Consulting and Growth",
+        businessConsultingDesc: "Starting and expanding a business in Turkey requires knowledge of laws and markets. Kanoon Hamyari, with professional consultants in business, taxation, company registration, marketing and commercial development, paves the way for your growth and success."
     },
     
     tr: {
@@ -1011,7 +1096,50 @@ const languages = {
         services: "Hizmetler",
         contactInfo: "İletişim Bilgileri",
         websiteBy: "Web sitesi tasarım ve geliştirme",
-        copyright: "Tüm hakları saklıdır © Kanoon Hamyari"
+        copyright: "Tüm hakları saklıdır © Kanoon Hamyari",
+        sitemap: "Site Haritası",
+        robots: "Robotlar",
+        
+        // Program Page
+        programs: "Programlar",
+        programDetails: "Program Detayları",
+        programsTitle: "Hedeflerimiz",
+        performerTitle: "Performansçılar",
+        concert2020: "Konser 2020",
+        venueLabel: "Mekan:",
+        venueAddress: "26/A, Coontum Caddesi\nNew York-2783",
+        business: "İş",
+        businessDesc: "Türkiye'de bir işletme başlatmak ve genişletmek, yasalar ve pazarlar hakkında bilgi gerektirir. Kanoon Hamyari, iş, vergi, şirket kaydı, pazarlama ve ticari gelişim alanlarında profesyonel danışmanlarla, büyümeniz ve başarınız için yol açar.",
+        decoration: "Dekorasyon",
+        decorationDesc: "Evinizi veya ofisinizi yenilemeyi planlıyorsanız, Kanoon Hamyari'nin profesyonel dekorasyon ekibi yanınızdadır. İlk tasarımdan projenin tamamlanmasına kadar, hizmetlerimiz konut ve ticari alanların yenilenmesini, iç mimariyi, boyamayı, dolapları, aydınlatmayı, parkeyi ve duvar kağıdını içerir.",
+        address: "Türkiye, İstanbul, Beylikdüzü, Bilgiyum Pasajı, 4. Kat",
+        education: "Eğitim",
+        legal: "Hukuki İşler",
+        
+        // Index Page additional
+        missionTitle: "Misyonumuz",
+        missionDesc1: "Hedefimiz, dinamik, empatik ve bilinçli bir topluluk yaratmaktır; Türkiye'deki her Farsça konuşanın aidiyet, güvenlik ve fırsat hissettiği bir yer.",
+        missionDesc2: "Empati ve işbirliği ile Türkiye'deki göç, yaşam ve çalışma yolunu hemşehrilerimiz için daha kolay ve güvenli hale getirebileceğimize inanıyoruz.",
+        goalsTitle: "Hedeflerimiz",
+        goal1: "Hedef 1",
+        goal1Title: "Türkiye'deki İranlılar ve Farsça konuşanlar arasında iletişim ağı oluşturma",
+        goal2: "Hedef 2",
+        goal2Title: "Hukuki, ikamet, emlak ve eğitim alanlarında profesyonel hizmetler sunma",
+        goal3: "Hedef 3",
+        goal3Title: "İran işletmelerini destekleme ve Farsça konuşan topluluğun ekonomik büyümesi",
+        goal4: "Hedef 4",
+        goal4Title: "Sosyal bağlantıları korumak için etkinlikler, kutlamalar ve kültürel turlar düzenleme",
+        goal5: "Hedef 5",
+        goal5Title: "Türkiye'deki eğitim, iş ve yatırım fırsatlarını tanıtmaya yardımcı olma",
+        testimonialsTitle: "Üye Yorumları",
+        testimonialsSubtitle: "Üyelerimizin Kanoon Hamyari hizmetlerinden gerçek deneyimleri",
+        locationTitle: "Konumumuz",
+        
+        // Additional Services
+        interiorDesign: "İç Tasarım ve Yenileme",
+        interiorDesignDesc: "Evinizi veya ofisinizi yenilemeyi planlıyorsanız, Kanoon Hamyari'nin profesyonel dekorasyon ekibi yanınızdadır. İlk tasarımdan projenin tamamlanmasına kadar, hizmetlerimiz konut ve ticari alanların yenilenmesini, iç mimariyi, boyamayı, dolapları, aydınlatmayı, parkeyi ve duvar kağıdını içerir.",
+        businessConsulting: "İş Danışmanlığı ve Büyüme",
+        businessConsultingDesc: "Türkiye'de bir işletme başlatmak ve genişletmek, yasalar ve pazarlar hakkında bilgi gerektirir. Kanoon Hamyari, iş, vergi, şirket kaydı, pazarlama ve ticari gelişim alanlarında profesyonel danışmanlarla, büyümeniz ve başarınız için yol açar."
     }
 };
 
@@ -1381,6 +1509,46 @@ function updateTextContent() {
     document.querySelectorAll('[data-translate="faq"]').forEach(el => el.textContent = langData.faq);
     document.querySelectorAll('[data-translate="blog"]').forEach(el => el.textContent = langData.blog);
     document.querySelectorAll('[data-translate="copyright"]').forEach(el => el.innerHTML = langData.copyright);
+    document.querySelectorAll('[data-translate="robots"]').forEach(el => el.textContent = langData.robots);
+    
+    // Update Program page
+    document.querySelectorAll('[data-translate="programs"]').forEach(el => el.textContent = langData.programs);
+    document.querySelectorAll('[data-translate="programsTitle"]').forEach(el => el.textContent = langData.programsTitle);
+    document.querySelectorAll('[data-translate="performerTitle"]').forEach(el => el.textContent = langData.performerTitle);
+    document.querySelectorAll('[data-translate="concert2020"]').forEach(el => el.textContent = langData.concert2020);
+    document.querySelectorAll('[data-translate="venueLabel"]').forEach(el => el.textContent = langData.venueLabel);
+    document.querySelectorAll('[data-translate="venueAddress"]').forEach(el => el.textContent = langData.venueAddress);
+    document.querySelectorAll('[data-translate="business"]').forEach(el => el.textContent = langData.business);
+    document.querySelectorAll('[data-translate="businessDesc"]').forEach(el => el.textContent = langData.businessDesc);
+    document.querySelectorAll('[data-translate="decoration"]').forEach(el => el.textContent = langData.decoration);
+    document.querySelectorAll('[data-translate="decorationDesc"]').forEach(el => el.textContent = langData.decorationDesc);
+    document.querySelectorAll('[data-translate="education"]').forEach(el => el.textContent = langData.education);
+    document.querySelectorAll('[data-translate="legal"]').forEach(el => el.textContent = langData.legal);
+    
+    // Update Index page additional
+    document.querySelectorAll('[data-translate="missionTitle"]').forEach(el => el.textContent = langData.missionTitle);
+    document.querySelectorAll('[data-translate="missionDesc1"]').forEach(el => el.textContent = langData.missionDesc1);
+    document.querySelectorAll('[data-translate="missionDesc2"]').forEach(el => el.textContent = langData.missionDesc2);
+    document.querySelectorAll('[data-translate="goalsTitle"]').forEach(el => el.textContent = langData.goalsTitle);
+    document.querySelectorAll('[data-translate="goal1"]').forEach(el => el.textContent = langData.goal1);
+    document.querySelectorAll('[data-translate="goal1Title"]').forEach(el => el.textContent = langData.goal1Title);
+    document.querySelectorAll('[data-translate="goal2"]').forEach(el => el.textContent = langData.goal2);
+    document.querySelectorAll('[data-translate="goal2Title"]').forEach(el => el.textContent = langData.goal2Title);
+    document.querySelectorAll('[data-translate="goal3"]').forEach(el => el.textContent = langData.goal3);
+    document.querySelectorAll('[data-translate="goal3Title"]').forEach(el => el.textContent = langData.goal3Title);
+    document.querySelectorAll('[data-translate="goal4"]').forEach(el => el.textContent = langData.goal4);
+    document.querySelectorAll('[data-translate="goal4Title"]').forEach(el => el.textContent = langData.goal4Title);
+    document.querySelectorAll('[data-translate="goal5"]').forEach(el => el.textContent = langData.goal5);
+    document.querySelectorAll('[data-translate="goal5Title"]').forEach(el => el.textContent = langData.goal5Title);
+    document.querySelectorAll('[data-translate="testimonialsTitle"]').forEach(el => el.textContent = langData.testimonialsTitle);
+    document.querySelectorAll('[data-translate="testimonialsSubtitle"]').forEach(el => el.textContent = langData.testimonialsSubtitle);
+    document.querySelectorAll('[data-translate="locationTitle"]').forEach(el => el.textContent = langData.locationTitle);
+    
+    // Update additional services
+    document.querySelectorAll('[data-translate="interiorDesign"]').forEach(el => el.textContent = langData.interiorDesign);
+    document.querySelectorAll('[data-translate="interiorDesignDesc"]').forEach(el => el.textContent = langData.interiorDesignDesc);
+    document.querySelectorAll('[data-translate="businessConsulting"]').forEach(el => el.textContent = langData.businessConsulting);
+    document.querySelectorAll('[data-translate="businessConsultingDesc"]').forEach(el => el.textContent = langData.businessConsultingDesc);
 }
 
 // Initialize language on page load
