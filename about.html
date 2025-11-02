@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link id="kh-footer-css" rel="stylesheet" href="css/footer.css">
+    <link id="kh-nav-css" rel="stylesheet" href="css/nav.css">
     
     <!-- Beautiful Persian Font Library -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,113 +53,7 @@
             line-height: 1.6;
         }
         
-        /* Navigation Styles */
-        #navigation {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-            white-space: nowrap !important;
-            list-style: none !important;
-            margin: 0 2px !important;
-            padding: 0 !important;
-            justify-content: center !important;
-            align-items: center !important;
-            gap: 0px !important;
-            background: rgba(0, 0, 0, 0.85) !important;
-            backdrop-filter: blur(20px) !important;
-            border-radius: 12px !important;
-            padding: 4px 6px !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            max-width: 100% !important;
-            overflow: hidden !important;
-        }
         
-        #navigation li a {
-            padding: 6px 10px !important;
-            font-size: 11px !important;
-            font-weight: 500 !important;
-            white-space: nowrap !important;
-            display: block !important;
-            text-decoration: none !important;
-            color: #ffffff !important;
-            transition: all 0.3s ease !important;
-            border-radius: 12px !important;
-            position: relative !important;
-            background: transparent !important;
-            border: 1px solid transparent !important;
-        }
-        
-        #navigation li a:hover {
-            color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.1) !important;
-            border-color: rgba(255, 255, 255, 0.2) !important;
-            transform: translateY(-1px) !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        #navigation li a:active {
-            transform: translateY(0) !important;
-        }
-        
-        /* Active page indicator */
-        #navigation li a.active {
-            background: rgba(255, 255, 255, 0.15) !important;
-            color: #ffffff !important;
-            border-color: rgba(255, 255, 255, 0.3) !important;
-        }
-        
-        .main-menu {
-            overflow: hidden !important;
-            width: 100% !important;
-        }
-        
-        .main-menu nav {
-            width: 100% !important;
-            display: flex !important;
-            justify-content: center !important;
-        }
-        
-        /* Hide scrollbars completely */
-        #navigation::-webkit-scrollbar {
-            display: none !important;
-        }
-        
-        #navigation {
-            -ms-overflow-style: none !important;
-            scrollbar-width: none !important;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1400px) {
-            #navigation li a {
-                padding: 8px 14px !important;
-                font-size: 12px !important;
-            }
-        }
-        
-        @media (max-width: 1200px) {
-            #navigation {
-                padding: 4px 6px !important;
-                border-radius: 12px !important;
-            }
-            
-            #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            #navigation {
-                padding: 3px 5px !important;
-                border-radius: 10px !important;
-            }
-            
-            #navigation li a {
-                padding: 6px 10px !important;
-                font-size: 10px !important;
-            }
-        }
         
         /* Brand tools */
         .brand_tools {
@@ -1425,6 +1320,7 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/languages.js"></script>
     
     <!-- AOS Animation Library -->
@@ -1489,51 +1385,7 @@
                 }
             });
             
-            // Language dropdown functionality
-            const languageBtn = document.getElementById('languageBtn');
-            const languageDropdown = document.getElementById('languageDropdown');
-            const currentLang = document.getElementById('currentLang');
-            const languageOptions = document.querySelectorAll('.language-option');
-            
-            if (languageBtn && languageDropdown) {
-                languageBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    languageDropdown.classList.toggle('show');
-                    languageBtn.classList.toggle('active');
-                });
-                
-                document.addEventListener('click', function(e) {
-                    if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
-                        languageDropdown.classList.remove('show');
-                        languageBtn.classList.remove('active');
-                    }
-                });
-                
-                languageOptions.forEach(option => {
-                    option.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const selectedLang = this.getAttribute('data-lang');
-                        const selectedText = this.textContent;
-                        
-                        currentLang.textContent = selectedLang === 'fa' ? 'فا' : selectedLang.toUpperCase();
-                        
-                        languageOptions.forEach(opt => opt.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        languageDropdown.classList.remove('show');
-                        languageBtn.classList.remove('active');
-                        
-                        if (typeof switchLanguage === 'function') {
-                            switchLanguage(selectedLang);
-                        }
-                    });
-                });
-                
-                const activeOption = document.querySelector('.language-option[data-lang="fa"]');
-                if (activeOption) {
-                    activeOption.classList.add('active');
-                }
-            }
+            // Language dropdown is handled by js/header.js
         });
     </script>
 
@@ -1550,6 +1402,8 @@
             <i class="fa fa-phone"></i>
         </a>
     </div>
+    <script src="js/header.js"></script>
+    <script src="js/languages.js"></script>
 </body>
 
 </html>

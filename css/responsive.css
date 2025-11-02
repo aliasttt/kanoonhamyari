@@ -12,14 +12,15 @@
 #navigation li {
     flex-shrink: 0 !important;
     white-space: nowrap !important;
-    margin: 0 8px !important;
+    margin: 0 2px !important;
 }
 
 #navigation li a {
-    padding: 8px 12px !important;
-    font-size: 14px !important;
+    padding: 6px 10px !important;
+    font-size: 11px !important;
     white-space: nowrap !important;
     display: block !important;
+    border-radius: 8px !important;
 }
 
 /* Ensure navigation container doesn't wrap */
@@ -38,30 +39,58 @@
 }
 
 /* Additional navigation fixes for different screen sizes */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (max-width: 1400px) {
     #navigation li a {
-        padding: 6px 8px !important;
-        font-size: 13px !important;
+        padding: 5px 8px !important;
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    #navigation li a {
+        padding: 4px 6px !important;
+        font-size: 9px !important;
     }
     
     #navigation li {
-        margin: 0 4px !important;
+        margin: 0 2px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    #navigation li a {
+        padding: 3px 5px !important;
+        font-size: 8px !important;
+    }
+    
+    #navigation li {
+        margin: 0 1px !important;
     }
 }
 
 @media (min-width: 1200px) {
     #navigation li a {
-        padding: 8px 15px !important;
-        font-size: 15px !important;
+        padding: 6px 10px !important;
+        font-size: 11px !important;
     }
     
     #navigation li {
-        margin: 0 10px !important;
+        margin: 0 2px !important;
     }
 }
 
 /* Mobile First Approach */
 @media (max-width: 768px) {
+    /* Navigation responsive */
+    #navigation li a {
+        padding: 3px 5px !important;
+        font-size: 8px !important;
+    }
+    
+    #navigation li {
+        margin: 0 !important;
+    }
+    
     /* Header responsive */
     .main-header-area {
         padding: 10px 0;

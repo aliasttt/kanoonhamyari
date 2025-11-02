@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link id="kh-footer-css" rel="stylesheet" href="css/footer.css">
+    <link id="kh-nav-css" rel="stylesheet" href="css/nav.css">
     <!-- <link rel="stylesheet" href="css/responsive.css">
     <!-- Dark Theme Navigation Menu with FOUC Prevention -->
     <style>
@@ -71,19 +72,18 @@
         }
         
         #navigation li a {
-            padding: 10px 16px !important;
-            font-size: 13px !important;
+            padding: 6px 10px !important;
+            font-size: 11px !important;
             font-weight: 500 !important;
             white-space: nowrap !important;
             display: block !important;
             text-decoration: none !important;
             color: #ffffff !important;
             transition: all 0.3s ease !important;
-            border-radius: 12px !important;
+            border-radius: 8px !important;
             position: relative !important;
             background: transparent !important;
             border: 1px solid transparent !important;
-            font-family: 'Vazirmatn', 'Noto Sans Arabic', Tahoma, Arial, sans-serif !important;
         }
         
         #navigation li a:hover {
@@ -129,20 +129,20 @@
         /* Responsive Design */
         @media (max-width: 1400px) {
             #navigation li a {
-                padding: 8px 14px !important;
-                font-size: 12px !important;
+                padding: 5px 8px !important;
+                font-size: 10px !important;
             }
         }
         
         @media (max-width: 1200px) {
             #navigation {
-                padding: 4px 6px !important;
-                border-radius: 12px !important;
+                padding: 3px 4px !important;
+                border-radius: 10px !important;
             }
             
             #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
+                padding: 4px 6px !important;
+                font-size: 9px !important;
             }
         }
         
@@ -150,15 +150,15 @@
             #navigation {
                 flex-wrap: nowrap !important;
                 justify-content: flex-start !important;
-                padding: 4px !important;
-                border-radius: 10px !important;
+                padding: 2px !important;
+                border-radius: 8px !important;
                 overflow-x: auto !important;
                 -webkit-overflow-scrolling: touch !important;
             }
             
             #navigation li a {
-                padding: 8px 10px !important;
-                font-size: 11px !important;
+                padding: 3px 5px !important;
+                font-size: 8px !important;
                 margin: 0 1px !important;
             }
         }
@@ -168,7 +168,7 @@
                 flex-direction: row !important;
                 overflow-x: auto !important;
                 -webkit-overflow-scrolling: touch !important;
-                padding: 3px !important;
+                padding: 2px !important;
             }
             
             #navigation li {
@@ -177,8 +177,8 @@
             }
             
             #navigation li a {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
+                padding: 3px 5px !important;
+                font-size: 8px !important;
                 white-space: nowrap !important;
             }
         }
@@ -727,9 +727,9 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
-
-
-
+    
+    
+    
     <!--contact js-->
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
@@ -739,88 +739,9 @@
 
 
     <script src="js/main.js"></script>
-    
-    
+    <script src="js/header.js"></script>
     <script src="js/languages.js"></script>
     
-    <!-- Language Dropdown JavaScript with FOUC Prevention -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add loaded class to prevent FOUC
-            document.body.classList.add('menu-loaded');
-            
-            const languageBtn = document.getElementById('languageBtn');
-            const languageDropdown = document.getElementById('languageDropdown');
-            const currentLang = document.getElementById('currentLang');
-            const languageOptions = document.querySelectorAll('.language-option');
-            
-            // Toggle dropdown on click
-            if (languageBtn) {
-                languageBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    languageDropdown.classList.toggle('show');
-                    languageBtn.classList.toggle('active');
-                });
-            }
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (languageBtn && languageDropdown && 
-                    !languageBtn.contains(e.target) && 
-                    !languageDropdown.contains(e.target)) {
-                    languageDropdown.classList.remove('show');
-                    languageBtn.classList.remove('active');
-                }
-            });
-            
-            // Handle language selection
-            languageOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const selectedLang = this.getAttribute('data-lang');
-                    const selectedText = this.textContent;
-                    
-                    // Update current language display
-                    if (currentLang) {
-                        currentLang.textContent = selectedLang === 'fa' ? 'ÙØ§' : selectedLang.toUpperCase();
-                    }
-                    
-                    // Update active state
-                    languageOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Close dropdown
-                    if (languageDropdown) {
-                        languageDropdown.classList.remove('show');
-                    }
-                    if (languageBtn) {
-                        languageBtn.classList.remove('active');
-                    }
-                    
-                    // Trigger language change (if you have language switching functionality)
-                    if (typeof switchLanguage === 'function') {
-                        switchLanguage(selectedLang);
-                    }
-                });
-            });
-            
-            // Set initial active language
-            const activeOption = document.querySelector('.language-option[data-lang="fa"]');
-            if (activeOption) {
-                activeOption.classList.add('active');
-            }
-            
-            // Set active menu item based on current page
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const menuLinks = document.querySelectorAll('#navigation a');
-            menuLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
