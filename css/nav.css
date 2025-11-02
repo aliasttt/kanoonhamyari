@@ -182,6 +182,12 @@ body.menu-loaded .language_dropdown {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.8)) !important;
 }
 
+/* Global fix: remove default body margin and enforce dark background */
+html, body {
+    margin: 0 !important;
+    background-color: #0a0a0a !important; /* site-wide dark background */
+}
+
 /* Remove white background from header parent containers - override all styles */
 #header-placeholder,
 #header-placeholder .header-area,
@@ -197,9 +203,9 @@ body.menu-loaded .language_dropdown {
     margin: 0 !important;
 }
 
-/* Header wrapper - part of body, no white background, remove absolute positioning */
+/* Header wrapper sits on dark strip at top of body */
 #header-placeholder {
-    background: transparent !important;
+    background: #0a0a0a !important; /* dark stripe behind nav */
     width: 100% !important;
     padding: 15px 0 !important;
     margin: 0 !important;
