@@ -30,6 +30,36 @@
                 document.body.insertBefore(headerPlaceholder, firstChild);
             }
         }
+        
+        // Clear any old content inside or after the header
+        headerPlaceholder.innerHTML = '';
+        
+        // Remove any old header content after placeholder (divs with header classes, row, container, etc.)
+        var nextSibling = headerPlaceholder.nextSibling;
+        while (nextSibling) {
+            var shouldRemove = false;
+            if (nextSibling.nodeType === 1) {
+                var tagName = nextSibling.tagName ? nextSibling.tagName.toLowerCase() : '';
+                var className = nextSibling.className ? nextSibling.className.toString() : '';
+                if (tagName === 'header' || 
+                    tagName === 'div' && (className.includes('header') || className.includes('brand_tools') || 
+                                          className.includes('navigation') || className.includes('row align-items-center') || 
+                                          className.includes('container') || className.includes('main-menu') || 
+                                          className.includes('header_bottom_border') || className.includes('mobile_menu'))) {
+                    shouldRemove = true;
+                }
+            } else if (nextSibling.nodeType === 3 && (!nextSibling.textContent || !nextSibling.textContent.trim())) {
+                shouldRemove = true;
+            }
+            
+            if (shouldRemove) {
+                var toRemove = nextSibling;
+                nextSibling = nextSibling.nextSibling;
+                toRemove.remove();
+            } else {
+                break;
+            }
+        }
 
         var logoSrc = 'img/logo.png';
         var path = window.location.pathname || '';
