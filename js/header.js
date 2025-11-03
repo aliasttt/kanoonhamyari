@@ -76,6 +76,9 @@
             '        <div class="row align-items-center">\n' +
             '          <div class="col-xl-3 col-lg-3">\n' +
             '            <div class="brand_tools">\n' +
+            '              <button class="kh-hamburger d-lg-none" id="khHamburger" aria-label="Toggle navigation" aria-expanded="false">\n' +
+            '                <i class="fa fa-bars"></i>\n' +
+            '              </button>\n' +
             '              <div class="logo">\n' +
             '                <a href="index.html">\n' +
             '                  <img src="' + logoSrc + '" alt="کانون همیاری">\n' +
@@ -92,9 +95,6 @@
             '                  <a href="#" class="language-option" data-lang="tr">Türkçe</a>\n' +
             '                </div>\n' +
             '              </div>\n' +
-            '              <button class="kh-hamburger d-lg-none" id="khHamburger" aria-label="Toggle navigation" aria-expanded="false">\n' +
-            '                <span></span><span></span><span></span>\n' +
-            '              </button>\n' +
             '            </div>\n' +
             '          </div>\n' +
             '          <div class="col-xl-9 col-lg-9">\n' +
