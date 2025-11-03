@@ -92,6 +92,9 @@
             '                  <a href="#" class="language-option" data-lang="tr">Türkçe</a>\n' +
             '                </div>\n' +
             '              </div>\n' +
+            '              <button class="kh-hamburger d-lg-none" id="khHamburger" aria-label="Toggle navigation" aria-expanded="false">\n' +
+            '                <span></span><span></span><span></span>\n' +
+            '              </button>\n' +
             '            </div>\n' +
             '          </div>\n' +
             '          <div class="col-xl-9 col-lg-9">\n' +
@@ -113,14 +116,25 @@
             '              </nav>\n' +
             '            </div>\n' +
             '          </div>\n' +
-            '          <div class="col-12">\n' +
-            '            <div class="mobile_menu d-block d-lg-none"></div>\n' +
-            '          </div>\n' +
+            '          <div class="col-12"></div>\n' +
             '        </div>\n' +
             '      </div>\n' +
             '    </div>\n' +
             '  </div>\n' +
             '</div>';
+
+        // inject mobile nav + overlay right after header
+        var mobileNav = document.createElement('nav');
+        mobileNav.className = 'kh-mobile-nav';
+        mobileNav.id = 'khMobileNav';
+        mobileNav.setAttribute('aria-hidden', 'true');
+        mobileNav.innerHTML = '<ul id="khMobileNavigation"></ul>';
+        headerPlaceholder.appendChild(mobileNav);
+
+        var overlay = document.createElement('div');
+        overlay.className = 'kh-mobile-overlay';
+        overlay.id = 'khMobileOverlay';
+        headerPlaceholder.appendChild(overlay);
 
         initializeHeaderScripts();
     }
@@ -180,6 +194,52 @@
                 link.classList.remove('active');
             }
         });
+
+        // Build mobile navigation (clone desktop items)
+        var desktopNav = document.getElementById('navigation');
+        var mobileList = document.getElementById('khMobileNavigation');
+        if (desktopNav && mobileList) {
+            mobileList.innerHTML = desktopNav.innerHTML;
+            // set active on mobile too
+            mobileList.querySelectorAll('a').forEach(function (a) {
+                var href = a.getAttribute('href');
+                if (href === currentPage || (!currentPage && href === 'index.html')) {
+                    a.classList.add('active');
+                }
+            });
+        }
+
+        // Hamburger toggle behavior
+        var hamburger = document.getElementById('khHamburger');
+        var mobileNavEl = document.getElementById('khMobileNav');
+        var overlayEl = document.getElementById('khMobileOverlay');
+        function closeMobile() {
+            document.body.classList.remove('kh-menu-open');
+            if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+            if (mobileNavEl) mobileNavEl.setAttribute('aria-hidden', 'true');
+        }
+        function openMobile() {
+            document.body.classList.add('kh-menu-open');
+            if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
+            if (mobileNavEl) mobileNavEl.setAttribute('aria-hidden', 'false');
+        }
+        if (hamburger && mobileNavEl && overlayEl) {
+            hamburger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (document.body.classList.contains('kh-menu-open')) {
+                    closeMobile();
+                } else {
+                    openMobile();
+                }
+            });
+            overlayEl.addEventListener('click', closeMobile);
+            document.addEventListener('keyup', function (e) { if (e.key === 'Escape') closeMobile(); });
+            // close after clicking a link
+            mobileNavEl.addEventListener('click', function (e) {
+                var t = e.target;
+                if (t && t.tagName && t.tagName.toLowerCase() === 'a') closeMobile();
+            });
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
