@@ -231,7 +231,7 @@ html, body {
 
 /* ================== Mobile Navigation (Hamburger) ================== */
 @media (max-width: 992px) {
-    /* Hamburger button - positioned at left side of brand_tools */
+    /* Hamburger button - grouped with language button on right */
     .kh-hamburger {
         display: inline-flex;
         width: 48px;
@@ -245,7 +245,6 @@ html, body {
         cursor: pointer;
         transition: all 0.3s ease;
         flex-shrink: 0;
-        order: -1; /* Move to leftmost position */
     }
     .kh-hamburger:hover {
         background: linear-gradient(135deg, #f7931e, #ff6b35);
@@ -338,6 +337,34 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     display: block;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
+}
+
+/* Mobile layout: Logo on left, buttons grouped on right */
+@media (max-width: 992px) {
+    .brand_tools {
+        justify-content: space-between;
+        width: 100%;
+        gap: 8px; /* Gap between items */
+    }
+    
+    /* Logo on left (visually) - first in RTL flow */
+    .brand_tools .logo {
+        order: 1;
+    }
+    
+    /* Group buttons together on right (visually) - language first, then hamburger */
+    .brand_tools .language_dropdown {
+        order: 2;
+    }
+    
+    .brand_tools .kh-hamburger {
+        order: 3;
+    }
+    
+    /* Reduce gap between buttons only */
+    .brand_tools .language_dropdown + .kh-hamburger {
+        margin-right: -4px; /* Overlap gap slightly to group buttons */
+    }
 }
 
 /* Language Dropdown Styles */
