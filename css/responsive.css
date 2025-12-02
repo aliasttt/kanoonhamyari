@@ -1,5 +1,165 @@
 /* Responsive CSS for Kanoon Hamyari Website */
 
+/* ============================================
+   GLOBAL FIXES - Prevent Horizontal Scroll
+   ============================================ */
+
+/* Prevent horizontal scroll on all devices */
+html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix for root element */
+:root {
+    max-width: 100vw !important;
+}
+
+/* Ensure all elements respect container width */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Prevent images and media from overflowing */
+img, video, iframe, embed, object {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Fix for tables */
+table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+    word-wrap: break-word !important;
+}
+
+/* Fix for pre and code blocks */
+pre, code {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    word-wrap: break-word !important;
+}
+
+/* Container fixes */
+.container, .container-fluid {
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Row fixes */
+.row {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    max-width: 100% !important;
+}
+
+/* Column fixes */
+[class*="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    max-width: 100% !important;
+}
+
+/* Fix for sections with padding */
+section, .section {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Fix for any element with fixed width */
+[style*="width"] {
+    max-width: 100% !important;
+}
+
+/* Fix for common problematic classes */
+.w-100, .width-100 {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Fix for hero sections */
+[class*="hero"], [class*="Hero"] {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Fix for carousels and sliders */
+[class*="carousel"], [class*="slider"], [class*="owl"] {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Fix for forms */
+form, .form, [class*="form"] {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Fix for buttons and links */
+button, .btn, a {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+}
+
+/* Fix for text elements */
+h1, h2, h3, h4, h5, h6, p, span, div {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Fix for absolute and fixed positioned elements */
+[style*="position: absolute"], [style*="position:fixed"] {
+    max-width: 100vw !important;
+}
+
+/* Fix for elements with transform */
+[style*="transform"] {
+    max-width: 100% !important;
+}
+
+/* Fix for wrapper and main containers */
+.wrapper, .main-wrapper, .page-wrapper, #wrapper, #main, main {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+/* Fix for header and footer */
+header, footer, .header, .footer {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+/* Fix for any element with min-width that might cause issues */
+[style*="min-width"] {
+    max-width: 100% !important;
+}
+
+/* Ensure viewport meta tag is respected */
+@media screen and (max-width: 100vw) {
+    * {
+        max-width: 100vw !important;
+    }
+}
+
 /* Navigation Menu Fix - Keep all items on single line */
 #navigation {
     display: flex !important;
@@ -81,6 +241,53 @@
 
 /* Mobile First Approach */
 @media (max-width: 768px) {
+    /* Global mobile fixes */
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
+    /* Container mobile fixes */
+    .container, .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        max-width: 100% !important;
+    }
+    
+    /* Row mobile fixes */
+    .row {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+    
+    /* Column mobile fixes */
+    [class*="col-"] {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Fix all sections */
+    section, .section, div[class*="section"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Fix padding issues */
+    [class*="padding"], [class*="p-"] {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Fix margin issues */
+    [class*="margin"], [class*="m-"] {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
     /* Navigation responsive */
     #navigation li a {
         padding: 3px 5px !important;
@@ -93,11 +300,19 @@
     
     /* Header responsive */
     .main-header-area {
-        padding: 10px 0;
+        padding: 10px 0 !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .header-area {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
     }
     
     .logo img {
         max-height: 40px;
+        max-width: 100% !important;
     }
     
     .main-menu {
@@ -106,6 +321,12 @@
     
     .mobile_menu {
         display: block !important;
+    }
+    
+    /* Brand tools mobile */
+    .brand_tools {
+        max-width: 100% !important;
+        padding: 8px !important;
     }
     
     /* Language switcher responsive */
@@ -131,6 +352,7 @@
     /* Services responsive */
     .single_service {
         margin-bottom: 30px;
+        max-width: 100% !important;
     }
     
     .service_icon {
@@ -140,6 +362,7 @@
     /* About section responsive */
     .about_thumb {
         margin-bottom: 30px;
+        max-width: 100% !important;
     }
     
     .about_info {
@@ -150,6 +373,7 @@
     /* Contact info responsive */
     .contact_info_wrap {
         text-align: center;
+        max-width: 100% !important;
     }
     
     .single_contact_info {
@@ -175,6 +399,26 @@
         margin: 5px 0;
     }
     
+    /* Fix all grids */
+    [class*="grid"], [class*="Grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        max-width: 100% !important;
+    }
+    
+    /* Fix all flex containers */
+    [class*="flex"], [class*="Flex"] {
+        flex-wrap: wrap !important;
+        max-width: 100% !important;
+    }
+    
+    /* Fix cards and boxes */
+    [class*="card"], [class*="box"], [class*="Card"], [class*="Box"] {
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
     /* WhatsApp button responsive */
     .whatsapp-fixed {
         bottom: 15px;
@@ -189,12 +433,34 @@
     .whatsapp-link i {
         font-size: 24px;
     }
+    
+    /* Phone button responsive */
+    .phone-fixed {
+        bottom: 75px;
+        right: 15px;
+    }
+    
+    .phone-link {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .phone-link i {
+        font-size: 24px;
+    }
 }
 
 /* Tablet responsive */
 @media (min-width: 769px) and (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
     .container {
         max-width: 750px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
     
     .single_service {
@@ -204,12 +470,60 @@
     .footer_widget {
         margin-bottom: 20px;
     }
+    
+    /* Fix sections */
+    section, .section {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
 }
 
 /* Large screens */
 @media (min-width: 1200px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
     .container {
         max-width: 1170px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Ensure no overflow */
+    section, .section {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
+    .container, .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .row {
+        margin-left: -5px !important;
+        margin-right: -5px !important;
+    }
+    
+    [class*="col-"] {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    
+    /* Reduce all padding on very small screens */
+    section, .section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 }
 

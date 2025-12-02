@@ -84,17 +84,6 @@
             '                  <img src="' + logoSrc + '" alt="کانون همیاری">\n' +
             '                </a>\n' +
             '              </div>\n' +
-            '              <div class="language_dropdown">\n' +
-            '                <button class="language_dropdown_btn" id="languageBtn">\n' +
-            '                  <span id="currentLang">فا</span>\n' +
-            '                  <i class="fa fa-chevron-down"></i>\n' +
-            '                </button>\n' +
-            '                <div class="language_dropdown_content" id="languageDropdown">\n' +
-            '                  <a href="#" class="language-option" data-lang="fa">فارسی</a>\n' +
-            '                  <a href="#" class="language-option" data-lang="en">English</a>\n' +
-            '                  <a href="#" class="language-option" data-lang="tr">Türkçe</a>\n' +
-            '                </div>\n' +
-            '              </div>\n' +
             '            </div>\n' +
             '          </div>\n' +
             '          <div class="col-xl-9 col-lg-9">\n' +
@@ -142,46 +131,6 @@
     function initializeHeaderScripts() {
         // Mark menu loaded (FOUC prevention works with nav.css)
         document.body.classList.add('menu-loaded');
-
-        var languageBtn = document.getElementById('languageBtn');
-        var languageDropdown = document.getElementById('languageDropdown');
-        var currentLang = document.getElementById('currentLang');
-        var languageOptions = document.querySelectorAll('.language-option');
-
-        if (languageBtn && languageDropdown) {
-            languageBtn.addEventListener('click', function (e) {
-                e.stopPropagation();
-                languageDropdown.classList.toggle('show');
-                languageBtn.classList.toggle('active');
-            });
-
-            document.addEventListener('click', function (e) {
-                if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
-                    languageDropdown.classList.remove('show');
-                    languageBtn.classList.remove('active');
-                }
-            });
-
-            languageOptions.forEach(function (option) {
-                option.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    var selectedLang = this.getAttribute('data-lang');
-                    if (currentLang) {
-                        currentLang.textContent = selectedLang === 'fa' ? 'فا' : selectedLang.toUpperCase();
-                    }
-                    languageOptions.forEach(function (opt) { opt.classList.remove('active'); });
-                    this.classList.add('active');
-                    languageDropdown.classList.remove('show');
-                    languageBtn.classList.remove('active');
-                    if (typeof window.switchLanguage === 'function') {
-                        window.switchLanguage(selectedLang);
-                    }
-                });
-            });
-
-            var activeOption = document.querySelector('.language-option[data-lang="fa"]');
-            if (activeOption) activeOption.classList.add('active');
-        }
 
         // Set active menu item based on current page
         var currentPage = window.location.pathname.split('/').pop() || 'index.html';

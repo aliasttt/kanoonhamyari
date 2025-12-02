@@ -332,17 +332,6 @@
                                         <img src="img/logo.png" alt="">
                                     </a>
                                 </div>
-                                    <div class="language_dropdown">
-                                        <button class="language_dropdown_btn" id="languageBtn">
-                                            <span id="currentLang">ÙØ§</span>
-                                            <i class="fa fa-chevron-down"></i>
-                                        </button>
-                                        <div class="language_dropdown_content" id="languageDropdown">
-                                            <a href="#" class="language-option" data-lang="fa">ÙØ§Ø±Ø³ÛŒ</a>
-                                            <a href="#" class="language-option" data-lang="en">English</a>
-                                            <a href="#" class="language-option" data-lang="tr">Türkçe</a>
-                            </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9">
@@ -955,7 +944,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             // Add loaded class to prevent FOUC
             document.body.classList.add('menu-loaded');
             
-            const languageBtn = document.getElementById('languageBtn');
             const languageDropdown = document.getElementById('languageDropdown');
             const currentLang = document.getElementById('currentLang');
             const languageOptions = document.querySelectorAll('.language-option');
